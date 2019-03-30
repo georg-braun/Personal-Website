@@ -17,6 +17,8 @@
   },
   "homepage": "https://gitlab.com/georg.braun92/personal-website#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "path": "^0.12.7"
   }
 }
