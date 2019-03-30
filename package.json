@@ -1,0 +1,19 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/georg.braun92/personal-website.git"
+  },
+  "author": "Georg Braun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/georg.braun92/personal-website/issues"
+  },
+  "homepage": "https://gitlab.com/georg.braun92/personal-website#readme"
+}
