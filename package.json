@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://gitlab.com/georg.braun92/personal-website/issues"
   },
-  "homepage": "https://gitlab.com/georg.braun92/personal-website#readme"
+  "homepage": "https://gitlab.com/georg.braun92/personal-website#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
