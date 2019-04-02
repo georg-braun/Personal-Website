@@ -1,5 +1,20 @@
+.circle-avatar {
+  width: 150px;
+  border-radius: 50%;
+}
 
-.circle-avatar{
-    width: 150px;
-    border-radius:50%;
+#header-visitenkarte {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.row-profile {
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+.profile-icon {
+  font-size: 2em;
+  color: black;
+  margin-left: 20px;
 }
