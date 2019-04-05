@@ -16,5 +16,20 @@
 .profile-icon {
   font-size: 2em;
   color: black;
-  margin-left: 20px;
+  margin-left: 20px;  
 }
+
+/* Bei großen Fenstern soll der Avatar direkt neben dem Text sein*/
+@media (min-width: 577px) { 
+  #avatar-div{    
+    text-align: right;
+  }
+}
+/* Ist das Fenster eher klein, so soll der Avatar zentriert sein*/
+@media (max-width: 576px) { 
+  #avatar-div{    
+    text-align: center;
+    margin-bottom: 1em;
+  }
+}
+
