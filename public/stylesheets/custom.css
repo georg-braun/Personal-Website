@@ -31,5 +31,11 @@
     text-align: center;
     margin-bottom: 1em;
   }
+
+  #visitenkarte-beschreibung {
+    line-height: 1.5em;
+    text-align: center;
+  }
 }
+
 
