@@ -11,4 +11,6 @@ app.set('view engine', 'ejs');
 
 app.get("/", (req, res) => { res.render("pages/home") });
 
+app.get("/projects", (req, res) => { res.render("pages/projects") });
+
 app.listen(PORT, () => { console.log(`Server started on Port ${PORT}`)});
