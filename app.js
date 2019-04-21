@@ -13,4 +13,6 @@ app.get("/", (req, res) => { res.render("pages/home") });
 
 app.get("/projects", (req, res) => { res.render("pages/projects") });
 
+app.get("/cv", (req, res) => { res.render("pages/cv") });
+
 app.listen(PORT, () => { console.log(`Server started on Port ${PORT}`)});
