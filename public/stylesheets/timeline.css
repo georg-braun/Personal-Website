@@ -1,206 +1,185 @@
-/* Media Queries */
-/* Card sizing */
-/* Colors */
-/* Calculations */
-/* Placeholders */
-@media (min-width: 1000px) {
-  #timeline .demo-card:nth-child(odd) .head::after, #timeline .demo-card:nth-child(even) .head::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 0;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent; }
-  #timeline .demo-card:nth-child(odd) .head::before, #timeline .demo-card:nth-child(even) .head::before {
-    position: absolute;
-    content: "";
-    width: 9px;
-    height: 9px;
-    background-color: #bdbdbd;
-    border-radius: 9px;
-    box-shadow: 0px 0px 2px 8px #f7f7f7; } }
+/* Credits to https://bootsnipp.com/snippets/OzQj */
 
-/* Some Cool Stuff */
-.demo-card:nth-child(1) {
-  order: 1; }
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
 
-.demo-card:nth-child(2) {
-  order: 5; }
-
-.demo-card:nth-child(3) {
-  order: 2; }
-
-.demo-card:nth-child(4) {
-  order: 6; }
-
-.demo-card:nth-child(5) {
-  order: 3; }
-
-.demo-card:nth-child(6) {
-  order: 7; }
-
-.demo-card:nth-child(7) {
-  order: 4; }
-
-.demo-card:nth-child(8) {
-  order: 8; }
-
-/* Border Box */
-* {
-  box-sizing: border-box; }
-
-/* Fonts */
-body {
-  font-family: Roboto; }
-
-#timeline {
-  padding: 100px 0;
-  background: #f7f7f7;
-  border-top: 1px solid rgba(191, 191, 191, 0.4);
-  border-bottom: 1px solid rgba(191, 191, 191, 0.4); }
-  #timeline h1 {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 200;
-    margin-bottom: 20px; }
-  #timeline p.leader {
-    text-align: center;
-    max-width: 90%;
-    margin: auto;
-    margin-bottom: 45px; }
-  #timeline .demo-card-wrapper {
-    position: relative;
-    margin: auto; }
-    @media (min-width: 1000px) {
-      #timeline .demo-card-wrapper {
-        display: flex;
-        flex-flow: column wrap;
-        width: 1170px;
-        height: 2140px;
-        margin: 0 auto; } }
-    #timeline .demo-card-wrapper::after {
-      z-index: 1;
-      content: "";
-      position: absolute;
+  .timeline:before {
       top: 0;
       bottom: 0;
+      position: absolute;
+      content: " ";
+      width: 3px;
+      background-color: #eeeeee;
       left: 50%;
-      border-left: 1px solid rgba(191, 191, 191, 0.4); }
-      @media (min-width: 1000px) {
-        #timeline .demo-card-wrapper::after {
-          border-left: 1px solid #bdbdbd; } }
-  #timeline .demo-card {
-    position: relative;
-    display: block;
-    margin: 10px auto 80px;
-    max-width: 94%;
-    z-index: 2; }
-    @media (min-width: 480px) {
-      #timeline .demo-card {
-        max-width: 60%;
-        box-shadow: 0px 1px 22px 4px rgba(0, 0, 0, 0.07); } }
-    @media (min-width: 720px) {
-      #timeline .demo-card {
-        max-width: 40%; } }
-    @media (min-width: 1000px) {
-      #timeline .demo-card {
-        max-width: 450px;
-        height: 400px;
-        margin: 90px;
-        margin-top: 45px;
-        margin-bottom: 45px; }
-        #timeline .demo-card:nth-child(odd) {
-          margin-right: 45px; }
-          #timeline .demo-card:nth-child(odd) .head::after {
-            border-left-width: 15px;
-            border-left-style: solid;
-            left: 100%; }
-          #timeline .demo-card:nth-child(odd) .head::before {
-            left: 491.5px; }
-        #timeline .demo-card:nth-child(even) {
-          margin-left: 45px; }
-          #timeline .demo-card:nth-child(even) .head::after {
-            border-right-width: 15px;
-            border-right-style: solid;
-            right: 100%; }
-          #timeline .demo-card:nth-child(even) .head::before {
-            right: 489.5px; }
-        #timeline .demo-card:nth-child(2) {
-          margin-top: 180px; } }
-    #timeline .demo-card .head {
+      margin-left: -1.5px;
+  }
+
+  .timeline > li {
+      margin-bottom: 20px;
       position: relative;
-      display: flex;
-      align-items: center;
-      color: #fff;
-      font-weight: 400; }
-      #timeline .demo-card .head .number-box {
-        display: inline;
-        float: left;
-        margin: 15px;
-        padding: 10px;
-        font-size: 35px;
-        line-height: 35px;
-        font-weight: 600;
-        background: rgba(0, 0, 0, 0.17); }
-      #timeline .demo-card .head h2 {
-        text-transform: uppercase;
-        font-size: 1.3rem;
-        font-weight: inherit;
-        letter-spacing: 2px;
-        margin: 0;
-        padding-bottom: 6px;
-        line-height: 1rem; }
-        @media (min-width: 480px) {
-          #timeline .demo-card .head h2 {
-            font-size: 165%;
-            line-height: 1.2rem; } }
-        #timeline .demo-card .head h2 span {
-          display: block;
-          font-size: 0.6rem;
-          margin: 0; }
-          @media (min-width: 480px) {
-            #timeline .demo-card .head h2 span {
-              font-size: 0.8rem; } }
-    #timeline .demo-card .body {
-      background: #fff;
-      border: 1px solid rgba(191, 191, 191, 0.4);
-      border-top: 0;
-      padding: 15px; }
-      @media (min-width: 1000px) {
-        #timeline .demo-card .body {
-          height: 315px; } }
-      #timeline .demo-card .body p {
-        font-size: 14px;
-        line-height: 18px;
-        margin-bottom: 15px; }
-      #timeline .demo-card .body img {
-        display: block;
-        width: 100%; }
-    #timeline .demo-card--step1 {
-      background-color: #46b8e9; }
-      #timeline .demo-card--step1 .head::after {
-        border-color: #46b8e9; }
-    #timeline .demo-card--step2 {
-      background-color: #3ee9d1; }
-      #timeline .demo-card--step2 .head::after {
-        border-color: #3ee9d1; }
-    #timeline .demo-card--step3 {
-      background-color: #ce43eb; }
-      #timeline .demo-card--step3 .head::after {
-        border-color: #ce43eb; }
-    #timeline .demo-card--step4 {
-      background-color: #4d92eb; }
-      #timeline .demo-card--step4 .head::after {
-        border-color: #4d92eb; }
-    #timeline .demo-card--step5 {
-      background-color: #46b8e9; }
-      #timeline .demo-card--step5 .head::after {
-        border-color: #46b8e9; }
-    #timeline .demo-card--step6 {
-      background-color: #3ee9d1; }
-      #timeline .demo-card--step6 .head::after {
-        border-color: #3ee9d1; }
-    #timeline .demo-card--step7 {
-      background-color: #ce43eb; }
-      #timeline .demo-card--step7 .head::after {
-        border-color: #ce43eb; }
+  }
+
+      .timeline > li:before,
+      .timeline > li:after {
+          content: " ";
+          display: table;
+      }
+
+      .timeline > li:after {
+          clear: both;
+      }
+
+      .timeline > li:before,
+      .timeline > li:after {
+          content: " ";
+          display: table;
+      }
+
+      .timeline > li:after {
+          clear: both;
+      }
+
+      .timeline > li > .timeline-panel {
+          width: 46%;
+          float: left;
+          border: 1px solid #d4d4d4;
+          border-radius: 2px;
+          padding: 20px;
+          position: relative;
+          -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+          box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+      }
+
+          .timeline > li > .timeline-panel:before {
+              position: absolute;
+              top: 26px;
+              right: -15px;
+              display: inline-block;
+              border-top: 15px solid transparent;
+              border-left: 15px solid #ccc;
+              border-right: 0 solid #ccc;
+              border-bottom: 15px solid transparent;
+              content: " ";
+          }
+
+          .timeline > li > .timeline-panel:after {
+              position: absolute;
+              top: 27px;
+              right: -14px;
+              display: inline-block;
+              border-top: 14px solid transparent;
+              border-left: 14px solid #fff;
+              border-right: 0 solid #fff;
+              border-bottom: 14px solid transparent;
+              content: " ";
+          }
+
+      .timeline > li > .timeline-badge {
+          color: #fff;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          font-size: 1.4em;
+          text-align: center;
+          position: absolute;
+          top: 16px;
+          left: 50%;
+          margin-left: -25px;
+          background-color: #999999;
+          z-index: 100;
+          border-top-right-radius: 50%;
+          border-top-left-radius: 50%;
+          border-bottom-right-radius: 50%;
+          border-bottom-left-radius: 50%;
+      }
+
+      .timeline > li.timeline-inverted > .timeline-panel {
+          float: right;
+      }
+
+          .timeline > li.timeline-inverted > .timeline-panel:before {
+              border-left-width: 0;
+              border-right-width: 15px;
+              left: -15px;
+              right: auto;
+          }
+
+          .timeline > li.timeline-inverted > .timeline-panel:after {
+              border-left-width: 0;
+              border-right-width: 14px;
+              left: -14px;
+              right: auto;
+          }
+
+.timeline-badge.primary {
+  background-color: #2e6da4 !important;
+}
+
+.timeline-badge.success {
+  background-color: #3f903f !important;
+}
+
+.timeline-badge.warning {
+  background-color: #f0ad4e !important;
+}
+
+.timeline-badge.danger {
+  background-color: #d9534f !important;
+}
+
+.timeline-badge.info {
+  background-color: #5bc0de !important;
+}
+
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+}
+
+  .timeline-body > p + p {
+      margin-top: 5px;
+  }
+
+@media (max-width: 767px) {
+  ul.timeline:before {
+      left: 40px;
+  }
+
+  ul.timeline > li > .timeline-panel {
+      width: calc(100% - 90px);
+      width: -moz-calc(100% - 90px);
+      width: -webkit-calc(100% - 90px);
+  }
+
+  ul.timeline > li > .timeline-badge {
+      left: 15px;
+      margin-left: 0;
+      top: 16px;
+  }
+
+  ul.timeline > li > .timeline-panel {
+      float: right;
+  }
+
+      ul.timeline > li > .timeline-panel:before {
+          border-left-width: 0;
+          border-right-width: 15px;
+          left: -15px;
+          right: auto;
+      }
+
+      ul.timeline > li > .timeline-panel:after {
+          border-left-width: 0;
+          border-right-width: 14px;
+          left: -14px;
+          right: auto;
+      }
+}

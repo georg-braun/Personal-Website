@@ -1,117 +1,136 @@
 <% include partials/header %>
 
-    <div class="container">
-        <section id=timeline>
-            <h1>Lebenslauf</h1>
-            <p class="leader"></p>
-            <div class="demo-card-wrapper">
-                <div class="demo-card demo-card--step1">
-                    <div class="head">
-                        <div class="number-box">
-                            <span>11.1992</span>
-                        </div>
-                        <h2><span class="small">Geburt</span> new human()</h2>
-                    </div>
-                    <div class="body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Soluta reiciendis deserunt doloribus
-                            consequatur, laudantium odio dolorum laboriosam.</p>
-                       
-                    </div>
-                </div>
-
-                <div class="demo-card demo-card--step2">
-                    <div class="head">
-                        <div class="number-box">
-                            <span>2003-2009</span>
-                        </div>
-                        <h2><span class="small">Realschule</span> ECR-Monschau</h2>
-                    </div>
-                    <div class="body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Soluta reiciendis deserunt doloribus
-                            consequatur, laudantium odio dolorum laboriosam.</p>
-                        <img src="http://placehold.it/1000x500" alt="Graphic">
-                    </div>
-                </div>
-
-                <div class="demo-card demo-card--step3">
-                    <div class="head">
-                        <div class="number-box">
-                            <span>2009-2011</span>
-                        </div>
-                        <h2><span class="small">Fachabitur</span> Wirtschaft & Verwaltung</h2>
-                    </div>
-                    <div class="body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Soluta reiciendis deserunt doloribus
-                            consequatur, laudantium odio dolorum laboriosam.</p>
-                        <img src="http://placehold.it/1000x500" alt="Graphic">
-                    </div>
-                </div>
-
-                <div class="demo-card demo-card--step4">
-                    <div class="head">
-                        <div class="number-box">
-                            <span>2011-2014</span>
-                        </div>
-                        <h2><span class="small">Ausbildung</span> FIAE</h2>
-                    </div>
-                    <div class="body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Soluta reiciendis deserunt doloribus
-                            consequatur, laudantium odio dolorum laboriosam.</p>
-                        <img src="http://placehold.it/1000x500" alt="Graphic">
-                    </div>
-                </div>
-
-                <div class="demo-card demo-card--step5">
-                    <div class="head">
-                        <div class="number-box">
-                            <span>2014-2018</span>
-                        </div>
-                        <h2><span class="small">B.Sc</span> Informatik</h2>
-                    </div>
-                    <div class="body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Soluta reiciendis deserunt doloribus
-                            consequatur, laudantium odio dolorum laboriosam.</p>
-                        <img src="http://placehold.it/1000x500" alt="Graphic">
-                    </div>
-                </div>
-
-                <div class="demo-card demo-card--step2">
-                    <div class="head">
-                        <div class="number-box">
-                            <span>2014+</span>
-                        </div>
-                        <h2><span class="small">Werkstudent</span> Inform GmbH</h2>
-                    </div>
-                    <div class="body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Soluta reiciendis deserunt doloribus
-                            consequatur, laudantium odio dolorum laboriosam.</p>
-                        <img src="http://placehold.it/1000x500" alt="Graphic">
-                    </div>
-                </div>
-                
-
-                <div class="demo-card demo-card--step3">
-                    <div class="head">
-                        <div class="number-box">
-                            <span>03/2017-08/2017</span>
-                        </div>
-                        <h2><span class="small">Praxissemester</span> Bosch Engineering</h2>
-                    </div>
-                    <div class="body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Soluta reiciendis deserunt doloribus
-                            consequatur, laudantium odio dolorum laboriosam.</p>
-                        <img src="http://placehold.it/1000x500" alt="Graphic">
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    </div>
-    <% include partials/footer %>
+<div class="container">
+  <div class="page-header">
+    <h1 id="timeline">Timeline</h1>
+  </div>
+  <ul class="timeline">
+    <li>
+      <div class="timeline-badge">
+        <i class="glyphicon glyphicon-check"></i>
+      </div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Georg.create()</h4>
+          <p>
+            <small class="text-muted"
+              ><i class="glyphicon glyphicon-time"></i> 1992</small
+            >
+          </p>
+        </div>
+        <div class="timeline-body">
+          <p></p>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-inverted">
+      <div class="timeline-badge warning">
+        <i class="glyphicon glyphicon-credit-card"></i>
+      </div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Realschule Monschau</h4>
+          <p>
+            <small class="text-muted"
+              ><i class="glyphicon glyphicon-time">2003 - 2009</i>
+            </small>
+          </p>
+        </div>
+        <div class="timeline-body">
+          <p></p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-badge danger">
+        <i class="glyphicon glyphicon-credit-card"></i>
+      </div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Fachabitur</h4>
+          <p>
+            <small class="text-muted"
+              ><i class="glyphicon glyphicon-time"></i> 2009 - 2011</small
+            >
+          </p>
+        </div>
+        <div class="timeline-body">
+          <p></p>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-inverted">
+      <div class="timeline-badge info">
+        <i class="glyphicon glyphicon-floppy-disk"></i>
+      </div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Ausbildung FIAE</h4>
+          <p>
+            <small class="text-muted"
+              ><i class="glyphicon glyphicon-time"></i> 2011 - 2014</small
+            >
+          </p>
+        </div>
+        <div class="timeline-body">
+          <p></p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-badge info">
+        <i class="glyphicon glyphicon-floppy-disk"></i>
+      </div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">B.Sc. Ingenieurinformatik</h4>
+          <p>
+            <small class="text-muted"
+              ><i class="glyphicon glyphicon-time"></i> 2014-2018</small
+            >
+          </p>
+        </div>
+        <div class="timeline-body">
+          <p></p>
+        </div>
+      </div>
+    </li>
+    <li class="timeline-inverted">
+      <div class="timeline-badge info">
+        <i class="glyphicon glyphicon-floppy-disk"></i>
+      </div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Praxissemester Bosch Engineering</h4>
+          <p>
+            <small class="text-muted"
+              ><i class="glyphicon glyphicon-time"></i> 03/2017 - 08/2017</small
+            >
+          </p>
+        </div>
+        <div class="timeline-body">
+          <p></p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-badge info">
+        <i class="glyphicon glyphicon-floppy-disk"></i>
+      </div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">M.Sc. ISE</h4>
+          <p>
+            <small class="text-muted"
+              ><i class="glyphicon glyphicon-time"></i> 2018+</small
+            >
+          </p>
+        </div>
+        <div class="timeline-body">
+          <p></p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+<% include partials/footer %>
