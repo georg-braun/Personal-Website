@@ -22,4 +22,6 @@ app.get("/projects", (req, res) => { res.render("pages/projects") });
 
 app.get("/profile", (req, res) => { res.render("pages/profile") });
 
+app.get("/impressum", (req, res) => {res.render("pages/impressum") });
+
 app.listen(PORT, () => { console.log(`Server started on Port ${PORT}`)});
