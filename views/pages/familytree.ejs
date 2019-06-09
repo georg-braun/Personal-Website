@@ -51,14 +51,13 @@
 			LoadFamilyTree();
 
 				async function getRelations() {
-					const relationRequest = await fetch("/stammbaum/beziehungen");
+					const relationRequest = await fetch("/familytree/relations");
 					const relations = await relationRequest.json();
 					return relations;
 				}
 
 				async function LoadFamilyTree() {
 					var hRelations = await getRelations();
-					console.log(hRelations);
 					FillDTreeWithRelations(hRelations)
 				}
 				

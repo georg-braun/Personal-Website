@@ -27,11 +27,11 @@ app.get("/profile", (req, res) => { res.render("pages/profile") });
 
 app.get("/impressum", (req, res) => {res.render("pages/impressum") });
 
-app.get("/stammbaum", (req, res) => {
-    res.render("pages/stammbaum")    
+app.get("/familytree", (req, res) => {
+    res.render("pages/familytree")    
 });
 
-var FStammbaumData = [{
+var FFamilyTreeRelations = [{
     "name": "Niclas Superlongsurname",
     "class": "man",
     "textClass": "emphasis",
@@ -81,8 +81,8 @@ var FStammbaumData = [{
     }]
   }];
 
-app.get("/stammbaum/beziehungen", (req, res) => {
-    res.json(FStammbaumData);
+app.get("/familytree/relations", (req, res) => {
+    res.json(FFamilyTreeRelations);
 });
 
 app.listen(PORT, () => { console.log(`Server started on Port ${PORT}`)});
