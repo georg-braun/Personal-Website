@@ -1,6 +1,5 @@
 const express = require("express");
 const path = require('path');
-const noSniff = require('dont-sniff-mimetype')
 const dTree = require("d3-dtree");
 const d3 = require("d3");
 
@@ -12,7 +11,6 @@ const PORT = process.env.PORT || 5000;
 var scssPath = path.join(__dirname, 'public/stylesheets/timeline.scss')
 console.log(scssPath);
 
-app.use(noSniff());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
