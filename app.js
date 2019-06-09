@@ -28,7 +28,61 @@ app.get("/profile", (req, res) => { res.render("pages/profile") });
 app.get("/impressum", (req, res) => {res.render("pages/impressum") });
 
 app.get("/stammbaum", (req, res) => {
-    res.render("pages/stammbaum", { StammbaumData : FStammbaumData })    
+    res.render("pages/stammbaum")    
+});
+
+var FStammbaumData = [{
+    "name": "Niclas Superlongsurname",
+    "class": "man",
+    "textClass": "emphasis",
+    "marriages": [{
+      "spouse": {
+        "name": "Iliana",
+        "class": "woman",
+        "extra": {
+          "nickname": "Illi"
+        }
+      },
+      "children": [{
+        "name": "James",
+        "class": "man",
+        "marriages": [{
+          "spouse": {
+            "name": "Alexandra",
+            "class": "woman"
+          },
+          "children": [{
+            "name": "Eric",
+            "class": "man",
+            "marriages": [{
+              "spouse": {
+                "name": "Eva",
+                "class": "woman"
+              }
+            }]
+          }, {
+            "name": "Jane",
+            "class": "woman"
+          }, {
+            "name": "Jasper",
+            "class": "man"
+          }, {
+            "name": "Emma",
+            "class": "woman"
+          }, {
+            "name": "Julia",
+            "class": "woman"
+          }, {
+            "name": "Jessica",
+            "class": "woman"
+          }]
+        }]
+      }]
+    }]
+  }];
+
+app.get("/stammbaum/beziehungen", (req, res) => {
+    res.json(FStammbaumData);
 });
 
 app.listen(PORT, () => { console.log(`Server started on Port ${PORT}`)});
