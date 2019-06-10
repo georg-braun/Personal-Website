@@ -29,10 +29,13 @@ app.get("/profile", (req, res) => { res.render("pages/profile") });
 
 app.get("/impressum", (req, res) => {res.render("pages/impressum") });
 
-app.get("/familytree", (req, res) => {
-    res.render("pages/familytree")    
+app.get("/projects/familytree", (req, res) => {
+    res.render("pages/projects/familytree")    
 });
 
+app.get("/projects/familytree-description", (req, res) => {
+     res.render("pages/projects/project-familytree-description")
+     });
 
 app.get("/familytree/relations", (req, res) => {
     res.json(familyTreeRelations);
