@@ -4,8 +4,8 @@ const path = require('path');
 const dTree = require("d3-dtree");
 const d3 = require("d3");
 
-// Data
 var familyTreeRelations = require("./data/familyRelations.json")
+
 
 const app = express();
 

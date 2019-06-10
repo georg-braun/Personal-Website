@@ -1,49 +1,36 @@
-[{
-    "name": "Niclas Superlongsurname",
+[
+  {
+    "name": "Georg Braun",
     "class": "man",
-    "textClass": "emphasis",
-    "marriages": [{
-      "spouse": {
-        "name": "Iliana",
-        "class": "woman",
-        "extra": {
-          "nickname": "Illi"
-        }
-      },
-      "children": [{
-        "name": "James",
-        "class": "man",
-        "marriages": [{
-          "spouse": {
-            "name": "Alexandra",
+    "marriages": [
+      {
+        "spouse": {
+          "name": "Katharina Braun",
+          "class": "woman"
+        },
+        "children": [
+          {
+            "name": "Achim",
+            "class": "man"
+          },
+          {
+            "name": "Otmar",
+            "class": "man"
+          },
+          {
+            "name": "Sigrid",
             "class": "woman"
           },
-          "children": [{
-            "name": "Eric",
-            "class": "man",
-            "marriages": [{
-              "spouse": {
-                "name": "Eva",
-                "class": "woman"
-              }
-            }]
-          }, {
-            "name": "Jane",
+          {
+            "name": "Katja",
             "class": "woman"
-          }, {
-            "name": "Jasper",
-            "class": "man"
-          }, {
-            "name": "Emma",
+          },
+          {
+            "name": "Christa",
             "class": "woman"
-          }, {
-            "name": "Julia",
-            "class": "woman"
-          }, {
-            "name": "Jessica",
-            "class": "woman"
-          }]
-        }]
-      }]
-    }]
-  }]
+          }
+        ]
+      }
+    ]
+  }
+]
