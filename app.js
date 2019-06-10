@@ -1,7 +1,11 @@
+// Modules
 const express = require("express");
 const path = require('path');
 const dTree = require("d3-dtree");
 const d3 = require("d3");
+
+// Data
+var familyTreeRelations = require("./data/familyRelations.json")
 
 const app = express();
 
@@ -29,58 +33,9 @@ app.get("/familytree", (req, res) => {
     res.render("pages/familytree")    
 });
 
-var FFamilyTreeRelations = [{
-    "name": "Niclas Superlongsurname",
-    "class": "man",
-    "textClass": "emphasis",
-    "marriages": [{
-      "spouse": {
-        "name": "Iliana",
-        "class": "woman",
-        "extra": {
-          "nickname": "Illi"
-        }
-      },
-      "children": [{
-        "name": "James",
-        "class": "man",
-        "marriages": [{
-          "spouse": {
-            "name": "Alexandra",
-            "class": "woman"
-          },
-          "children": [{
-            "name": "Eric",
-            "class": "man",
-            "marriages": [{
-              "spouse": {
-                "name": "Eva",
-                "class": "woman"
-              }
-            }]
-          }, {
-            "name": "Jane",
-            "class": "woman"
-          }, {
-            "name": "Jasper",
-            "class": "man"
-          }, {
-            "name": "Emma",
-            "class": "woman"
-          }, {
-            "name": "Julia",
-            "class": "woman"
-          }, {
-            "name": "Jessica",
-            "class": "woman"
-          }]
-        }]
-      }]
-    }]
-  }];
 
 app.get("/familytree/relations", (req, res) => {
-    res.json(FFamilyTreeRelations);
+    res.json(familyTreeRelations);
 });
 
 app.listen(PORT, () => { console.log(`Server started on Port ${PORT}`)});
