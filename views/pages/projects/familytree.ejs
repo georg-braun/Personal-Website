@@ -1,9 +1,9 @@
 <!-- Credits https://github.com/ErikGartner/dTree-->
 
-<% var rootPath = '../'; %>
-<%- include(rootPath + 'partials/header'); %>
+<% var rootPath= '../'; %>
+  <%- include(rootPath + 'partials/header'); %>
 
-	<style type="text/css">
+    <style type="text/css">
   .linage {
     fill: none;
     stroke: #000;
@@ -35,19 +35,58 @@
     border-style: solid;
     border-width: 1px;
   }
+  textarea {
+    width: 95%;
+    height: 300px;
+  }
 </style>
 
-	<script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
-	<script src="https://d3js.org/d3.v4.min.js"></script>
-	<script src="/dTree.js"></script>
+    <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="/dTree.js"></script>
 
-	<div class="container">
-		<h1>Stammbaum</h1>
-		<div id="graph"></div>
-	</div>
+    <div class="container">
+      <h2>Stammbaum</h2>
 
-	<script>
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="pills-home-tab" data-toggle="pill"
+            href="#pills-home" role="tab" aria-controls="pills-home"
+            aria-selected="true">Visuell</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill"
+            href="#pills-profile" role="tab" aria-controls="pills-profile"
+            aria-selected="false">Daten</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+          aria-labelledby="pills-home-tab">
+          <div id="graph"></div>
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+          aria-labelledby="pills-profile-tab">
+          <textarea id="relationsJson"></textarea>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+    <script>
   LoadFamilyTree();
+
+  var relationsJsonArea = document.getElementById("relationsJson");
+  if(relationsJsonArea.addEventListener){
+    relationsJsonArea.addEventListener("input", function(){
+      // Family Tree neu bauen, aber diesmal mit den Daten aus dem Textfeld
+      // -> Family Tree die Dependency von außen mit reingeben, was gerendert werden soll :)
+    }, false);
+  }
+
 
   async function getRelations() {
     const relationRequest = await fetch("/familytree/relations");
@@ -57,6 +96,7 @@
 
   async function LoadFamilyTree() {
     var hRelations = await getRelations();
+    document.getElementById("relationsJson").value = JSON.stringify(hRelations);
     FillDTreeWithRelations(hRelations);
   }
 
@@ -89,4 +129,4 @@
   }
 </script>
 
-<%- include(rootPath + 'partials/footer'); %>
+    <%- include(rootPath + 'partials/footer'); %>
