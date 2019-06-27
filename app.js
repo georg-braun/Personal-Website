@@ -36,6 +36,10 @@ app.get("/projects/familytree-description", (req, res) => {
      res.render("pages/projects/project-familytree-description")
      });
 
+app.get("/projects/website-description", (req, res) => {
+    res.render("pages/projects/project-website-description")
+    });     
+
 app.get("/familytree/relations", (req, res) => {
     res.json(familyTreeRelations);
 });
