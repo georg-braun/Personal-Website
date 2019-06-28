@@ -11,10 +11,47 @@
   <p>Wichtig war mir dabei, dass ich sowohl das Front- als auch Backend selber (Bibliotheken ausgenommen) erstelle um so mehr zu lernen.</p>
   <p>&nbsp;</p>
   <h3>Was habe ich bisher gemacht?</h3>
-  <p>Um überhaupt eine Orientierung zu haben was aktuell ist, beziehungsweise um einen Einstiegspunkt zu haben, startete ich mit einem Udemy-Kurs zur Webentwicklung: <em>The Web Developer Bootcamp</em> (<a href='https://www.udemy.com/the-web-developer-bootcamp/' target='_blank' class='url'>https://www.udemy.com/the-web-developer-bootcamp/</a>). Mit diesem Kurs und einiger Selbstrecherche habe ich dann begonnen meine eigene Webseite zu entwickeln. Vermutlich wird die Webseite verschiedene Ausbaustufen erhalten, da ich immer wieder neue Sachen ausprobieren, beziehungsweise entwickeln möchte. Deshalb wird diese Seite hier vielmehr als Historie und Dokumentation der verschidenen Ausbaustufen dienen :) </p>
+  <p>Um überhaupt eine Orientierung zu haben was aktuell ist, beziehungsweise um einen Einstiegspunkt zu haben, startete ich mit einem Udemy-Kurs zur Webentwicklung: <em>The Web Developer Bootcamp</em> (<a href='https://www.udemy.com/the-web-developer-bootcamp/' target='_blank' class='url'>https://www.udemy.com/the-web-developer-bootcamp/</a>). Mit diesem Kurs und einiger Selbstrecherche habe ich dann begonnen meine eigene Webseite zu entwickeln. Vermutlich wird die Webseite verschiedene Ausbaustufen erhalten, da ich immer wieder neue Sachen ausprobieren, beziehungsweise entwickeln möchte. Deshalb wird diese Seite hier vielmehr als Historie und Dokumentation der verschiedenen Ausbaustufen dienen :) </p>
   <p>&nbsp;</p>
+  <h3>Hosten einer statischen Webseite</h3>
+  <p><em>Stand: 06/2019</em></p>
+  <p>Die Entwicklung startete mit der Erstellung des notwendigen Webservers. Diese wurde mit Node.js und Express realisiert. Nach der Einrichtung der ersten Routen habe ich begonnen das Front-End zu erstellen. Zur Unterstützung bei der Gestaltung nutzte ich hauptsächlich Bootstrap 4. Um Redundanzen zu vermeiden habe ich Embedded JavaScript templating (EJS <a href='https://ejs.co/' target='_blank' class='url'>https://ejs.co/</a>) genutzt. Auf dem Bild sind dabei die verschiedenen Bereiche der Seite dargestellt. Es gab sowohl ein Header-, als auch Footer-Template, welche den Kopf- und Fußbereich (grün markiert) definierten. Der eigentliche Seiteninhalt (hier: Projekte) wird in einer eigenen Datei festgehalten und jeweils das Header und Footer Template mit eingebunden.</p>
+  <p><img src='/images/project-website-static.png' class="img-fluid" alt='project-website-static' referrerPolicy='no-referrer' /></p>
+  <p>Um die Ordnerstruktur des Servers etwas sauberer zu halten habe ich die &quot;Views&quot; noch in einen eigenen Ordner gelegt. Dazu habe ich der Express App mitgeteilt wo es nach den Views suchen soll.</p>
+  <p><code>app.set(&#39;views&#39;, path.join(__dirname, &#39;views&#39;))<span style='font-family:"Helvetica Neue", Helvetica, Arial, sans-serif'>;</span></code></p>
+  <p>Durch die Erstellung eines eigenen Webservers im Rahmen von Node.js ist es zudem einfacher die Webseite lokal zu testen, ohne jedesmal die Seite deployen zu müssen. </p>
+  <p>Bei der Projektübersicht (die oben auf dem Bild zu sehen ist), handelt es sich um statische Inhalte. Die Daten werden also nicht aus einer Datenbank bezogen, sondern sind hard-coded in der Seite. Deshalb ist es auch eins der nächsten Ziele, die Projekt-Artikel in eine Datenbank auszulagern, sodass die Daten aus dieser geladen werden. Somit wäre das Hinzufügen eines Artikels auch unabhängig von einem Deployment der Seite.</p>
+  <p>Das eigentliche Deployment der Seite, also das &quot;öffentlich&quot; machen, erfolgte über ein Hosting der Node-Applikation bei den Cloud Anbieter (PaaS) Heroku (<a href='http://www.heroku.com' target='_blank' class='url'>www.heroku.com</a>). Heroku hat ein eigenes CLI-Tool, dass das Deployment ermöglicht. Nach der Authentifizierung ist es dann möglich, das Git-Repository an Heroku zu übertragen (Push an einen Git-Heroku Remote). Für die Nutzung von Herok aus Hoster, bedarf es jedoch noch ein paar Anpassungen an der Node.js Applikation. So wird die Datei <code>Procfile</code> im Root-Verzeichnis vorausgesetzt. Der Inhalt dieser Datei ist aber sehr überschaubar:</p>
+  <pre><code>web: node app.js
+  
+  </code></pre>
+  <p>Damit hat Heroku den passenden Einstiegspunkt in die Applikation. Im Programm ist es noch wichtig den richtigen Port zu verwenden. Die hostende Umgebung bestimmt den Port, sodass dieser erst zur Laufzeit gesetzt werden kann:</p>
+  <pre><code>const PORT = process.env.PORT || 5000;
+  </code></pre>
+  <p>Für die lokale Entwicklung auf dem eigenen Rechner konnte der Port 5000 genutzt werden.</p>
+  <p>Somit war das grundsätzliche Deployment schon möglich. Jedoch wollte ich nicht immer in zwei Git-Remote-Repositories Pushen müssen (Gitlab zur eigenen Verwaltung und Heroku zum Deployment). Deshalb definierte ich mit Gitlab  CI  /CD eingen Job, der sich um das Deployment kümmerte. Die Konfiguration des Jobs (<code>.gitlab<span style='font-family:"Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>ci.yml</code>) sah wie folgt aus:</p>
+  <pre><code>image: node:latest
+  
+  stages:
+    - deploy
+  
+  deploy_production:
+    stage: deploy
+    image: ruby:latest
+    script:
+      - apt-get update -qy
+      - apt-get install -y ruby-dev
+      - gem install dpl
+      - dpl --provider=heroku --app=fierce-badlands-12125 --api-key=$HEROKU_API_KEY
+    environment:
+      name: production
+    only:
+      - master
+  
+  </code></pre>
+  <p>Wie man sieht wird im Rahmen des Jobs ein Docker-Container erzeugt, der auf einem Ruby Image basiert. Dort wird der Dpl Gem installiert (Deployment Provider). Mit der Angabe der Heroku-App und einem generierten API-Key, welcher natürlich nicht im Klartext enthalten ist ;) , kann dann über Dpl das Deployment erfolgen.</p>
   <p>&nbsp;</p>
-  <p>&nbsp;</p>
+  
   
   
 </div>

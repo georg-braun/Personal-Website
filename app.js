@@ -11,9 +11,6 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 
-var scssPath = path.join(__dirname, 'public/stylesheets/timeline.scss')
-console.log(scssPath);
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 
