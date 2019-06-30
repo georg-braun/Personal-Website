@@ -70,3 +70,4 @@ deploy_production:
 
 ```
 Wie man sieht wird im Rahmen des Jobs ein Docker-Container erzeugt, der auf einem Ruby Image basiert. Dort wird der Dpl Gem installiert (Deployment Provider). Mit der Angabe der Heroku-App und einem generierten API-Key, welcher natürlich nicht im Klartext enthalten ist ;) , kann dann über Dpl das Deployment erfolgen.
+
