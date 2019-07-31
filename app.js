@@ -1,17 +1,20 @@
 // Modules
 const express = require("express");
 const path = require('path');
+const converter = require('./converter');
 
 
 var familyTreeRelations = require("./data/familyRelations.json")
 
 
-const app = express();
 
+
+const app = express();
 const PORT = process.env.PORT || 5000;
 
 
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 
 app.set('views', path.join(__dirname, 'views'));
@@ -40,5 +43,16 @@ app.get("/projects/website-description", (req, res) => {
 app.get("/familytree/relations", (req, res) => {
     res.json(familyTreeRelations);
 });
+
+
+converter.getArticles('./data/articles', article => {
+    app.get(article.route, (req, res) => {
+        res.send(article.content);     
+    });  
+});
+
+
+
+
 
 app.listen(PORT, () => { console.log(`Server started on Port ${PORT}`)});
