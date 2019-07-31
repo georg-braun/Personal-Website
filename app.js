@@ -22,7 +22,8 @@ app.set('view engine', 'ejs');
 
 app.get("/", (req, res) => { res.render("pages/home") });
 
-app.get("/projects", (req, res) => { res.render("pages/projects") });
+app.get("/projects", (req, res) => { 
+    res.render("pages/projects", {Articles : Articles}) });
 
 app.get("/profile", (req, res) => { res.render("pages/profile") });
 
@@ -45,11 +46,13 @@ app.get("/familytree/relations", (req, res) => {
 });
 
 
+var Articles = [];
 converter.getArticles('./data/articles', article => {
-    app.get(article.route, (req, res) => {
-        //res.send(article.content);    
+    app.get(article.route, (req, res) => {  
         res.render('pages/article', { article : article}); 
     });  
+    Articles.push(article);
+
 });
 
 
