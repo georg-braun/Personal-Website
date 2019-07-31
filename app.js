@@ -47,7 +47,8 @@ app.get("/familytree/relations", (req, res) => {
 
 converter.getArticles('./data/articles', article => {
     app.get(article.route, (req, res) => {
-        res.send(article.content);     
+        //res.send(article.content);    
+        res.render('pages/article', { article : article}); 
     });  
 });
 
