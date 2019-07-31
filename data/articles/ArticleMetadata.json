@@ -1,0 +1,12 @@
+{
+  "metadata": [
+    {
+      "title": "Mein erster Artikel",
+      "file": "2019-07-31-Erster-Artikel.md",
+      "route": "/mein-erster-artikel",
+      "tags": ["JavaScript", "C#"],
+      "thumbnail": "thumbnails/testthumbnail.jpg",
+      "date": "2019-07-31"
+    }
+  ]
+}
