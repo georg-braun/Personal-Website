@@ -1,62 +1,38 @@
-const fs = require('fs');
-const path = require('path');
-const showdown = require('showdown');
-
+const fs = require("fs");
+const path = require("path");
+const showdown = require("showdown");
 
 var converter = new showdown.Converter();
-converter.setFlavor('github');
+converter.setFlavor("github");
 
+async function importArticles(_dirname, _articleFoundHandler) {
+  let hArticleInfos = getArticleInfos(
+    path.join(_dirname, "ArticleMetadata.json")
+  );
 
-async function readFiles(dirname, articleFoundHandler) {
-    let hArticleMetadataFilePath = path.join(dirname, "ArticleMetadata.json");
-    var hArticleMetaDataText = fs.readFileSync(hArticleMetadataFilePath);
-    var hArticleMetaData = JSON.parse(hArticleMetaDataText);
+  for (i = 0; i < hArticleInfos.metadata.length; i++) {
+    let hArticle = hArticleInfos.metadata[i];
+    let hArticleHTML = getArticleAsHtml(_dirname, hArticle);
+    hArticle.content = hArticleHTML;
 
-    for (i=0; i < hArticleMetaData.metadata.length; i++){
-        var hArticle = hArticleMetaData.metadata[i];
-        var hArticlePath = path.join(dirname, hArticle.file);
-        fs.readFile(hArticlePath, 'utf-8', (err, hArticleContent) => {
-            if (err){
-                console.log(err);
-                return;
-            }
-            var hArticleHtmlContent = ConvertMarkdownToHTML(hArticleContent);
-            hArticle.content = hArticleHtmlContent;
-            articleFoundHandler(hArticle);
-        });
-    }
-
-/*
-    fs.readdir(dirname, (err, filenames) => {
-        if (err) {
-            console.log(err);
-            return;
-        }
-
-        filenames.forEach(filename => {
-            
-            fs.readFile(hRelativeFilePath, 'utf-8', (err, content) => {
-                if (err){
-                    console.log(err);
-                    return;
-                }
-                var hArticle = ConvertMarkdownToArticle(content);
-                articleFoundHandler(hArticle);
-            });
-        });
-
-    });
-    */
+    _articleFoundHandler(hArticle);
+  }
 }
 
-
-
-function ConvertMarkdownToHTML(_markdown){
-    return converter.makeHtml(_markdown);
+function getArticleInfos(_metadataPath) {
+  let hArticleMetaDataText = fs.readFileSync(_metadataPath);
+  return JSON.parse(hArticleMetaDataText);
 }
 
-async function getArticles(dir, articleFoundHandler){
-    readFiles(dir, articleFoundHandler);    
+function getArticleAsHtml(_dirname, _articleMetadata) {
+  let hArticlePath = path.join(_dirname, _articleMetadata.file);
+
+  let hArticleMarkdown = fs.readFileSync(hArticlePath, "utf-8");
+  return ConvertMarkdownToHTML(hArticleMarkdown);
 }
 
-module.exports = { readFiles , getArticles };
+function ConvertMarkdownToHTML(_markdown) {
+  return converter.makeHtml(_markdown);
+}
+
+module.exports = { importArticles };

@@ -7,6 +7,14 @@
       "tags": ["JavaScript", "C#"],
       "thumbnail": "thumbnails/testthumbnail.jpg",
       "date": "2019-07-31"
+    },
+    {
+      "title": "Erstellung eines Stammbaums",
+      "file": "2019-08-01-Stammbaum.md",
+      "route": "/erstellung-stammbaum",
+      "tags": [],
+      "thumbnail": "thumbnails/testthumbnail.jpg",
+      "date": "2019-08-01"
     }
   ]
 }
