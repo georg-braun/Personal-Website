@@ -1,20 +1,23 @@
 {
   "metadata": [
     {
-      "title": "Mein erster Artikel",
-      "file": "2019-07-31-Erster-Artikel.md",
-      "route": "/mein-erster-artikel",
-      "tags": ["JavaScript", "C#"],
-      "thumbnail": "thumbnails/testthumbnail.jpg",
-      "date": "2019-07-31"
-    },
-    {
       "title": "Erstellung eines Stammbaums",
+      "description": "Entwicklung eines Familienstammbaums",
       "file": "2019-08-01-Stammbaum.md",
       "route": "/erstellung-stammbaum",
       "tags": [],
       "thumbnail": "thumbnails/testthumbnail.jpg",
       "date": "2019-08-01"
+    },
+    {
+      "title": "Erstellung der Webseite",
+      "description": "Gestaltung einer eigenen Webseite",
+      "file": "2019-07-01-Webseite.md",
+      "route": "/erstellung-webseite",
+      "tags": ["JavaScript", "EJS"],
+      "thumbnail": "thumbnails/testthumbnail.jpg",
+      "date": "2019-07-01"
     }
+
   ]
 }

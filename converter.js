@@ -11,11 +11,14 @@ async function importArticles(_dirname, _articleFoundHandler) {
   );
 
   for (i = 0; i < hArticleInfos.metadata.length; i++) {
-    let hArticle = hArticleInfos.metadata[i];
-    let hArticleHTML = getArticleAsHtml(_dirname, hArticle);
-    hArticle.content = hArticleHTML;
-
-    _articleFoundHandler(hArticle);
+    try {
+      let hArticle = hArticleInfos.metadata[i];
+      let hArticleHTML = getArticleAsHtml(_dirname, hArticle);
+      hArticle.content = hArticleHTML;
+      _articleFoundHandler(hArticle);
+    } catch (error) {
+      console.log("Fehler beim Artikel-Import: " + error);
+    }
   }
 }
 
