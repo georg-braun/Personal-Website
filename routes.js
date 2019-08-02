@@ -29,25 +29,21 @@ router.get("/projects/familytree", (req, res) => {
   res.render("pages/projects/familytree");
 });
 
-router.get("/projects/familytree-description", (req, res) => {
-  res.render("pages/projects/project-familytree-description");
-});
-
-router.get("/projects/website-description", (req, res) => {
-  res.render("pages/projects/project-website-description");
-});
-
 var familyTreeRelations = require("./data/familyRelations.json");
 router.get("/familytree/relations", (req, res) => {
   res.json(familyTreeRelations);
 });
 
 var Articles = [];
-converter.importArticles("./data/articles", article => {
-  router.get(article.route, (req, res) => {
-    res.render("pages/article", { article: article });
+function addArticleRoutes() {
+  converter.importArticles("./data/articles", article => {
+    router.get(article.route, (req, res) => {
+      res.render("pages/article", { article: article });
+    });
+    Articles.push(article);
   });
-  Articles.push(article);
-});
+}
+
+addArticleRoutes();
 
 module.exports = router;
