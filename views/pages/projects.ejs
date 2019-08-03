@@ -1,34 +1,22 @@
 <% include partials/header %>
 
-
 <div class="container">
   <div class="row">
-    <div class="col-sm-6">
+    <% Articles.forEach(function(article){ %>
+    <div class="col-sm-4">
       <div class="card">
-          <img src="/images/project-familyTree-image.jpg" alt="FamilyTreeImage" class="card-img-top">
+        <img src="<%= article.thumbnail %>" alt="FamilyTreeImage" class="card-img-top" />
         <div class="card-body">
-          <h5 class="card-title">Stammbaum</h5>
-          <span class="badge badge-info">Aktiv</span>
-          <p class="card-text">
-            Entwicklung eines Familienstammbaums 
-          </p>
-          <a href="/projects/familytree-description" class="btn btn-primary">Projektbeschreibung</a>
+          <h5 class="card-title"><%= article.title %></h5>
+          <small class="text-muted">
+            <p> <i class="far fa-clock"> <%= article.date %></i>
+          </small></p>
+          <p class="card-text"><%= article.description %></p>
+          <a href="<%= article.route %>" class="btn btn-primary">Mehr</a>
         </div>
       </div>
     </div>
-    <div class="col-sm-6">
-      <div class="card">
-          <img src="/images/project-website-image.jpg" alt="FamilyTreeImage" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title">Eigene Webseite</h5>
-          <span class="badge badge-info">Aktiv</span>
-          <p class="card-text">
-            Gestaltung einer eigenen Webseite
-          </p>
-          <a href="/projects/website-description" class="btn btn-primary">Projektbeschreibung</a>
-        </div>
-      </div>
-    </div>
+    <% }); %>
   </div>
 </div>
 
