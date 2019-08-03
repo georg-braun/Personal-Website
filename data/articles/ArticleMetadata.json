@@ -6,8 +6,8 @@
       "file": "2019-08-01-Stammbaum.md",
       "route": "/erstellung-stammbaum",
       "tags": [],
-      "thumbnail": "thumbnails/testthumbnail.jpg",
-      "date": "2019-08-01"
+      "thumbnail": "thumbnails/tree.jpg",
+      "date": "01.07.2019"
     },
     {
       "title": "Erstellung der Webseite",
@@ -15,8 +15,8 @@
       "file": "2019-07-01-Webseite.md",
       "route": "/erstellung-webseite",
       "tags": ["JavaScript", "EJS"],
-      "thumbnail": "thumbnails/testthumbnail.jpg",
-      "date": "2019-07-01"
+      "thumbnail": "thumbnails/code.jpg",
+      "date": "01.06.2019"
     }
 
   ]
