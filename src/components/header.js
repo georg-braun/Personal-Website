@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import VisitCard from "./visitcard"
 
+
 const Header = ({ siteTitle }) => (
   <header>
     <VisitCard></VisitCard>       
