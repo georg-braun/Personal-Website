@@ -6,6 +6,9 @@ import VisitCard from "./visitcard"
 import Contactlist from "./contactlist"
 import { Navbar, Nav } from "react-bootstrap"
 
+
+
+
 const Header = ({ siteTitle }) => (
   <Navbar bg="dark" expand="lg" sticky="top">
     <Navbar.Brand><VisitCard ></VisitCard></Navbar.Brand>
@@ -19,7 +22,6 @@ const Header = ({ siteTitle }) => (
       <Contactlist></Contactlist>
     </Navbar.Collapse>
   </Navbar>
-
 )
 
 Header.propTypes = {
