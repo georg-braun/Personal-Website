@@ -6,7 +6,16 @@ import VisitCard from "./visitcard"
 import Contactlist from "./contactlist"
 import { Navbar, Nav } from "react-bootstrap"
 
+import styled from "styled-components"
 
+const StyledNavLink = styled(Nav.Link)`
+  color: LightGray !important;
+
+  :hover {
+    color: white !important;
+  }
+
+`
 
 
 const Header = ({ siteTitle }) => (
@@ -15,9 +24,9 @@ const Header = ({ siteTitle }) => (
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
-        <Nav.Link>Blog</Nav.Link>
-        <Nav.Link>Wissen</Nav.Link>
-        <Nav.Link>Profil</Nav.Link>
+        <StyledNavLink>Blog</StyledNavLink>
+        <StyledNavLink>Wissen</StyledNavLink>
+        <StyledNavLink>Profil</StyledNavLink>
       </Nav>
       <Contactlist></Contactlist>
     </Navbar.Collapse>
