@@ -14,10 +14,10 @@ export default ({ data }) => (
     <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.id}>
-        <p>
-          {node.fileAbsolutePath}
-        </p>
-        <p>{node.excerpt}</p>
+        <Link to={node.fields.slug}>
+          <h4>{node.frontmatter.title}</h4>
+        </Link>
+        
       </div>
     ))}
 
@@ -26,13 +26,19 @@ export default ({ data }) => (
 )
 
 export const query = graphql`
-  {
-    allMarkdownRemark {
+  query {
+    allMarkdownRemark{
+      totalCount
       edges {
         node {
           id
-          html
-          fileAbsolutePath
+          frontmatter {
+            title
+          }
+          fields {
+            slug
+          }
+          excerpt
         }
       }
     }
