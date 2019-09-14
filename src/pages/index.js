@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 
+
 import React from "react"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
