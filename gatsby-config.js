@@ -26,7 +26,7 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    /*{
+    {
       resolve: `gatsby-source-git`,
       options: {
         name: `knowledge-repo`,
@@ -36,14 +36,14 @@ module.exports = {
         // Tailor which files get imported eg. import the docs folder from a codebase.
         patterns: `**`
       }
-    },*/
+    },
     {
       resolve: `gatsby-source-filesystem`,  // Laden der Markdown-Dateien
       options: {
         name: `markdown`,
-        path: `${__dirname}/src/markdown`,
+        path: `${__dirname}/src`,
       },
-    },
+       },
     {
       resolve: `gatsby-transformer-remark`, // Transformator der Markdowns
       options: {
