@@ -4,11 +4,17 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 const StyledBadge = styled(Badge)`
-    margin-right: 3px;
+  margin-right: 3px;
 `
 
-
 const KnowledgeLink = ({ title, path, tags }) => {
+  var hArticleTags = null
+  if (tags !== null) {
+    hArticleTags = tags.map(tag => {
+      return <StyledBadge variant="secondary">{tag}</StyledBadge>
+    })
+  }
+
   return (
     <>
       <Row>
@@ -17,12 +23,7 @@ const KnowledgeLink = ({ title, path, tags }) => {
             <h6>{title}</h6>
           </Link>
         </Col>
-        <Col>
-          {tags.map(tag => {
-            return  <StyledBadge variant="secondary">{tag}</StyledBadge>
-          })}
-         
-        </Col>
+        <Col>{hArticleTags}</Col>
       </Row>
     </>
   )

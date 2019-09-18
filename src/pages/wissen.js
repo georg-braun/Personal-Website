@@ -12,7 +12,9 @@ import KnowledgeLink from "../components/knowledge-link"
 function createKnowledgeOverview(data) {
   var hLastCategory = null
 
+
   var hOverview = data.allMarkdownRemark.edges.map(({ node }) => {
+   
     var hCurrentCategory = node.frontmatter.category
 
     // Check if the a new category header is necessary
@@ -45,14 +47,10 @@ export default ({ data }) => (
   </Layout>
 )
 
+// It's important to filter out articles, that don`t have a category and title
 export const query = graphql`
   {
-    allMarkdownRemark(
-      sort: {
-        fields: [frontmatter___category, frontmatter___title]
-        order: ASC
-      }
-    ) {
+    allMarkdownRemark(sort: {fields: [frontmatter___category, frontmatter___title], order: ASC}, filter: {frontmatter: {category: {ne: null}, title: {ne: null}}}) {
       edges {
         node {
           fields {
