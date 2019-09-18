@@ -24,9 +24,9 @@ const Header = ({ siteTitle }) => (
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
-        <StyledNavLink>Blog</StyledNavLink>
-        <StyledNavLink>Wissen</StyledNavLink>
-        <StyledNavLink>Profil</StyledNavLink>
+        <StyledNavLink href="/" >Blog</StyledNavLink>
+        <StyledNavLink  href="/wissen">Wissen</StyledNavLink>
+        <StyledNavLink href="/profil">Profil</StyledNavLink>
       </Nav>
       <Contactlist></Contactlist>
     </Navbar.Collapse>
