@@ -14,7 +14,7 @@ const KnowledgeLink = ({ title, path, tags }) => {
       <Row>
         <Col>
           <Link to={path}>
-            <h5>{title}</h5>
+            <h6>{title}</h6>
           </Link>
         </Col>
         <Col>
