@@ -26,8 +26,8 @@ export const query = graphql`
   {
     allMarkdownRemark(
       sort: {
-        fields: [frontmatter___category, frontmatter___title]
-        order: ASC
+        fields: [frontmatter___date]
+        order: DESC
       }
       filter: {
         frontmatter: { category: { ne: null }, title: { ne: null } }
