@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Georg Braun`,
+    description: `Persönlicher Blog, Wissensdatenbank und Projektseite`,
+    author: `@georgbraun`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -55,6 +55,12 @@ module.exports = {
       resolve: `gatsby-transformer-remark`, // Transformator der Markdowns
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: `100`,
+            },
+          },         
           {
             resolve: `gatsby-remark-prismjs`, // Code-Highlighting
             options: {

@@ -9,7 +9,6 @@ import SEO from "../components/seo"
 import BlogEntry from "../components/blog-entry"
 
 function createBlogOverview(_blogdata) {
-  console.log(_blogdata)
   return _blogdata.edges.map(({ node }) => {
     return <BlogEntry title={node.frontmatter.title} path={node.fields.slug} date={node.frontmatter.date} category={node.frontmatter.category} imageName={node.frontmatter.image} excerpt={node.frontmatter.excerpt}></BlogEntry>
     
@@ -19,7 +18,6 @@ function createBlogOverview(_blogdata) {
 export default ({ data }) => (
 
   <Layout>
-     { console.log(data)}
     <SEO title="Blog" />
     {createBlogOverview(data.blogdata)}
   </Layout>

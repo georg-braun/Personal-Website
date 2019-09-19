@@ -41,7 +41,6 @@ exports.createPages = async ({ graphql, actions }) => {
         // Decide which template to use
         var hComponent = path.resolve(`./src/templates/knowledge-post.js`)
         if (node.fileAbsolutePath.includes("/data/blog/")){
-          console.log(node.fileAbsolutePath)
           hComponent = path.resolve(`./src/templates/blog-post.js`)
         }
 
