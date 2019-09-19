@@ -8,8 +8,15 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Header from "./header"
 import {Container} from "react-bootstrap"
+import styled from "styled-components"
+import Header from "./header"
+
+
+const StyledContainer = styled(Container)`
+  padding-top: 40px;
+`
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -22,12 +29,13 @@ const Layout = ({ children }) => {
     }
   `)
 
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Container>
+      <StyledContainer>
         <main>{children}</main>
-        </Container>
+        </StyledContainer>
     </>
   )
 }

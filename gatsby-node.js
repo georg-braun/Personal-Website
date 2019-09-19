@@ -19,6 +19,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     })
   }
 }
+
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
     const result = await graphql(`
@@ -29,15 +30,24 @@ exports.createPages = async ({ graphql, actions }) => {
               fields {
                 slug
               }
+              fileAbsolutePath
             }
           }
         }
       }
     `)
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+
+        // Decide which template to use
+        var hComponent = path.resolve(`./src/templates/knowledge-post.js`)
+        if (node.fileAbsolutePath.includes("/data/blog/")){
+          console.log(node.fileAbsolutePath)
+          hComponent = path.resolve(`./src/templates/blog-post.js`)
+        }
+
         createPage({
           path: node.fields.slug,
-          component: path.resolve(`./src/templates/knowledge-post.js`),
+          component: hComponent,
           context: {
             // Data passed to context is available
             // in page queries as GraphQL variables.

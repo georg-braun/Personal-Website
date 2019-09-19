@@ -8,7 +8,7 @@ const BlogEntryMetadata = styled.span`
   color: grey;
 `
 const BlogEntryRow = styled(Row)`
-  margin-top: 40px;
+  margin-bottom: 40px;
 `
 
 const BlogEntryExcerpt = styled.div`
