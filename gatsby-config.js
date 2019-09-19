@@ -34,16 +34,23 @@ module.exports = {
         // Optionally supply a branch. If none supplied, you'll get the default branch.
         branch: `master`,
         // Tailor which files get imported eg. import the docs folder from a codebase.
-        patterns: `**`
-      }
+        patterns: `**`,
+      },
     },
     {
-      resolve: `gatsby-source-filesystem`,  // Laden der Markdown-Dateien
+      resolve: `gatsby-source-filesystem`, // Laden der Markdown-Dateien
       options: {
         name: `markdown`,
         path: `${__dirname}/src/data/blog`,
       },
-       },
+    },
+    {
+      resolve: `gatsby-source-filesystem`, 
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/data/images`,
+      },
+    },
     {
       resolve: `gatsby-transformer-remark`, // Transformator der Markdowns
       options: {
@@ -66,7 +73,7 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-images`,  // Verarbeitet die in den Markdowns genutzten Bilder (benötigt z.B. das source-filesystem Plugin)
+            resolve: `gatsby-remark-images`, // Verarbeitet die in den Markdowns genutzten Bilder (benötigt z.B. das source-filesystem Plugin)
             options: {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
@@ -79,5 +86,6 @@ module.exports = {
     },
     // Laden/Transformieren von Bildern
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 }

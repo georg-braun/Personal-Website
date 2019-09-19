@@ -1,6 +1,7 @@
 ---
 title: "Erstellung eines eigenen Familienstammbaums"
 date: 2019-08-01 00:00:00
+image: "tree.jpg"
 category: "it"
 ---
 

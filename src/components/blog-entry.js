@@ -1,7 +1,8 @@
 import React from "react"
 import { Row, Col, Badge } from "react-bootstrap"
-import { Link } from "gatsby"
+import { useStaticQuery, Link } from "gatsby"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 const BlogEntryMetadata = styled.span`
   margin-right: 20px;
@@ -15,35 +16,68 @@ const BlogEntryExcerpt = styled.div`
   margin-top: 15px;
 `
 
-const BlogImg = styled.img`
-
-:hover {
-  transform: translate(0,-5px);
-  -webkit-transform: translate(0,-5px);
-  -o-transform: translate(0,-5px); 
-  -moz-transform: translate(0,-5px);
-  transition-duration: .5s;
-}
+const StyledBlogImg = styled(Img)`
+  :hover {
+    transform: translate(0, -5px);
+    -webkit-transform: translate(0, -5px);
+    -o-transform: translate(0, -5px);
+    -moz-transform: translate(0, -5px);
+    transition-duration: 0.5s;
+  }
 `
 
-const BlogEntry = ({ title, path, category, date, excerpt, image }) => {
+function getBlogEntryImage(data, imageName) {
+  const hImageEdge = data.allImageSharp.edges.find(
+    edge => edge.node.fluid.originalName === imageName
+  )
+
+  var hBlogImage = null
+  if (hImageEdge) {
+    hBlogImage = <StyledBlogImg fluid={hImageEdge.node.fluid} alt="" />
+  }
+
+  return hBlogImage
+}
+
+const BlogEntry = ({
+  title,
+  path,
+  category,
+  date,
+  excerpt,
+  imageName,
+}) => {
+  // As far as I know it`s not possible to use variables in static queries. So I try to get all images and filter them afterwards.
+  const data = useStaticQuery(graphql`
+    {
+      allImageSharp {
+        edges {
+          node {
+            fluid {
+              ...GatsbyImageSharpFluid
+              originalName
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  var hBlogEntryImage = getBlogEntryImage(data, imageName)
+
   return (
     <>
       <BlogEntryRow>
         <Col lg={4} md={4} sm={12}>
-        <Link to={path}>
-        <BlogImg src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"></BlogImg>
-          </Link>
-         
+          <Link to={path}>{hBlogEntryImage}</Link>
         </Col>
         <Col>
           <Link to={path}>
             <h3>{title}</h3>
           </Link>
-           <BlogEntryMetadata>{date}</BlogEntryMetadata>     
-           <BlogEntryMetadata>Kategorie: {category}</BlogEntryMetadata>   
-           <BlogEntryExcerpt>{excerpt}</BlogEntryExcerpt> 
-
+          <BlogEntryMetadata>{date}</BlogEntryMetadata>
+          <BlogEntryMetadata>Kategorie: {category}</BlogEntryMetadata>
+          <BlogEntryExcerpt>{excerpt}</BlogEntryExcerpt>
         </Col>
       </BlogEntryRow>
     </>

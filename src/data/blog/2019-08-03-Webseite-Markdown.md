@@ -2,6 +2,7 @@
 title: "Umstellung der Seite auf Markdown"
 date: 2019-08-03 00:00:00
 category: "it"
+image: "simple.jpg"
 ---
 
 **tldr**

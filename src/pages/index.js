@@ -8,23 +8,26 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogEntry from "../components/blog-entry"
 
-function createBlogOverview(data) {
-  return data.allMarkdownRemark.edges.map(({ node }) => {
-    return <BlogEntry title={node.frontmatter.title} path={node.fields.slug} date={node.frontmatter.date} category={node.frontmatter.category} image={node.frontmatter.image} excerpt={node.frontmatter.excerpt}></BlogEntry>
+function createBlogOverview(_blogdata) {
+  console.log(_blogdata)
+  return _blogdata.edges.map(({ node }) => {
+    return <BlogEntry title={node.frontmatter.title} path={node.fields.slug} date={node.frontmatter.date} category={node.frontmatter.category} imageName={node.frontmatter.image} excerpt={node.frontmatter.excerpt}></BlogEntry>
     
   })
 }
 
 export default ({ data }) => (
+
   <Layout>
+     { console.log(data)}
     <SEO title="Blog" />
-    {createBlogOverview(data)}
+    {createBlogOverview(data.blogdata)}
   </Layout>
 )
 
 export const query = graphql`
   {
-    allMarkdownRemark(
+    blogdata: allMarkdownRemark(
       sort: {
         fields: [frontmatter___date]
         order: DESC
@@ -53,5 +56,6 @@ export const query = graphql`
         }
       }
     }
+    
   }
 `
