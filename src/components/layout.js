@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import {Container} from "react-bootstrap"
 import styled from "styled-components"
 import Header from "./header"
+import Footer from "./footer"
 
 
 const StyledContainer = styled(Container)`
@@ -36,6 +37,7 @@ const Layout = ({ children }) => {
       <StyledContainer>
         <main>{children}</main>
         </StyledContainer>
+        <Footer>Hey</Footer>
     </>
   )
 }
