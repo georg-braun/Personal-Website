@@ -3,10 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { Alert } from "react-bootstrap"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import KnowledgeLink from "../components/knowledge-link"
+
+
 
 // Assumes that the data is ordered by category
 function createKnowledgeOverview(data) {
@@ -37,13 +40,18 @@ function createKnowledgeOverview(data) {
   return hOverview
 }
 
+
+const StyledAlert = styled(Alert)`
+  background-color: #f1d302;
+`
+
 export default ({ data }) => {
   const [show, setShow] = useState(true)
 
   var hAlert = null
   if (show) {
     hAlert = (
-      <Alert variant="info" onClose={() => setShow(false)} dismissible>
+      <StyledAlert  onClose={() => setShow(false)} dismissible>
         <Alert.Heading>Was ist das hier?</Alert.Heading>
         <p>
           Das hier ist meine 📝 Notiz-Sammlung zu diversen Themen, die mir als
@@ -60,9 +68,12 @@ export default ({ data }) => {
           <br></br>
           🙋 Feedback ist immer gerne gesehen.
         </p>
-      </Alert>
+      </StyledAlert>
     )
   } 
+
+
+
 
   return (
     <Layout>

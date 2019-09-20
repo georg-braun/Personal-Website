@@ -11,7 +11,7 @@ const StyledHeaderAvatar = styled.img`
 
 const AvatarLocationDescription = styled.span`
   font-size: 0.7em;
-  color: white;
+  color: #fdfffc;
 `
 
 const VisitCard = () => (
