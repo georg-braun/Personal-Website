@@ -5,4 +5,8 @@
  */
 
 // You can delete this file if you're not using it
-require("prismjs/themes/prism-tomorrow.css")
+import "bootstrap/dist/css/bootstrap.min.css";
+require("prismjs/themes/prism-tomorrow.css");
+require("./src/styles/timeline.css");
+require("./src/styles/markdown-post.css");
+

@@ -6,28 +6,41 @@ import AvatarImg from "../images/avatar.png"
 const StyledHeaderAvatar = styled.img`
   border-radius: 50%;
   width: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
   margin: 0px;
 `
 
-const AvatarLocationDescription = styled.span`
+
+const AvatarLocationDescription = styled.div`
+  display: inline-block;
+  vertical-align: middle;
   font-size: 0.7em;
   color: #fdfffc;
+  line-height: normal;
+  margin-left: 10px;
+  margin-right: 20px;
+  font-size: 0.6em;
 `
 
 const VisitCard = () => (
   <>
-    <Container>
-      <Row>
-        <Col>
-          <StyledHeaderAvatar src={AvatarImg} alt="Avatar"></StyledHeaderAvatar>
-        </Col>
-        <Col className="align-self-center">
-          <AvatarLocationDescription>
-            Georg Braun | <span role="img" aria-label="gps">📍</span> Aachen | <span role="img" aria-label="worker">👷</span> Softwareentwickler
-          </AvatarLocationDescription>
-        </Col>
-      </Row>
-    </Container>
+    <div>
+      <StyledHeaderAvatar src={AvatarImg} alt="Avatar"></StyledHeaderAvatar>
+
+      <AvatarLocationDescription>
+        Georg Braun <br></br>
+        <span role="img" aria-label="gps">
+          📍
+        </span>
+        Aachen <br></br>
+        <span role="img" aria-label="worker">
+          👷
+        </span>
+        Softwareentwickler
+      </AvatarLocationDescription>
+    </div>
   </>
 )
 

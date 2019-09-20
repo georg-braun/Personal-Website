@@ -1,0 +1,15 @@
+
+.markdown-post h1 {
+  margin-top: 30px;
+}
+.markdown-post h2,
+.markdown-post h3,
+.markdown-post h4,
+.markdown-post h5,
+.markdown-post h6 {
+  margin-top: 50px;
+}
+
+.markdown-post a {
+  color: grey !important;
+}

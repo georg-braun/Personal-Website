@@ -26,6 +26,7 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-git`,
       options: {

@@ -7,7 +7,7 @@ margin-top: 30px;
 margin-bottom: 30px;
 font-size: 0.7em;
 text-align: center;
-color: grey;
+color: black !important;
 `
 
 export default () => {

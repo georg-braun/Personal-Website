@@ -1,21 +1,19 @@
 import React from "react"
-import {Badge} from "react-bootstrap"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Badge } from "react-bootstrap"
 import {
-  faWrench,
-  faClock,
-  faMapMarkerAlt,
-  faSchool,
-  faIndustry,
-  faGraduationCap,
-  faBriefcase,
-  faRoute,
-  faHammer,
-} from "@fortawesome/free-solid-svg-icons"
+  FaWrench,
+  FaClock,
+  FaMapMarkerAlt,
+  FaSchool,
+  FaIndustry,
+  FaGraduationCap,
+  FaBriefcase,
+  FaRoute,
+  FaHammer,
+} from "react-icons/fa"
 
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import "./timeline.css"
 
 export default () => (
   <Layout>
@@ -25,19 +23,19 @@ export default () => (
       <ul class="timeline">
         <li>
           <div class="timeline-badge success">
-            <FontAwesomeIcon icon={faWrench} />
+            <FaWrench />
           </div>
           <div class="timeline-panel">
             <div class="timeline-heading">
               <h4 class="timeline-title">Georg.create()</h4>
               <p>
                 <small class="text-muted">
-                  <FontAwesomeIcon icon={faClock} /> 1992
+                  <FaClock /> 1992
                 </small>
 
                 <br></br>
                 <small class="text-muted">
-                  <FontAwesomeIcon icon={faMapMarkerAlt} /> Simmerath
+                  <FaMapMarkerAlt /> Simmerath
                 </small>
               </p>
             </div>
@@ -48,18 +46,18 @@ export default () => (
         </li>
         <li class="timeline-inverted">
           <div class="timeline-badge warning">
-            <FontAwesomeIcon icon={faSchool} />
+            <FaSchool />
           </div>
           <div class="timeline-panel">
             <div class="timeline-heading">
               <h4 class="timeline-title">Realschule Monschau</h4>
               <p>
                 <small class="text-muted">
-                  <FontAwesomeIcon icon={faClock} /> 2003 - 2009
+                  <FaClock /> 2003 - 2009
                 </small>
                 <br></br>
                 <small class="text-muted">
-                  <FontAwesomeIcon icon={faMapMarkerAlt} /> Monschau
+                  <FaMapMarkerAlt /> Monschau
                 </small>
               </p>
             </div>
@@ -70,18 +68,18 @@ export default () => (
         </li>
         <li>
           <div class="timeline-badge danger">
-            <FontAwesomeIcon icon={faSchool} />
+            <FaSchool />
           </div>
           <div class="timeline-panel">
             <div class="timeline-heading">
               <h4 class="timeline-title">Fachhochschulreife</h4>
               <p>
                 <small class="text-muted">
-                  <FontAwesomeIcon icon={faClock} /> 2009 - 2011
+                  <FaClock /> 2009 - 2011
                 </small>
                 <br></br>
                 <small class="text-muted">
-                  <FontAwesomeIcon icon={faMapMarkerAlt} /> Aachen
+                  <FaMapMarkerAlt /> Aachen
                 </small>
               </p>
             </div>
@@ -92,7 +90,7 @@ export default () => (
         </li>
         <li class="timeline-inverted">
           <div class="timeline-badge info">
-            <FontAwesomeIcon icon={faIndustry} />
+            <FaIndustry />
           </div>
           <div class="timeline-panel">
             <div class="timeline-heading">
@@ -101,12 +99,11 @@ export default () => (
               </h4>
               <p>
                 <small class="text-muted">
-                  <FontAwesomeIcon icon={faClock} /> 2011 - 2014
+                  <FaClock /> 2011 - 2014
                 </small>
                 <br></br>
                 <small class="text-muted">
-                  <FontAwesomeIcon icon={faMapMarkerAlt} /> Oberforstbach
-                  (Aachen)
+                  <FaMapMarkerAlt /> Oberforstbach (Aachen)
                 </small>
               </p>
             </div>
@@ -119,18 +116,18 @@ export default () => (
         </li>
         <li>
           <div class="timeline-badge warning">
-            <FontAwesomeIcon icon={faGraduationCap} />
+            <FaGraduationCap />
           </div>
           <div class="timeline-panel">
             <div class="timeline-heading">
               <h4 class="timeline-title">B.Sc. Ingenieurinformatik</h4>
               <p>
                 <small class="text-muted">
-                  <FontAwesomeIcon icon={faClock} /> 2014-2018
+                  <FaClock /> 2014-2018
                 </small>
                 <br></br>
                 <small class="text-muted">
-                  <FontAwesomeIcon icon={faMapMarkerAlt} /> Aachen
+                  <FaMapMarkerAlt /> Aachen
                 </small>
               </p>
             </div>
@@ -144,18 +141,18 @@ export default () => (
         </li>
         <li class="timeline-inverted">
           <div class="timeline-badge danger">
-            <FontAwesomeIcon icon={faBriefcase} />
+            <FaBriefcase />
           </div>
           <div class="timeline-panel">
             <div class="timeline-heading">
               <h4 class="timeline-title">Werkstudent Softwareentwickler</h4>
               <p>
                 <small class="text-muted">
-                  <FontAwesomeIcon icon={faClock} /> 2014+
+                  <FaClock /> 2014+
                 </small>
                 <br></br>
                 <small class="text-muted">
-                  <i class="fas fa-map-marker-alt"></i> Oberforstbach (Aachen)
+                  <FaMapMarkerAlt /> Oberforstbach (Aachen)
                 </small>
               </p>
             </div>
@@ -169,18 +166,18 @@ export default () => (
         </li>
         <li>
           <div class="timeline-badge success">
-            <FontAwesomeIcon icon={faRoute} />
+            <FaRoute />
           </div>
           <div class="timeline-panel">
             <div class="timeline-heading">
               <h4 class="timeline-title">Praxissemester Bosch Engineering</h4>
               <p>
                 <small class="text-muted">
-                  <FontAwesomeIcon icon={faClock} /> 03/2017 - 08/2017
+                  <FaClock /> 03/2017 - 08/2017
                 </small>
                 <br></br>
                 <small class="text-muted">
-                  <FontAwesomeIcon icon={faMapMarkerAlt} /> Abstatt
+                  <FaMapMarkerAlt /> Abstatt
                 </small>
               </p>
             </div>
@@ -191,7 +188,7 @@ export default () => (
         </li>
         <li class="timeline-inverted">
           <div class="timeline-badge warning">
-            <FontAwesomeIcon icon={faGraduationCap} />
+            <FaGraduationCap />
           </div>
           <div class="timeline-panel">
             <div class="timeline-heading">
@@ -200,11 +197,11 @@ export default () => (
               </h4>
               <p>
                 <small class="text-muted">
-                  <FontAwesomeIcon icon={faClock} /> 2018 - 2019
+                  <FaClock /> 2018 - 2019
                 </small>
                 <br></br>
                 <small class="text-muted">
-                  <FontAwesomeIcon icon={faMapMarkerAlt} /> Aachen
+                  <FaMapMarkerAlt /> Aachen
                 </small>
               </p>
             </div>
@@ -218,27 +215,24 @@ export default () => (
         </li>
         <li class="timeline">
           <div class="timeline-badge info">
-            <FontAwesomeIcon icon={faHammer} />
+            <FaHammer />
           </div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4 class="timeline-title">
-                Softwareentwickler (INFORM GmbH)
-              </h4>
+              <h4 class="timeline-title">Softwareentwickler (INFORM GmbH)</h4>
               <p>
                 <small class="text-muted">
-                  <FontAwesomeIcon icon={faClock} /> 2019+
+                  <FaClock /> 2019+
                 </small>
                 <br></br>
                 <small class="text-muted">
-                  <FontAwesomeIcon icon={faMapMarkerAlt} /> Oberforstbach (Aachen)
+                  <FaMapMarkerAlt /> Oberforstbach (Aachen)
                 </small>
               </p>
             </div>
             <div class="timeline-body">
               <p>
                 <Badge variant="info">C#</Badge>
-                
               </p>
             </div>
           </div>
