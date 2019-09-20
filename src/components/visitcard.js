@@ -23,7 +23,7 @@ const VisitCard = () => (
         </Col>
         <Col className="align-self-center">
           <AvatarLocationDescription>
-            Georg Braun | 📍 Aachen | 👷 Softwareentwickler
+            Georg Braun | <span role="img" aria-label="gps">📍</span> Aachen | <span role="img" aria-label="worker">👷</span> Softwareentwickler
           </AvatarLocationDescription>
         </Col>
       </Row>

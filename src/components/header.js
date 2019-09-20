@@ -1,16 +1,12 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import VisitCard from "./visitcard"
 
 import Contactlist from "./contactlist"
-import { Navbar, Nav, Button } from "react-bootstrap"
+import { Navbar, Nav } from "react-bootstrap"
 
 import styled from "styled-components"
 
-const StyledNavLink = styled(Nav.Link)`
-
-`
 
 const StyledNavText = styled.span`
 color: #fdfffc !important;

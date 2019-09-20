@@ -54,7 +54,7 @@ export default ({ data }) => {
       <StyledAlert  onClose={() => setShow(false)} dismissible>
         <Alert.Heading>Was ist das hier?</Alert.Heading>
         <p>
-          Das hier ist meine 📝 Notiz-Sammlung zu diversen Themen, die mir als
+          Das hier ist meine <span role="img" aria-label="sheet">📝</span>  Notiz-Sammlung zu diversen Themen, die mir als
           Nachschlagewerk dient.{" "}
         </p>
         <p>
@@ -64,9 +64,9 @@ export default ({ data }) => {
           profitieren können.
         </p>
         <p>
-          ⚠️ Sehr wahrscheinlich sind nicht alle Notiz-Inhalte korrekt.{" "}
+        <span role="img" aria-label="warning">⚠️</span> Sehr wahrscheinlich sind nicht alle Notiz-Inhalte korrekt.{" "}
           <br></br>
-          🙋 Feedback ist immer gerne gesehen.
+          <span role="img" aria-label="wave">🙋</span> Feedback ist immer gerne gesehen.
         </p>
       </StyledAlert>
     )
