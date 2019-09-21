@@ -19,7 +19,7 @@ const Contactlist = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <StyledIconContainer>
+        <StyledIconContainer leftMostIcon>
           <FaXing />
         </StyledIconContainer>
       </a>
