@@ -28,14 +28,20 @@ const StyledContainer = styled(Container)`
   padding-top: 40px;
 `
 
-const FullHeightContainer = styled.div`
-  height: "100%";
-`
+
 
 const NameInfoItem = styled(Menu.Item)`
-@media (max-width: 600px) {
-  display: none !important;
-}
+  @media (max-width: 600px) {
+    display: none !important;
+  }
+`
+const AvatarName = styled.div`
+margin-bottom: 12px;
+font-size: 1.3em;
+`
+const AvatarDescription = styled.div`
+  margin-bottom: 9px;
+  font-size: 0.8em;
 `
 
 const Layout = ({ children, title }) => {
@@ -57,31 +63,28 @@ const Layout = ({ children, title }) => {
   }
 
   return (
-    <FullHeightContainer>
+    <>
       <Menu inverted fixed="top">
-        
-        <div onMouseOver={() => {
-            setVisible(true)
-          }}>
-        <Menu.Item
-          onClick={() => {
+        <div
+          onMouseOver={() => {
             setVisible(true)
           }}
         >
-          <Icon name="bars"></Icon>
-        </Menu.Item>
+          <Menu.Item
+            onClick={() => {
+              setVisible(true)
+            }}
+          >
+            <Icon name="bars"></Icon>
+          </Menu.Item>
         </div>
 
         {SiteTitleInfo}
         <Menu.Menu position="right">
-
-        <NameInfoItem position="right">
-         Georg Braun
-        
-        </NameInfoItem>
-        <Menu.Item position="right">
-          <ContactList></ContactList>
-        </Menu.Item>
+          <NameInfoItem position="right">Georg Braun</NameInfoItem>
+          <Menu.Item position="right">
+            <ContactList></ContactList>
+          </Menu.Item>
         </Menu.Menu>
       </Menu>
 
@@ -99,8 +102,18 @@ const Layout = ({ children, title }) => {
         <Menu.Item>
           <div>
             <Image src={AvatarImg} circular></Image>
-            <div>Georg Braun</div>
-            <div>Aachen</div>
+            <AvatarName>Georg Braun</AvatarName>
+            <AvatarDescription>
+              <span role="img" aria-label="gps">
+                📍
+              </span>{" "}
+              Aachen
+            </AvatarDescription>
+            <AvatarDescription>
+            <span role="img" aria-label="worker">
+          👷
+        </span> Softwareentwickler
+            </AvatarDescription>
           </div>
         </Menu.Item>
 
@@ -109,15 +122,15 @@ const Layout = ({ children, title }) => {
           Home
         </Menu.Item>
         <Menu.Item as="a" href="/wissen">
-          <Icon name="gamepad" />
+          <Icon name="book" />
           Wissen
         </Menu.Item>
         <Menu.Item as="a" href="/projekte">
-          <Icon name="camera" />
+          <Icon name="pencil" />
           Projekte
         </Menu.Item>
         <Menu.Item as="a" href="/profil">
-          <Icon name="camera" />
+          <Icon name="user circle" />
           Profil
         </Menu.Item>
       </Sidebar>
@@ -130,7 +143,7 @@ const Layout = ({ children, title }) => {
           <Footer>Hey</Footer>
         </Segment>
       </Sidebar.Pusher>
-    </FullHeightContainer>
+    </>
   )
 }
 
