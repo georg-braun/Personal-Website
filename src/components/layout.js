@@ -91,7 +91,7 @@ const Layout = ({ children, title }) => {
       <Sidebar
         className="mobile-sidebar"
         as={Menu}
-        animation="push"
+        animation="overlay"
         icon="labeled"
         inverted
         onHide={() => setVisible(false)}
