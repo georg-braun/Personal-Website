@@ -2,9 +2,11 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+const siteTitle = "Impressum"
+
 export default ({ data }) => (
-  <Layout>
-    <SEO title="Impressum" />
+  <Layout title={siteTitle}  >
+    <SEO title={siteTitle} />
     <h1>Impressum</h1>
     <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
     <p>

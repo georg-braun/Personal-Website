@@ -15,9 +15,11 @@ import {
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 
+const siteTitle="Profil"
+
 export default () => (
-  <Layout>
-    <SEO title="Profil" />
+  <Layout title={siteTitle} >
+    <SEO title={siteTitle}  />
 
     <div class="container">
       <ul class="timeline">

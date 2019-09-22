@@ -12,6 +12,7 @@ const StyledMetadata = styled.div`
   margin-bottom: 30px;
 `
 
+
 export default ({ data }) => {
   const post = data.markdownRemark
   return (

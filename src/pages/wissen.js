@@ -44,6 +44,7 @@ function createKnowledgeOverview(data) {
 const StyledAlert = styled(Alert)`
   background-color: #f1d302;
 `
+const siteTitle = "Wissen";
 
 export default ({ data }) => {
   const [show, setShow] = useState(true)
@@ -76,8 +77,8 @@ export default ({ data }) => {
 
 
   return (
-    <Layout>
-      <SEO title="Wissen" />
+    <Layout title={siteTitle} >
+      <SEO title={siteTitle}  />
       {hAlert}
       <h6>{data.allMarkdownRemark.totalCount} Themen</h6>
       {createKnowledgeOverview(data)}

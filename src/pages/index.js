@@ -11,11 +11,12 @@ function createBlogOverview(_blogdata) {
     
   })
 }
+const siteTitle="Blog";
 
 export default ({ data }) => (
 
-  <Layout>
-    <SEO title="Blog" />
+  <Layout title={siteTitle}>
+    <SEO title={siteTitle} />
     {createBlogOverview(data.blogdata)}
   </Layout>
 )

@@ -34,7 +34,7 @@ const Header = ({ siteTitle }) => (
     </Navbar.Brand>
     <StyledNavbarToggle aria-controls="basic-navbar-nav" />
 
-    <Navbar.Collapse id="basic-navbar-nav">
+    <Navbar.Collapse id="basic-navbar-nav" >
       <Nav className="mr-auto">
         <Nav.Link href="/"><StyledNavText>Blog</StyledNavText></Nav.Link>
         <Nav.Link href="/wissen"><StyledNavText>Wissen</StyledNavText></Nav.Link>
