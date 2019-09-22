@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Container } from "react-bootstrap"
 import styled from "styled-components"
+import ContactList from "./contactlist"
 import Footer from "./footer"
 import {
   Header,
@@ -28,9 +29,8 @@ const StyledContainer = styled(Container)`
 `
 
 const FullHeightContainer = styled.div`
-height: "100%";
+  height: "100%";
 `
-
 
 const Layout = ({ children, title }) => {
   const data = useStaticQuery(graphql`
@@ -52,16 +52,19 @@ const Layout = ({ children, title }) => {
 
   return (
     <FullHeightContainer>
-       <Menu inverted fixed="top">
-            <Menu.Item
-              onClick={() => {
-                setVisible(true)
-              }}
-            >
-              <Icon name="bars"></Icon>
-            </Menu.Item>
-            {SiteTitleInfo}
-          </Menu>
+      <Menu inverted fixed="top">
+        <Menu.Item
+          onClick={() => {
+            setVisible(true)
+          }}
+        >
+          <Icon name="bars"></Icon>
+        </Menu.Item>
+        {SiteTitleInfo}
+        <Menu.Item position="right">
+          <ContactList></ContactList>{" "}
+        </Menu.Item>
+      </Menu>
 
       <Sidebar
         className="mobile-sidebar"
@@ -102,7 +105,6 @@ const Layout = ({ children, title }) => {
 
       <Sidebar.Pusher>
         <Segment basic>
-         
           <StyledContainer>
             <main>{children}</main>
           </StyledContainer>
