@@ -32,6 +32,12 @@ const FullHeightContainer = styled.div`
   height: "100%";
 `
 
+const NameInfoItem = styled(Menu.Item)`
+@media (max-width: 600px) {
+  display: none !important;
+}
+`
+
 const Layout = ({ children, title }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -43,7 +49,7 @@ const Layout = ({ children, title }) => {
     }
   `)
 
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(false)
 
   var SiteTitleInfo = null
   if (title !== undefined) {
@@ -53,6 +59,10 @@ const Layout = ({ children, title }) => {
   return (
     <FullHeightContainer>
       <Menu inverted fixed="top">
+        
+        <div onMouseOver={() => {
+            setVisible(true)
+          }}>
         <Menu.Item
           onClick={() => {
             setVisible(true)
@@ -60,10 +70,19 @@ const Layout = ({ children, title }) => {
         >
           <Icon name="bars"></Icon>
         </Menu.Item>
+        </div>
+
         {SiteTitleInfo}
+        <Menu.Menu position="right">
+
+        <NameInfoItem position="right">
+         Georg Braun
+        
+        </NameInfoItem>
         <Menu.Item position="right">
-          <ContactList></ContactList>{" "}
+          <ContactList></ContactList>
         </Menu.Item>
+        </Menu.Menu>
       </Menu>
 
       <Sidebar
