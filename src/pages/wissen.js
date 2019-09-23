@@ -1,40 +1,43 @@
-import "bootstrap/dist/css/bootstrap.min.css"
-
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { Alert } from "react-bootstrap"
 import styled from "styled-components"
-
+import { Input } from 'semantic-ui-react'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import KnowledgeLink from "../components/knowledge-link"
+import Contactlist from "../components/contactlist"
 
 
 
 // Assumes that the data is ordered by category
-function createKnowledgeOverview(data) {
+function createKnowledgeOverview(data, filterString) {
   var hLastCategory = null
 
   var hOverview = data.allMarkdownRemark.edges.map(({ node }) => {
-    var hCurrentCategory = node.frontmatter.category
+    
+    if (node.frontmatter.title.includes(filterString) || node.rawMarkdownBody.includes(filterString) || node.frontmatter.tags.includes(filterString)) {
 
-    // Check if the a new category header is necessary
-    var hCategoryHeader = null
-    if (hCurrentCategory !== hLastCategory) {
-      hCategoryHeader = <h3>{hCurrentCategory}</h3>
-      hLastCategory = hCurrentCategory
+      var hCurrentCategory = node.frontmatter.category
+  
+      // Check if a new category header is necessary
+      var hCategoryHeader = null
+      if (hCurrentCategory !== hLastCategory) {
+        hCategoryHeader = <h3>{hCurrentCategory}</h3>
+        hLastCategory = hCurrentCategory
+      }
+  
+      return (
+        <>
+          {hCategoryHeader}
+          <KnowledgeLink
+            title={node.frontmatter.title}
+            path={node.fields.slug}
+            tags={node.frontmatter.tags}
+          ></KnowledgeLink>
+        </>
+      )
     }
-
-    return (
-      <>
-        {hCategoryHeader}
-        <KnowledgeLink
-          title={node.frontmatter.title}
-          path={node.fields.slug}
-          tags={node.frontmatter.tags}
-        ></KnowledgeLink>
-      </>
-    )
   })
 
   return hOverview
@@ -42,12 +45,17 @@ function createKnowledgeOverview(data) {
 
 
 const StyledAlert = styled(Alert)`
-  background-color: #f1d302;
+  background-color: #1b1c1d;
+  color: white;
 `
+
+
+
 const siteTitle = "Wissen";
 
 export default ({ data }) => {
   const [show, setShow] = useState(true)
+  const [filter, setFilter] = useState("")
 
   var hAlert = null
   if (show) {
@@ -67,7 +75,7 @@ export default ({ data }) => {
         <p>
         <span role="img" aria-label="warning">⚠️</span> Sehr wahrscheinlich sind nicht alle Notiz-Inhalte korrekt.{" "}
           <br></br>
-          <span role="img" aria-label="wave">🙋</span> Feedback ist immer gerne gesehen.
+          <span role="img" aria-label="wave">🙋</span> Feedback ist immer gerne gesehen: <strong>@</strong> ( <Contactlist></Contactlist> )
         </p>
       </StyledAlert>
     )
@@ -81,7 +89,18 @@ export default ({ data }) => {
       <SEO title={siteTitle}  />
       {hAlert}
       <h6>{data.allMarkdownRemark.totalCount} Themen</h6>
-      {createKnowledgeOverview(data)}
+      <Input laceholder="Titel, Inhalt, Tag" onChange={(event, data) => setFilter(data.value)}
+          action={{
+            color: 'teal',
+            labelPosition: 'left',
+            icon: 'search',
+            content: 'Suche',
+          }}
+          actionPosition='left'
+          placeholder='Titel, Inhalt, Tag'
+      ></Input>
+
+      {createKnowledgeOverview(data, filter)}
     </Layout>
   )
 }
@@ -113,6 +132,7 @@ export const query = graphql`
           }
           fileAbsolutePath
           tableOfContents
+          rawMarkdownBody
         }
       }
     }
