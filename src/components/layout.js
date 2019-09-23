@@ -28,16 +28,14 @@ const StyledContainer = styled(Container)`
   padding-top: 40px;
 `
 
-
-
 const NameInfoItem = styled(Menu.Item)`
   @media (max-width: 600px) {
     display: none !important;
   }
 `
 const AvatarName = styled.div`
-margin-bottom: 12px;
-font-size: 1.3em;
+  margin-bottom: 12px;
+  font-size: 1.3em;
 `
 const AvatarDescription = styled.div`
   margin-bottom: 9px;
@@ -110,16 +108,17 @@ const Layout = ({ children, title }) => {
               Aachen
             </AvatarDescription>
             <AvatarDescription>
-            <span role="img" aria-label="worker">
-          👷
-        </span> Softwareentwickler
+              <span role="img" aria-label="worker">
+                👷
+              </span>{" "}
+              Softwareentwickler
             </AvatarDescription>
           </div>
         </Menu.Item>
 
         <Menu.Item as="a" href="/">
           <Icon name="home" />
-          Home
+          Blog
         </Menu.Item>
         <Menu.Item as="a" href="/wissen">
           <Icon name="book" />
