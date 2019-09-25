@@ -7,21 +7,11 @@
 
 import React, { useState } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import { Container } from "react-bootstrap"
 import styled from "styled-components"
 import ContactList from "./contactlist"
 import Footer from "./footer"
-import {
-  Header,
-  Icon,
-  Image,
-  Menu,
-  Segment,
-  Sidebar,
-  Sidebar as SidebarMobile,
-  Sidebar as SidebarDekstop,
-} from "semantic-ui-react"
+import { Icon, Image, Menu, Segment, Sidebar } from "semantic-ui-react"
 import AvatarImg from "../images/avatar.png"
 
 const StyledContainer = styled(Container)`
@@ -43,16 +33,6 @@ const AvatarDescription = styled.div`
 `
 
 const Layout = ({ children, title }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   const [visible, setVisible] = useState(false)
 
   var SiteTitleInfo = null

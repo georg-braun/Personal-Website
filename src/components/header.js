@@ -1,20 +1,17 @@
 import PropTypes from "prop-types"
 import React from "react"
-import VisitCard from "./visitcard"
-
 import Contactlist from "./contactlist"
 import { Navbar, Nav } from "react-bootstrap"
 
 import styled from "styled-components"
 
-
 const StyledNavText = styled.span`
-color: #fdfffc !important;
-:hover {
-  color: #ffffff !important;
-  border-bottom: 2px solid white;
-  padding-bottom: 2px;
-}
+  color: #fdfffc !important;
+  :hover {
+    color: #ffffff !important;
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
+  }
 `
 
 const StyledNavbar = styled(Navbar)`
@@ -26,20 +23,27 @@ const StyledNavbarToggle = styled(Navbar.Toggle)`
   background: transparent !important;
 `
 
-
 const Header = ({ siteTitle }) => (
-  <StyledNavbar  expand="lg" sticky="top">
+  <StyledNavbar expand="lg" sticky="top">
     <Navbar.Brand>
       <VisitCard></VisitCard>
     </Navbar.Brand>
     <StyledNavbarToggle aria-controls="basic-navbar-nav" />
 
-    <Navbar.Collapse id="basic-navbar-nav" >
+    <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
-        <Nav.Link href="/"><StyledNavText>Blog</StyledNavText></Nav.Link>
-        <Nav.Link href="/wissen"><StyledNavText>Wissen</StyledNavText></Nav.Link>
-        <Nav.Link href="/projekte"><StyledNavText>Projekte</StyledNavText></Nav.Link>
-        <Nav.Link href="/profil"><StyledNavText>Profil</StyledNavText></Nav.Link>
+        <Nav.Link href="/">
+          <StyledNavText>Blog</StyledNavText>
+        </Nav.Link>
+        <Nav.Link href="/wissen">
+          <StyledNavText>Wissen</StyledNavText>
+        </Nav.Link>
+        <Nav.Link href="/projekte">
+          <StyledNavText>Projekte</StyledNavText>
+        </Nav.Link>
+        <Nav.Link href="/profil">
+          <StyledNavText>Profil</StyledNavText>
+        </Nav.Link>
       </Nav>
       <Contactlist></Contactlist>
     </Navbar.Collapse>

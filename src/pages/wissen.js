@@ -11,11 +11,13 @@ import Contactlist from "../components/contactlist"
 // Assumes that the data is ordered by category
 function createKnowledgeOverview(data, filterString) {
   var hLastCategory = null
-  var hFilterString = filterString.toLowerCase()
 
   var hFilterRegExp = new RegExp(filterString, "i") // i = case insensitive
 
   var hOverview = data.allMarkdownRemark.edges.map(({ node }) => {
+
+    var hKnowledgeEntry = null;
+
     if (
       hFilterRegExp.test(node.frontmatter.title) ||
       hFilterRegExp.test(node.rawMarkdownBody) ||
@@ -30,7 +32,9 @@ function createKnowledgeOverview(data, filterString) {
         hLastCategory = hCurrentCategory
       }
 
-      return (
+
+
+      hKnowledgeEntry = (
         <>
           {hCategoryHeader}
           <KnowledgeLink
@@ -41,6 +45,9 @@ function createKnowledgeOverview(data, filterString) {
         </>
       )
     }
+
+    return hKnowledgeEntry;
+    
   })
 
   return hOverview
