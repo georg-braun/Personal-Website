@@ -7,7 +7,7 @@ import BlogEntry from "../components/blog-entry"
 
 function createBlogOverview(_blogdata) {
   return _blogdata.edges.map(({ node }) => {
-    return <BlogEntry title={node.frontmatter.title} path={node.fields.slug} date={node.frontmatter.date} category={node.frontmatter.category} imageName={node.frontmatter.image} excerpt={node.frontmatter.excerpt}></BlogEntry>
+    return <BlogEntry key={node.frontmatter.title} title={node.frontmatter.title} path={node.fields.slug} date={node.frontmatter.date} category={node.frontmatter.category} imageName={node.frontmatter.image} excerpt={node.frontmatter.excerpt}></BlogEntry>
     
   })
 }
