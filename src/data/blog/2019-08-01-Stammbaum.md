@@ -24,5 +24,5 @@ Daraufhin wurde die dTree Demo mit in die Webseite eingebunden und das GrundgerÃ
 
 Damit stand das GrundgerÃ¼st und es stand die Pflege der Daten an.
 
-[Zum Stammbaum](/projects/familytree)
+[Zum Stammbaum](http://stammbaum.georg-braun.de/)
 
