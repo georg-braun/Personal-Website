@@ -52,6 +52,27 @@ export default ({ data }) => (
             </StyledButton>
           </ProjectEntry>
         </Col>
+        <Col lg="6">
+          <ProjectEntry
+            projectTitle="GraphToDTreeConverter"
+            projectDuration="08/2019"
+            image={data.graphdotreeconverter.edges[0].node.fluid}
+            link="https://www.npmjs.com/package/graphtodtreeconverter/v/1.0.0"
+            tags={["JavaScript", "NPM"]}
+          >
+            <StyledButton
+              fluid
+              href="https://gitlab.com/georg.braun92/graphtodtreeconverter/blob/master/README.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <StyledIconContainer>
+                <FaGitlab />
+              </StyledIconContainer>
+              Code + Projektbeschreibung
+            </StyledButton>
+          </ProjectEntry>
+        </Col>       
       </Row>
     </ProjectContainer>
   </Layout>
@@ -62,6 +83,16 @@ export const query = graphql`
     familienstammbaum: allImageSharp(
       filter: { fluid: { originalName: { regex: "/stammbaum-preview.jpg/" } } }
     ) {
+      edges {
+        node {
+          fluid {
+            ...GatsbyImageSharpFluid
+            originalName
+          }
+        }
+      }
+    }
+    graphdotreeconverter: allImageSharp(filter: {fluid: {originalName: {regex: "/arrow-wall.jpg/"}}}) {
       edges {
         node {
           fluid {

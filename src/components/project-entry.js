@@ -71,7 +71,7 @@ export default ({
   return (
     <StyledProjectContainer>
       <a href={link} target="_blank" rel="noopener noreferrer">
-        <StyledImg fluid={image} alt="" />
+        <StyledImg fluid={image} alt=""  />
         <ProjectBody>
           <ProjectTitle>{projectTitle}</ProjectTitle>
 
