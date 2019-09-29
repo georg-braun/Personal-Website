@@ -8,8 +8,6 @@ import styled from "styled-components"
 import { FaGitlab } from "react-icons/fa"
 import ProjectEntry from "../components/project-entry"
 
-
-
 const StyledButton = styled(Button)`
   margin-bottom: 5px !important;
 
@@ -37,7 +35,7 @@ export default ({ data }) => (
           <ProjectEntry
             projectTitle="Familienstammbaum"
             projectDuration="08/2019"
-            image={data.allImageSharp.edges[0].node.fluid}
+            image={data.familienstammbaum.edges[0].node.fluid}
             link="http://stammbaum.georg-braun.de"
             tags={["React", "DTree"]}
           >
@@ -61,7 +59,7 @@ export default ({ data }) => (
 
 export const query = graphql`
   {
-    allImageSharp(
+    familienstammbaum: allImageSharp(
       filter: { fluid: { originalName: { regex: "/stammbaum-preview.jpg/" } } }
     ) {
       edges {
