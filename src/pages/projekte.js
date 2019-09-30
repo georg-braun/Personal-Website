@@ -57,7 +57,7 @@ export default ({ data }) => (
             projectTitle="GraphToDTreeConverter"
             projectDuration="08/2019"
             image={data.graphdotreeconverter.edges[0].node.fluid}
-            link="https://www.npmjs.com/package/graphtodtreeconverter/v/1.0.0"
+            link="https://www.npmjs.com/package/graphtodtreeconverter/"
             tags={["JavaScript", "NPM"]}
           >
             <StyledButton
