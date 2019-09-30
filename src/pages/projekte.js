@@ -56,7 +56,7 @@ export default ({ data }) => (
           <ProjectEntry
             projectTitle="GraphToDTreeConverter"
             projectDuration="08/2019"
-            image={data.graphdotreeconverter.edges[0].node.fluid}
+            image={data.graphtodtreeconverter.edges[0].node.fluid}
             link="https://www.npmjs.com/package/graphtodtreeconverter/"
             tags={["JavaScript", "NPM"]}
           >
@@ -92,7 +92,7 @@ export const query = graphql`
         }
       }
     }
-    graphdotreeconverter: allImageSharp(filter: {fluid: {originalName: {regex: "/arrow-wall.jpg/"}}}) {
+    graphtodtreeconverter: allImageSharp(filter: {fluid: {originalName: {regex: "/arrow-wall.jpg/"}}}) {
       edges {
         node {
           fluid {
