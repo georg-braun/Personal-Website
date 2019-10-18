@@ -64,12 +64,11 @@ const PersonInfo = ({ children, link }) => {
 }
 
 // Um die Kontext-Referenz für das Sticky zu erstellen ist es notwendig eine Komponenten Klasse zu erstellen
-class Layout extends Component {
-  contextRef = React.createRef()
+const Layout = ({children}) => {
 
-  render() {
     return (
       <>
+      
         <Container>
           <StyledMenu size="huge" borderless>
             <Menu.Menu position="right">
@@ -121,13 +120,14 @@ class Layout extends Component {
                 </FixedContent>
               </ProfileContainer>
             </Grid.Column>
-            <Grid.Column mobile={16} computer={12}>{this.props.children}</Grid.Column>
+            <Grid.Column mobile={16} computer={12}>{children}</Grid.Column>
           </Grid>
         </Container>
       </>
     )
   }
-}
+
+
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
