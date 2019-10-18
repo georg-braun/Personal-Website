@@ -27,13 +27,13 @@ const StyledContainer = styled(Container)`
   padding-top: 40px;
 `
 
-const OnlyComputerColumn = styled(Grid.Column)`
+
+const ProfileContainer = styled.div`
+  padding-top: 50px;
+
   @media (max-width: 600px) {
     display: none !important;
   }
-`
-const ProfileContainer = styled.div`
-  padding-top: 120px;
 `
 
 const ImageContainer = styled.div`
@@ -51,7 +51,9 @@ const StyledPersonInfoContent = styled.div`
   color: black;
 `
 
-
+const FixedContent = styled.div`
+  position: fixed;
+`
 
 const PersonInfo = ({ children, link }) => {
   return (
@@ -60,8 +62,6 @@ const PersonInfo = ({ children, link }) => {
     </a>
   )
 }
-
-
 
 // Um die Kontext-Referenz für das Sticky zu erstellen ist es notwendig eine Komponenten Klasse zu erstellen
 class Layout extends Component {
@@ -93,9 +93,10 @@ class Layout extends Component {
           </StyledMenu>
 
           <Grid>
-            <Grid.Column  computer={4}>
-              <Sticky context={this.contextRef}>
+            <Grid.Column computer={4}>
+              
               <ProfileContainer>
+                <FixedContent>
                   <ImageContainer>
                     <Image src={AvatarImg} circular></Image>
                   </ImageContainer>
@@ -117,10 +118,10 @@ class Layout extends Component {
                   <PersonInfo link="mailto:mail@georg-braun.de">
                     <FaEnvelope /> Mail
                   </PersonInfo>
-                </ProfileContainer>
-              </Sticky>
+                </FixedContent>
+              </ProfileContainer>
             </Grid.Column>
-            <Grid.Column computer={12}>{this.props.children}</Grid.Column>
+            <Grid.Column mobile={16} computer={12}>{this.props.children}</Grid.Column>
           </Grid>
         </Container>
       </>
