@@ -68,12 +68,16 @@ const StyledBanner = styled.div`
     url(${BannerImg});
 
   height: 200px;
+  @media (max-width: ${cMobileDesktopViewWidthBreakPoint}) {
+    height: 100px;
+  }
 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 `
+
 
 const StyledBannerText = styled.div`
   text-align: center;
