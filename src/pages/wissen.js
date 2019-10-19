@@ -61,9 +61,10 @@ const StyledAlert = styled(Alert)`
 const siteTitle = "Wissen"
 
 export default ({ data }) => {
-  const [show, setShow] = useState(true)
+  const [show, setShow] = useState(false)
   const [filter, setFilter] = useState("")
 
+  // Wissen-Banner momentan deaktiviert
   var hAlert = null
   if (show) {
     hAlert = (

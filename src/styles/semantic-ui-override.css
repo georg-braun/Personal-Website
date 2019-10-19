@@ -1,0 +1,7 @@
+/*
+ * Die Semantic UI CSS definiert eine Body-CSS Regel die dafür sorgt, dass eine zweite Scrollbar angezeigt wird. 
+ * Mit dieser Regel wird diese zweite Scrollbar wieder ausgeblendet.
+*/
+body {
+    overflow-x: visible;
+}

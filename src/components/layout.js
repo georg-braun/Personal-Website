@@ -7,121 +7,205 @@
 
 import React, { useState } from "react"
 import PropTypes from "prop-types"
-import { Container } from "react-bootstrap"
 import styled from "styled-components"
-import ContactList from "./contactlist"
 import Footer from "./footer"
-import { Icon, Image, Menu, Segment, Sidebar } from "semantic-ui-react"
+import {
+  Container,
+  Icon,
+  Image,
+  Menu,
+  Header,
+  Grid,
+  Sidebar,
+} from "semantic-ui-react"
+import { FaXing, FaLinkedin, FaGitlab, FaEnvelope } from "react-icons/fa"
 import AvatarImg from "../images/avatar.png"
+import BannerImg from "../images/banner.png"
 
-const StyledContainer = styled(Container)`
-  padding-top: 40px;
-`
+const cMobileDesktopViewWidthBreakPoint = "600px"
 
-const NameInfoItem = styled(Menu.Item)`
-  @media (max-width: 600px) {
+const ProfileContainer = styled.div`
+  padding-top: 50px;
+
+  @media (max-width: 991px) {
     display: none !important;
   }
 `
-const AvatarName = styled.div`
-  margin-bottom: 12px;
-  font-size: 1.3em;
-`
-const AvatarDescription = styled.div`
-  margin-bottom: 9px;
-  font-size: 0.8em;
+
+const ComputerViewMenu = styled(Menu.Menu)`
+  @media (max-width: ${cMobileDesktopViewWidthBreakPoint}) {
+    display: none !important;
+  }
 `
 
-const Layout = ({ children, title }) => {
-  const [visible, setVisible] = useState(false)
+const ImageContainer = styled.div`
+  max-width: 120px;
+`
 
-  var SiteTitleInfo = null
-  if (title !== undefined) {
-    SiteTitleInfo = <Menu.Item>{title}</Menu.Item>
+const StyledMenu = styled(Menu)`
+  margin-top: 20px !important;
+  border: none !important;
+  box-shadow: none !important;
+`
+
+const StyledPersonInfoContent = styled.div`
+  margin-bottom: 10px;
+  color: black;
+`
+
+const FixedContent = styled.div`
+  position: fixed;
+`
+
+const StyledBurgerMenu = styled(Menu.Item)`
+  @media (min-width: ${cMobileDesktopViewWidthBreakPoint}) {
+    display: none !important;
+  }
+`
+
+const StyledBanner = styled.div`
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(${BannerImg});
+
+  height: 200px;
+  @media (max-width: ${cMobileDesktopViewWidthBreakPoint}) {
+    height: 100px;
   }
 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+`
+
+
+const StyledBannerText = styled.div`
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+`
+
+const StyledBannerTitle = styled.h1`
+  color: white;
+`
+
+const StyledSiteContent = styled.div`
+  margin-top: 30px;
+`
+
+const PersonInfo = ({ children, link }) => {
+  return (
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      <StyledPersonInfoContent>{children}</StyledPersonInfoContent>
+    </a>
+  )
+}
+
+const MenuEntries = () => {
   return (
     <>
-      <Menu inverted fixed="top">
-        <div
-          onMouseOver={() => {
-            setVisible(true)
-          }}
-        >
-          <Menu.Item
-            onClick={() => {
-              setVisible(true)
-            }}
-          >
-            <Icon name="bars"></Icon>
-          </Menu.Item>
-        </div>
+      <Menu.Item as="a" href="/">
+        <Icon name="home" />
+        Blog
+      </Menu.Item>
+      <Menu.Item as="a" href="/wissen">
+        <Icon name="book" />
+        Wissen
+      </Menu.Item>
+      <Menu.Item as="a" href="/projekte">
+        <Icon name="pencil" />
+        Projekte
+      </Menu.Item>
+      <Menu.Item as="a" href="/profil">
+        <Icon name="user circle" />
+        Profil
+      </Menu.Item>
+    </>
+  )
+}
 
-        {SiteTitleInfo}
-        <Menu.Menu position="right">
-          <NameInfoItem position="right">Georg Braun</NameInfoItem>
-          <Menu.Item position="right">
-            <ContactList></ContactList>
-          </Menu.Item>
-        </Menu.Menu>
-      </Menu>
-
+// Um die Kontext-Referenz für das Sticky zu erstellen ist es notwendig eine Komponenten Klasse zu erstellen
+const Layout = ({ children }) => {
+  const [sidebarIsVisible, setVisible] = useState(false)
+  return (
+    <>
       <Sidebar
         className="mobile-sidebar"
         as={Menu}
         animation="overlay"
         icon="labeled"
-        inverted
         onHide={() => setVisible(false)}
         vertical
-        visible={visible}
+        visible={sidebarIsVisible}
         width="thin"
       >
-        <Menu.Item>
-          <div>
-            <Image src={AvatarImg} circular></Image>
-            <AvatarName>Georg Braun</AvatarName>
-            <AvatarDescription>
-              <span role="img" aria-label="gps">
-                📍
-              </span>{" "}
-              Aachen
-            </AvatarDescription>
-            <AvatarDescription>
-              <span role="img" aria-label="worker">
-                👷
-              </span>{" "}
-              Softwareentwickler
-            </AvatarDescription>
-          </div>
-        </Menu.Item>
-
-        <Menu.Item as="a" href="/">
-          <Icon name="home" />
-          Blog
-        </Menu.Item>
-        <Menu.Item as="a" href="/wissen">
-          <Icon name="book" />
-          Wissen
-        </Menu.Item>
-        <Menu.Item as="a" href="/projekte">
-          <Icon name="pencil" />
-          Projekte
-        </Menu.Item>
-        <Menu.Item as="a" href="/profil">
-          <Icon name="user circle" />
-          Profil
-        </Menu.Item>
+        <MenuEntries />
       </Sidebar>
 
-      <Sidebar.Pusher>
-        <Segment basic>
-          <StyledContainer>
-            <main>{children}</main>
-          </StyledContainer>
-          <Footer>Hey</Footer>
-        </Segment>
-      </Sidebar.Pusher>
+      <Sidebar.Pusher></Sidebar.Pusher>
+
+      <Container>
+        <StyledMenu size="huge" borderless>
+          <StyledBurgerMenu>
+            <div
+              onClick={() => {
+                setVisible(true)
+              }}
+            >
+              <Icon name="bars"></Icon>
+            </div>
+          </StyledBurgerMenu>
+          <ComputerViewMenu position="right">
+            <MenuEntries />
+          </ComputerViewMenu>
+        </StyledMenu>
+      </Container>
+
+      <StyledBanner>
+        <StyledBannerText>
+          <StyledBannerTitle> Georg Braun</StyledBannerTitle>
+          <p>Softwareentwickler</p>
+        </StyledBannerText>
+      </StyledBanner>
+
+      <Container>
+        <Grid>
+          <Grid.Column computer={4}>
+            <ProfileContainer>
+              <FixedContent>
+                <ImageContainer>
+                  <Image src={AvatarImg} circular></Image>
+                </ImageContainer>
+
+                <Header>Georg Braun</Header>
+                <p>Softwareentwickler</p>
+
+                <PersonInfo text="Aachen" />
+                <PersonInfo link="https://www.xing.com/profile/Georg_Braun18">
+                  <FaXing /> Xing
+                </PersonInfo>
+                <PersonInfo link="https://www.linkedin.com/in/georg-braun-41286b140/">
+                  <FaLinkedin /> Linkedin
+                </PersonInfo>
+
+                <PersonInfo link="https://gitlab.com/georg.braun92">
+                  <FaGitlab /> Gitlab
+                </PersonInfo>
+                <PersonInfo link="mailto:mail@georg-braun.de">
+                  <FaEnvelope /> Mail
+                </PersonInfo>
+              </FixedContent>
+            </ProfileContainer>
+          </Grid.Column>
+          <Grid.Column mobile={16} computer={12}>
+            <StyledSiteContent>{children}</StyledSiteContent>
+          </Grid.Column>
+        </Grid>
+        <Footer />
+      </Container>
     </>
   )
 }
