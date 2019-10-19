@@ -5,10 +5,9 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useState, Component } from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import ContactList from "./contactlist"
 import Footer from "./footer"
 import {
   Container,
@@ -17,18 +16,13 @@ import {
   Menu,
   Header,
   Grid,
-  Sticky,
-  Table,
   Sidebar,
 } from "semantic-ui-react"
 import { FaXing, FaLinkedin, FaGitlab, FaEnvelope } from "react-icons/fa"
 import AvatarImg from "../images/avatar.png"
+import BannerImg from "../images/banner.png"
 
-
-const cMobileDesktopViewWidthBreakPoint = "600px";
-
-
-
+const cMobileDesktopViewWidthBreakPoint = "600px"
 
 const ProfileContainer = styled.div`
   padding-top: 50px;
@@ -43,8 +37,6 @@ const ComputerViewMenu = styled(Menu.Menu)`
     display: none !important;
   }
 `
-
-
 
 const ImageContainer = styled.div`
   max-width: 120px;
@@ -66,9 +58,38 @@ const FixedContent = styled.div`
 `
 
 const StyledBurgerMenu = styled(Menu.Item)`
-@media (min-width: ${cMobileDesktopViewWidthBreakPoint}) {
-  display: none !important;
-}
+  @media (min-width: ${cMobileDesktopViewWidthBreakPoint}) {
+    display: none !important;
+  }
+`
+
+const StyledBanner = styled.div`
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(${BannerImg});
+
+  height: 200px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+`
+
+const StyledBannerText = styled.div`
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+`
+
+const StyledBannerTitle = styled.h1`
+  color: white;
+`
+
+const StyledSiteContent = styled.div`
+  margin-top: 30px;
 `
 
 const PersonInfo = ({ children, link }) => {
@@ -80,7 +101,6 @@ const PersonInfo = ({ children, link }) => {
 }
 
 const MenuEntries = () => {
-    
   return (
     <>
       <Menu.Item as="a" href="/">
@@ -124,27 +144,30 @@ const Layout = ({ children }) => {
       <Sidebar.Pusher></Sidebar.Pusher>
 
       <Container>
-        <StyledMenu size="huge" borderless >
-        <StyledBurgerMenu>
-              <div
-                onClick={() => {
-                  setVisible(true)
-                }}
-              >
-                <Icon name="bars"></Icon>
-              </div>
-            </StyledBurgerMenu>
+        <StyledMenu size="huge" borderless>
+          <StyledBurgerMenu>
+            <div
+              onClick={() => {
+                setVisible(true)
+              }}
+            >
+              <Icon name="bars"></Icon>
+            </div>
+          </StyledBurgerMenu>
           <ComputerViewMenu position="right">
-            
-
-
             <MenuEntries />
-
-
-            
           </ComputerViewMenu>
         </StyledMenu>
+      </Container>
 
+      <StyledBanner>
+        <StyledBannerText>
+          <StyledBannerTitle> Georg Braun</StyledBannerTitle>
+          <p>Softwareentwickler</p>
+        </StyledBannerText>
+      </StyledBanner>
+
+      <Container>
         <Grid>
           <Grid.Column computer={4}>
             <ProfileContainer>
@@ -174,10 +197,10 @@ const Layout = ({ children }) => {
             </ProfileContainer>
           </Grid.Column>
           <Grid.Column mobile={16} computer={12}>
-            {children}
+            <StyledSiteContent>{children}</StyledSiteContent>
           </Grid.Column>
         </Grid>
-        <Footer/>
+        <Footer />
       </Container>
     </>
   )
