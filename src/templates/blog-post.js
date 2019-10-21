@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import styled from "styled-components"
+import SEO from "../components/seo"
 
 const MetadataEntry = styled.span`
   margin-right: 20px;
@@ -17,6 +18,7 @@ export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
+      <SEO title={post.frontmatter.title} />
       <div className="markdown-post">
         <h1>{post.frontmatter.title}</h1>
         <StyledMetadata>

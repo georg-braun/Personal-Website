@@ -7,7 +7,7 @@ import BlogEntry from "../components/blog-entry"
 
 function createBlogOverview(_blogdata) {
   return _blogdata.edges.map(({ node }) => {
-    return <BlogEntry key={node.frontmatter.title} title={node.frontmatter.title} path={node.fields.slug} date={node.frontmatter.date} category={node.frontmatter.category} imageName={node.frontmatter.image} excerpt={node.frontmatter.excerpt}></BlogEntry>
+    return <BlogEntry key={node.frontmatter.title} title={node.frontmatter.title} path={node.fields.slug} date={node.frontmatter.date} category={node.frontmatter.category} imageName={node.frontmatter.image} excerpt={node.frontmatter.excerpt} timeToRead={node.timeToRead}></BlogEntry>
     
   })
 }
@@ -15,7 +15,7 @@ const siteTitle="Blog";
 
 export default ({ data }) => (
 
-  <Layout title={siteTitle}>
+  <Layout>
     <SEO title={siteTitle} />
     {createBlogOverview(data.blogdata)}
   </Layout>
@@ -49,6 +49,7 @@ export const query = graphql`
           }
           fileAbsolutePath
           excerpt
+          timeToRead
         }
       }
     }

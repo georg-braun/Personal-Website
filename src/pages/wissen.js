@@ -99,7 +99,7 @@ export default ({ data }) => {
   }
 
   return (
-    <Layout title={siteTitle}>
+    <Layout>
       <SEO title={siteTitle} />
       {hAlert}
       <h6>{data.allMarkdownRemark.totalCount} Themen</h6>
