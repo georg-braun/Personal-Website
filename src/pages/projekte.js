@@ -36,6 +36,7 @@ export default ({ data }) => (
             projectTitle="Familienstammbaum"
             projectDuration="08/2019"
             image={data.familienstammbaum.edges[0].node.fluid}
+            description="Erstellung eines Familiengraphen mit der Möglichkeit flexible Familienstammbäume zu erstellen. Somit ist es möglich mehrere Familienbäume aus einer Graphenstruktur zu erzeugen."
             link="http://stammbaum.georg-braun.de"
             tags={["React", "DTree"]}
           >
@@ -57,6 +58,7 @@ export default ({ data }) => (
             projectTitle="GraphToDTreeConverter"
             projectDuration="08/2019"
             image={data.graphtodtreeconverter.edges[0].node.fluid}
+            description="Converter der eine gegebene Graphenstruktur, in Abhängkeit eines Root-Knotens, in eine Baumstruktur umwandelt."
             link="https://www.npmjs.com/package/graphtodtreeconverter/"
             tags={["JavaScript", "NPM"]}
           >

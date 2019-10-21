@@ -7,7 +7,7 @@ import { FaClock } from "react-icons/fa"
 
 const StyledProjectContainer = styled.div`
   border-style: solid;
-  border-width: 0px 1px 0px 1px !important;
+  border-width: 1px 1px 0px 1px !important;
   border-width: 1px;
   border-color: lightgrey;
   border-radius: 5px;
@@ -35,13 +35,19 @@ const ProjectBody = styled.div`
   margin: 10px;
 `
 
-const ProjectDescription = styled.div`
+const ProjectTags = styled.div`
   margin-top: 10px;
 `
 
 const StyledBadge = styled(Badge)`
   margin-right: 5px;
   font-size: 0.9em;
+`
+
+const ProjectDescription = styled.div`
+  color: gray;
+  margin-top: 5px;
+  height: 100px;
 `
 
 const ProjectFooter = styled.div`
@@ -63,6 +69,7 @@ export default ({
   projectDuration,
   image,
   link,
+  description,
   children,
   tags,
 }) => {
@@ -75,12 +82,14 @@ export default ({
       <a href={link} target="_blank" rel="noopener noreferrer">
         <StyledImg fluid={image} alt=""  />
         <ProjectBody>
-          <ProjectTitle>{projectTitle}</ProjectTitle>
-
+          <ProjectTitle>{projectTitle}</ProjectTitle>         
           <ProjectDuration>
             <FaClock /> {projectDuration}
           </ProjectDuration>
-          <ProjectDescription>{tagBadges}</ProjectDescription>
+          <ProjectDescription>
+          {description}
+          </ProjectDescription>
+          <ProjectTags>{tagBadges}</ProjectTags>
         </ProjectBody>
         <ProjectFooter>{children}</ProjectFooter>
       </a>
