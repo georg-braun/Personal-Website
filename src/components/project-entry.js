@@ -60,7 +60,7 @@ const StyledImg = styled(Img)`
     // picture styles
     border-width: 0px;
   }
-  height: 100px;
+  height: 130px;
   margin-top: 2px;
 `
 
