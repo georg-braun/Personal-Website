@@ -101,7 +101,6 @@ export default ({ data }) => {
       {hAlert}
       <h6>{data.allMarkdownRemark.totalCount} Themen</h6>
       <Input
-        laceholder="Titel, Inhalt, Tag"
         onChange={(event, data) => setFilter(data.value)}
         action={{
           color: "teal",
@@ -110,7 +109,7 @@ export default ({ data }) => {
           content: "Suche",
         }}
         actionPosition="left"
-        placeholder="Titel, Inhalt, Tag"
+        placeholder="Titel, Inhalt"
       ></Input>
 
       {createKnowledgeOverview(data, filter)}
