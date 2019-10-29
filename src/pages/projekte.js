@@ -17,6 +17,8 @@ const StyledButton = styled(Button)`
 `
 
 const ProjectContainer = styled.div`
+  display: flex;
+  flex-wrap : wrap;
   margin-top: 20px;
 `
 
@@ -30,9 +32,8 @@ export default ({ data }) => (
     <SEO title={siteTitle} />
 
     <ProjectContainer>
-      <Row>
-        <Col lg="6">
-          <ProjectEntry
+
+    <ProjectEntry
             projectTitle="Familienstammbaum"
             projectDuration="08/2019"
             image={data.familienstammbaum.edges[0].node.fluid}
@@ -52,8 +53,7 @@ export default ({ data }) => (
               Code + Projektbeschreibung
             </StyledButton>
           </ProjectEntry>
-        </Col>
-        <Col lg="6">
+
           <ProjectEntry
             projectTitle="GraphToDTreeConverter"
             projectDuration="08/2019"
@@ -74,8 +74,61 @@ export default ({ data }) => (
               Code + Projektbeschreibung
             </StyledButton>
           </ProjectEntry>
-        </Col>       
-      </Row>
+
+
+          <ProjectEntry
+            projectTitle="Seminararbeit: Implementierung Objektorientierter-Konstrukte in der Java Virtual Machine"
+            projectDuration="Winter 2018"
+            image={data.seminararbeitJvm.edges[0].node.fluid}            
+            description="Seminararbeit über die Umsetzung von objektontierter auf der Ebene der Java Virtual Machine."
+            link="https://gitlab.com/georg.braun92/Seminararbeit/blob/master/Seminararbeit.pdf"
+            tags={["JVM"]}
+          >          
+          </ProjectEntry>
+
+        <ProjectEntry
+            projectTitle="Augmented Reality mit Matlab"
+            projectDuration="Winter 2016"
+            image={data.bildverarbeitungArBild.edges[0].node.fluid}
+            description="Eine Augmented Reality Anwendung die mit Matlab entwickelt wurde. Die Anwendung erkennt ein Film-Cover und spielt an der Position den Trailer ab."
+            link="https://gitlab.com/georg.braun92/Study-Image-Processing-WS2016"
+            tags={["Matlab"]}
+          >
+            <StyledButton
+              fluid
+              href="https://gitlab.com/georg.braun92/Study-Image-Processing-WS2016"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <StyledIconContainer>
+                <FaGitlab />
+              </StyledIconContainer>
+              Code + Projektbeschreibung
+            </StyledButton>
+          </ProjectEntry>
+
+        <ProjectEntry
+            projectTitle="AR mit OpenCV und OpenGL"
+            projectDuration="Sommer 2016"
+            image={data.computerGrafikArBild.edges[0].node.fluid}
+            description="Entwicklung einer Augmented Reality Anwendung mit OpenCV und OpenGL. Verschiedene Formen werden auf ArUco Markern gerendert. "
+            link="https://gitlab.com/georg.braun92/Study-Computer-Graphics-SS2016"
+            tags={["OpenCV", "OpenGL", "C++"]}
+          >
+            <StyledButton
+              fluid
+              href="https://gitlab.com/georg.braun92/Study-Computer-Graphics-SS2016"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <StyledIconContainer>
+                <FaGitlab />
+              </StyledIconContainer>
+              Code + Projektbeschreibung
+            </StyledButton>
+          </ProjectEntry>
+
+      
     </ProjectContainer>
   </Layout>
 )
@@ -95,6 +148,36 @@ export const query = graphql`
       }
     }
     graphtodtreeconverter: allImageSharp(filter: {fluid: {originalName: {regex: "/arrow-wall.jpg/"}}}) {
+      edges {
+        node {
+          fluid {
+            ...GatsbyImageSharpFluid
+            originalName
+          }
+        }
+      }
+    }
+    computerGrafikArBild: allImageSharp(filter: {fluid: {originalName: {regex: "/computerGrafikArProjekt.png/"}}}) {
+      edges {
+        node {
+          fluid {
+            ...GatsbyImageSharpFluid
+            originalName
+          }
+        }
+      }
+    }
+    bildverarbeitungArBild: allImageSharp(filter: {fluid: {originalName: {regex: "/bildverarbeitungArProjekt.png/"}}}) {
+      edges {
+        node {
+          fluid {
+            ...GatsbyImageSharpFluid
+            originalName
+          }
+        }
+      }
+    }
+    seminararbeitJvm: allImageSharp(filter: {fluid: {originalName: {regex: "/seminararbeitJvm.jpg/"}}}) {
       edges {
         node {
           fluid {

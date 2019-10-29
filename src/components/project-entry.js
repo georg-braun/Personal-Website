@@ -6,6 +6,8 @@ import styled from "styled-components"
 import { FaClock } from "react-icons/fa"
 
 const StyledProjectContainer = styled.div`
+  display: flex;
+  align-items : flex-end;
   border-style: solid;
   border-width: 1px 1px 0px 1px !important;
   border-width: 1px;
@@ -13,6 +15,9 @@ const StyledProjectContainer = styled.div`
   border-radius: 5px;
   padding-bottom: -10px !important;
   padding-top: 3px;
+  width: 340px;
+  margin: 20px;
+  
 
   :hover {
     transform: translate(0, -5px);
@@ -77,10 +82,15 @@ export default ({
     <StyledBadge variant="primary">{tag}</StyledBadge>
   ))
 
+  if (image != null) {
+
+    var hProjectImage = <StyledImg fluid={image} alt=""  />
+  }
+
   return (
     <StyledProjectContainer>
       <a href={link} target="_blank" rel="noopener noreferrer">
-        <StyledImg fluid={image} alt=""  />
+        {hProjectImage}
         <ProjectBody>
           <ProjectTitle>{projectTitle}</ProjectTitle>         
           <ProjectDuration>
