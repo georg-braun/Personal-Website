@@ -37,8 +37,7 @@ function createKnowledgeOverview(data, filterString) {
           {hCategoryHeader}
           <KnowledgeLink
             title={node.frontmatter.title}
-            path={node.fields.slug}
-            tags={node.frontmatter.tags}
+            path={node.fields.slug}            
           ></KnowledgeLink>
         </>
       )
