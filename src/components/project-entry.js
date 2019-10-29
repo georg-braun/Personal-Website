@@ -47,7 +47,7 @@ const StyledBadge = styled(Badge)`
 const ProjectDescription = styled.div`
   color: gray;
   margin-top: 5px;
-  height: 100px;
+  
 `
 
 const ProjectFooter = styled.div`
