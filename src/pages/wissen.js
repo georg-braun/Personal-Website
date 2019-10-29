@@ -10,18 +10,16 @@ import Contactlist from "../components/contactlist"
 
 // Assumes that the data is ordered by category
 function createKnowledgeOverview(data, filterString) {
+  console.log(filterString)
   var hLastCategory = null
-
-  var hFilterRegExp = new RegExp(filterString, "i") // i = case insensitive
 
   var hOverview = data.allMarkdownRemark.edges.map(({ node }) => {
 
     var hKnowledgeEntry = null;
 
     if (
-      hFilterRegExp.test(node.frontmatter.title) ||
-      hFilterRegExp.test(node.rawMarkdownBody) ||
-      hFilterRegExp.test(node.frontmatter.tags)
+      node.frontmatter.title.includes(filterString) ||
+      node.rawMarkdownBody.includes(filterString)
     ) {
       var hCurrentCategory = node.frontmatter.category
 
@@ -47,7 +45,7 @@ function createKnowledgeOverview(data, filterString) {
     }
 
     return hKnowledgeEntry;
-    
+   
   })
 
   return hOverview
