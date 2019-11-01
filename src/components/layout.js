@@ -58,6 +58,7 @@ const FixedContent = styled.div`
 `
 
 const StyledBurgerMenu = styled(Menu.Item)`
+  margin-left: -35px;
   @media (min-width: ${cMobileDesktopViewWidthBreakPoint}) {
     display: none !important;
   }
@@ -86,6 +87,10 @@ const StyledBannerText = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+`
+
+const StyledMenuContainer = styled(Container)`
+  margin-top: -20px;
 `
 
 const StyledBannerTitle = styled.h1`
@@ -147,7 +152,7 @@ const Layout = ({ children }) => {
 
       <Sidebar.Pusher></Sidebar.Pusher>
 
-      <Container>
+      <StyledMenuContainer>
         <StyledMenu size="huge" borderless>
           <StyledBurgerMenu>
             <div
@@ -162,7 +167,7 @@ const Layout = ({ children }) => {
             <MenuEntries />
           </ComputerViewMenu>
         </StyledMenu>
-      </Container>
+      </StyledMenuContainer>
 
       <StyledBanner>
         <StyledBannerText>
