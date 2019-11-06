@@ -4,4 +4,9 @@
 */
 body {
     overflow-x: visible;
+    font-size: unset;
+}
+
+html {
+    font-size: unset;
 }
