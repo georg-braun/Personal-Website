@@ -18,7 +18,7 @@ import {
   Grid,
   Sidebar,
 } from "semantic-ui-react"
-import { FaXing, FaLinkedin, FaGitlab, FaEnvelope } from "react-icons/fa"
+import { FaXing, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"
 import AvatarImg from "../images/avatar.png"
 import BannerImg from "../images/banner.png"
 
@@ -196,8 +196,8 @@ const Layout = ({ children }) => {
                   <FaLinkedin /> Linkedin
                 </PersonInfo>
 
-                <PersonInfo link="https://gitlab.com/georg.braun92">
-                  <FaGitlab /> Gitlab
+                <PersonInfo link="https://github.com/velox1992">
+                  <FaGithub /> Github
                 </PersonInfo>
                 <PersonInfo link="mailto:mail@georg-braun.de">
                   <FaEnvelope /> Mail

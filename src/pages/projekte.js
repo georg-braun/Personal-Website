@@ -5,7 +5,7 @@ import { Row, Col } from "react-bootstrap"
 import { Button } from "semantic-ui-react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import { FaGitlab } from "react-icons/fa"
+import { FaGithub } from "react-icons/fa"
 import ProjectEntry from "../components/project-entry"
 
 const StyledButton = styled(Button)`
@@ -43,12 +43,12 @@ export default ({ data }) => (
           >
             <StyledButton
               fluid
-              href="https://gitlab.com/georg.braun92/family-tree/blob/master/README.md"
+              href="https://github.com/velox1992/Family-Tree"
               target="_blank"
               rel="noopener noreferrer"
             >
               <StyledIconContainer>
-                <FaGitlab />
+                <FaGithub />
               </StyledIconContainer>
               Code + Projektbeschreibung
             </StyledButton>
@@ -64,12 +64,12 @@ export default ({ data }) => (
           >
             <StyledButton
               fluid
-              href="https://gitlab.com/georg.braun92/graphtodtreeconverter/blob/master/README.md"
+              href="https://github.com/velox1992/GraphToDTreeConverter"
               target="_blank"
               rel="noopener noreferrer"
             >
               <StyledIconContainer>
-                <FaGitlab />
+                <FaGithub />
               </StyledIconContainer>
               Code + Projektbeschreibung
             </StyledButton>
@@ -81,7 +81,7 @@ export default ({ data }) => (
             projectDuration="Winter 2018"
             image={data.seminararbeitJvm.edges[0].node.fluid}            
             description="Seminararbeit über die Umsetzung von objektontierter auf der Ebene der Java Virtual Machine."
-            link="https://gitlab.com/georg.braun92/Seminararbeit/blob/master/Seminararbeit.pdf"
+            link="https://github.com/velox1992/Study-Seminararbeit-OO-In-Der-JVM-WS1819/blob/master/Seminararbeit.pdf"
             tags={["JVM"]}
           >          
           </ProjectEntry>
@@ -91,17 +91,17 @@ export default ({ data }) => (
             projectDuration="Winter 2016"
             image={data.bildverarbeitungArBild.edges[0].node.fluid}
             description="Eine Augmented Reality Anwendung die mit Matlab entwickelt wurde. Die Anwendung erkennt ein Film-Cover und spielt an der Position den Trailer ab."
-            link="https://gitlab.com/georg.braun92/Study-Image-Processing-WS2016"
+            link="https://github.com/velox1992/Study-Image-Processing-WS2016"
             tags={["Matlab"]}
           >
             <StyledButton
               fluid
-              href="https://gitlab.com/georg.braun92/Study-Image-Processing-WS2016"
+              href="https://github.com/velox1992/Study-Image-Processing-WS2016"
               target="_blank"
               rel="noopener noreferrer"
             >
               <StyledIconContainer>
-                <FaGitlab />
+                <FaGithub />
               </StyledIconContainer>
               Code + Projektbeschreibung
             </StyledButton>
@@ -112,17 +112,17 @@ export default ({ data }) => (
             projectDuration="Sommer 2016"
             image={data.computerGrafikArBild.edges[0].node.fluid}
             description="Entwicklung einer Augmented Reality Anwendung mit OpenCV und OpenGL. Verschiedene Formen werden auf ArUco Markern gerendert. "
-            link="https://gitlab.com/georg.braun92/Study-Computer-Graphics-SS2016"
+            link="https://github.com/velox1992/Study-Computer-Graphics-SS2016"
             tags={["OpenCV", "OpenGL", "C++"]}
           >
             <StyledButton
               fluid
-              href="https://gitlab.com/georg.braun92/Study-Computer-Graphics-SS2016"
+              href="https://github.com/velox1992/Study-Computer-Graphics-SS2016"
               target="_blank"
               rel="noopener noreferrer"
             >
               <StyledIconContainer>
-                <FaGitlab />
+                <FaGithub />
               </StyledIconContainer>
               Code + Projektbeschreibung
             </StyledButton>
