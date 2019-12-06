@@ -39,7 +39,7 @@ const ComputerViewMenu = styled(Menu.Menu)`
 `
 
 const ImageContainer = styled.div`
-  max-width: 120px;
+  max-width: 210px;
 `
 
 const StyledMenu = styled(Menu)`
@@ -182,7 +182,7 @@ const Layout = ({ children }) => {
             <ProfileContainer>
               <FixedContent>
                 <ImageContainer>
-                  <Image src={AvatarImg} circular></Image>
+                  <Image src={AvatarImg} size="huge" ></Image>
                 </ImageContainer>
 
                 <Header>Georg Braun</Header>
