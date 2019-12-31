@@ -15,16 +15,27 @@ function createBlogOverview(_blogdata) {
 }
 const siteTitle="Home";
 
-const SearchContainer = styled.div`
+const SearchContainerWideScreen = styled.div`
   position: fixed;
-  width: 300px;
-  right: 5vw;
-  
+  width: 200px;
+  right: 3vw;
+
+  @media (max-width: 1729px) {
+    display: none !important;
+  }  
+`
+
+const SearchContainerSmallScreen = styled.div`
+  margin-bottom: 20px;
+
+  @media (min-width: 1730px) {
+    display: none !important;
+  }  
 `
 
 const StyledInputContainer = styled.div`
-  width: 300px;
-  margin-bottom: 5px;
+  width: 200px;
+  margin-bottom: 10px;
   
 `
 
@@ -40,8 +51,6 @@ const StyledTag = styled.span`
   }
 `
 
-var FTags;
-
 function createKnowledgeOverview(data, filterString) {
   var hOverview = data.posts.edges.map(({ node }) => {
 
@@ -49,7 +58,8 @@ function createKnowledgeOverview(data, filterString) {
 
     if (
       node.frontmatter.title.includes(filterString) ||
-      node.rawMarkdownBody.includes(filterString)
+      node.rawMarkdownBody.includes(filterString) ||
+      (node.frontmatter.tags != null && node.frontmatter.tags.includes(filterString))
     ) {
       
 
@@ -57,7 +67,9 @@ function createKnowledgeOverview(data, filterString) {
         <>
           <KnowledgeLink
             title={node.frontmatter.title}
-            path={node.fields.slug}            
+            path={node.fields.slug}       
+            date={node.frontmatter.date}    
+            tags={node.frontmatter.tags} 
           ></KnowledgeLink>
         </>
       )
@@ -70,12 +82,12 @@ function createKnowledgeOverview(data, filterString) {
   return hOverview
 }
 
-function createTagContainer(tags){
+function createTagContainer(tags, filterMethod){
 
   
   var hTags = tags.map((tag) => {
     return (
-    <StyledTag onClick={() => {console.log("test")}}>
+    <StyledTag onClick={() => {filterMethod(tag)}}>
       
       {tag}
     </StyledTag>
@@ -97,23 +109,38 @@ export default ({ data }) => {
       <SEO title={siteTitle} />
       
       <h6>{data.posts.totalCount} Themen</h6>
-      <SearchContainer>
+
+      <SearchContainerSmallScreen>
         <StyledInputContainer>
         <Input
           onChange={(event, data) => setFilter(data.value)}
           action={{
-            color: "teal",
-            labelPosition: "left",
-            icon: "search",
-            content: "Suche",
+            color: "teal",            
+            icon: "search",            
           }}
           fluid
+          value={filter}
           actionPosition="left"
-          placeholder="Titel, Inhalt"/>
+          placeholder="Titel, Inhalt, Tag"/>
           </StyledInputContainer>
-          {createTagContainer(data.tags.distinct)}
-          
-      </SearchContainer>
+          {createTagContainer(data.tags.distinct, setFilter)}          
+      </SearchContainerSmallScreen>
+
+      <SearchContainerWideScreen>
+        <StyledInputContainer>
+        <Input
+          onChange={(event, data) => setFilter(data.value)}
+          action={{
+            color: "teal",            
+            icon: "search",            
+          }}
+          fluid
+          value={filter}
+          actionPosition="left"
+          placeholder="Titel, Inhalt, Tag"/>
+          </StyledInputContainer>
+          {createTagContainer(data.tags.distinct, setFilter)}          
+      </SearchContainerWideScreen>
       
 
       {createKnowledgeOverview(data, filter)}
