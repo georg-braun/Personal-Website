@@ -116,10 +116,6 @@ const MenuEntries = () => {
         <Icon name="home" />
         Blog
       </Menu.Item>
-      <Menu.Item as="a" href="/wissen">
-        <Icon name="book" />
-        Wissen
-      </Menu.Item>
       <Menu.Item as="a" href="/projekte">
         <Icon name="pencil" />
         Projekte
