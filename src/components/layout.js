@@ -178,7 +178,7 @@ const Layout = ({ children }) => {
             <ProfileContainer>
               <FixedContent>
                 <ImageContainer>
-                  <Image src={AvatarImg} size="huge" ></Image>
+                    <Image src={AvatarImg} size="huge" href="/" ></Image>
                 </ImageContainer>
 
                 <Header>Georg Braun</Header>
