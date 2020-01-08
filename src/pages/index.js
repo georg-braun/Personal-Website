@@ -109,7 +109,7 @@ export default ({ data }) => {
     <Layout>
       <SEO title={siteTitle} />
       
-      <h6>{data.posts.totalCount} Themen</h6>
+      <h6>{data.posts.totalCount} Beiträge</h6>
 
       <SearchContainerSmallScreen>
         <StyledInputContainer>
