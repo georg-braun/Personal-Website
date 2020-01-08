@@ -3,16 +3,11 @@ import { graphql } from "gatsby"
 import { Input } from "semantic-ui-react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import BlogEntry from "../components/blog-entry"
 import KnowledgeLink from "../components/knowledge-link"
 import styled from "styled-components"
+import dateFormat from "dateformat"
 
-function createBlogOverview(_blogdata) {
-  return _blogdata.edges.map(({ node }) => {
-    return <BlogEntry key={node.frontmatter.title} title={node.frontmatter.title} path={node.fields.slug} date={node.frontmatter.date} category={node.frontmatter.category} imageName={node.frontmatter.image} excerpt={node.frontmatter.excerpt} timeToRead={node.timeToRead}></BlogEntry>
-    
-  })
-}
+
 const siteTitle="Home";
 
 const SearchContainerWideScreen = styled.div`
@@ -62,13 +57,18 @@ function createKnowledgeOverview(data, filterString) {
       (node.frontmatter.tags != null && node.frontmatter.tags.includes(filterString))
     ) {
       
+      var hBlogEntryDateString = "";
+      if (node.frontmatter.date != null){
+        hBlogEntryDateString = dateFormat(node.frontmatter.date, "deutschKurz")
+      }
+
 
       hKnowledgeEntry = (
         <>
           <KnowledgeLink
             title={node.frontmatter.title}
             path={node.fields.slug}       
-            date={node.frontmatter.date}    
+            date={hBlogEntryDateString}    
             tags={node.frontmatter.tags} 
           ></KnowledgeLink>
         </>
@@ -103,6 +103,7 @@ function createTagContainer(tags, filterMethod){
 export default ({ data }) => {
   
   const [filter, setFilter] = useState("")
+  dateFormat.masks.deutschKurz = 'dd.mm.yyyy';
 
   return (
     <Layout>
@@ -157,7 +158,7 @@ export const query = graphql`
         order: DESC
       }
       filter: {
-        frontmatter: { category: { ne: null }, title: { ne: null } }
+        frontmatter: { title: { ne: null } }
         fileAbsolutePath: { regex: "/knowledge-repo/" }
       }
     ) {
@@ -170,8 +171,8 @@ export const query = graphql`
           id
           frontmatter {
             title
-            category
             tags
+            date
           }
           fileAbsolutePath
           tableOfContents
