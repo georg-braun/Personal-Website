@@ -155,7 +155,7 @@ export const query = graphql`
     posts: allMarkdownRemark(
       sort: {
         fields: [frontmatter___date]
-        order: DESC
+        order: ASC
       }
       filter: {
         frontmatter: { title: { ne: null } }
