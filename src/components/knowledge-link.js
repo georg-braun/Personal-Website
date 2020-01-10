@@ -1,6 +1,6 @@
 import React from "react"
 import { Row, Col, Badge } from "react-bootstrap"
-import { Link } from "gatsby"
+import { Link as GatsbyLink} from "gatsby"
 import styled from "styled-components"
 
 const StyledBlogEntry = styled.div`
@@ -9,9 +9,13 @@ const StyledBlogEntry = styled.div`
   border-style: solid;
   border-color: lightgray;
   border-width: 2px;
-  border-radius: 5px;
-  
+  border-radius: 3px;  
 `
+
+const StyledLink = styled(GatsbyLink)`
+  color: black;
+`;
+
 
 const StyledDate = styled.div`
   text-align: right;
@@ -27,7 +31,7 @@ const KnowledgeLink = ({ title, path, tags, date }) => {
   console.log(tags)
   return (
     <StyledBlogEntry>
-        <Link to={path}>
+        <StyledLink to={path} color="black">
       <Row key={title}>
         <Col>       
             <p>{title}</p>
@@ -44,7 +48,7 @@ const KnowledgeLink = ({ title, path, tags, date }) => {
           </StyledDate>
         </Col>
       </Row>
-      </Link>
+      </StyledLink>
     </StyledBlogEntry>
   )
 }
