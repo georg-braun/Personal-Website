@@ -95,6 +95,7 @@ const StyledMenuContainer = styled(Container)`
 
 const StyledBannerTitle = styled.h1`
   color: white;
+  margin-bottom: 0px;
 `
 
 const StyledSiteContent = styled.div`
