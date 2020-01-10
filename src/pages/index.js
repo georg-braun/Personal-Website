@@ -8,7 +8,7 @@ import styled from "styled-components"
 import dateFormat from "dateformat"
 
 
-const siteTitle="Home";
+const siteTitle="Blog";
 
 const SearchContainerWideScreen = styled.div`
   position: fixed;
