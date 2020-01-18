@@ -28,8 +28,7 @@ const KnowledgeLink = ({ title, path, tags, date }) => {
     hTagString = tags.join(", ");
   }
 
-  console.log(tags)
-  return (
+    return (
     <StyledBlogEntry>
         <StyledLink to={path} color="black">
       <Row key={title}>
