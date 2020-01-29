@@ -16,10 +16,8 @@ export default ({ data }) => {
       <SEO title={post.frontmatter.title} />
       <div className="markdown-post">
         <h1>{post.frontmatter.title}</h1>
-        <small>{post.frontmatter.tags.join(", ")}</small>
+        <small><i>Tags: {post.frontmatter.tags.join(", ")}</i></small>
        
-        
-        <div dangerouslySetInnerHTML={{ __html: post.tableOfContents}} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
@@ -30,7 +28,6 @@ export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
-      tableOfContents
       frontmatter {
         title
         tags
