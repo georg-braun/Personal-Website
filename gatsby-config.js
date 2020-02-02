@@ -94,5 +94,13 @@ module.exports = {
     // Laden/Transformieren von Bildern
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-emoji`,  // <-- this line adds emoji
+        ]
+      }
+    },
   ],
 }

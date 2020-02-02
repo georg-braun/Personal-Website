@@ -1,11 +1,18 @@
 import React from "react"
 
+export default ({ title, url, comment }) => {
 
-export default ({title, url, comment}) => (
-    <div>
-        <li>
-      <p>{title}</p>
-      <a href={url} target="_blank" rel="noopener noreferrer">{url}</a>
-      </li>
-    </div>
-)
+  return (
+  <div>
+    <li>
+      {title} (
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        {url}
+      </a>)
+      <p>
+      <small>{comment}</small>
+      </p>
+    </li>
+  </div>
+  )
+}

@@ -15,9 +15,9 @@ export default () => (
     <ul>
       <ReadingListEntry 
         title="Goodbye, CleanCode" 
-        url="https://overreacted.io/goodbye-clean-code/"/>      
+        url="https://overreacted.io/goodbye-clean-code"
+        comment="Möglichst generische Lösungen sind nicht unbedingt hilfreich."/>      
     </ul>
-    :smile:
   
   </Layout>
 )
