@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { Input } from "semantic-ui-react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import KnowledgeLink from "../components/knowledge-link"
+import BlogLink from "../components/blog-link"
 import styled from "styled-components"
 import dateFormat from "dateformat"
 
@@ -65,12 +65,12 @@ function createKnowledgeOverview(data, filterString) {
 
       hKnowledgeEntry = (
         <>
-          <KnowledgeLink
+          <BlogLink
             title={node.frontmatter.title}
             path={node.fields.slug}       
             date={hBlogEntryDateString}    
             tags={node.frontmatter.tags} 
-          ></KnowledgeLink>
+          ></BlogLink>
         </>
       )
     }

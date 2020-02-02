@@ -1,9 +1,9 @@
 import React from "react"
-import { Row, Col, Badge } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 import { Link as GatsbyLink} from "gatsby"
 import styled from "styled-components"
 
-const StyledBlogEntry = styled.div`
+const StyledBlogLink = styled.div`
   margin-bottom: 20px;
   padding: 5px;
   border-style: solid;
@@ -21,7 +21,7 @@ const StyledDate = styled.div`
   text-align: right;
 `
 
-const KnowledgeLink = ({ title, path, tags, date }) => {
+const BlogLink = ({ title, path, tags, date }) => {
 
   var hTagString = "";
   if (tags != null){
@@ -29,7 +29,7 @@ const KnowledgeLink = ({ title, path, tags, date }) => {
   }
 
     return (
-    <StyledBlogEntry>
+    <StyledBlogLink>
         <StyledLink to={path} color="black">
       <Row key={title}>
         <Col>       
@@ -48,8 +48,8 @@ const KnowledgeLink = ({ title, path, tags, date }) => {
         </Col>
       </Row>
       </StyledLink>
-    </StyledBlogEntry>
+    </StyledBlogLink>
   )
 }
 
-export default KnowledgeLink
+export default BlogLink
