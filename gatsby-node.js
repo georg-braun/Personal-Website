@@ -39,7 +39,7 @@ exports.createPages = async ({ graphql, actions }) => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
 
         // Decide which template to use
-        var hComponent = path.resolve(`./src/templates/knowledge-post.js`)        
+        var hComponent = path.resolve(`./src/templates/post-template.js`)        
 
         createPage({
           path: node.fields.slug,
