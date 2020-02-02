@@ -76,7 +76,7 @@ module.exports = {
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: false,
-              noInlineHighlight: false,
+              noInlineHighlight: true,
               // Customize the prompt used in shell output
               // Values below are default
               prompt: {

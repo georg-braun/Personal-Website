@@ -8,7 +8,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'semantic-ui-css/semantic.min.css'
 require("./src/styles/semantic-ui-override.css")
-require("prismjs/themes/prism.css");
+require("prismjs/themes/prism-tomorrow.css");
 require("./src/styles/timeline.css");
 require("./src/styles/markdown-post.css");
 

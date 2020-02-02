@@ -2,9 +2,13 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import styled from "styled-components"
 
 
-
+// Kapselt den Artikel Inhalt
+const ArticleContainer = styled.div`
+  margin-top: 20px;
+`
 
 
 
@@ -18,7 +22,7 @@ export default ({ data }) => {
         <h1>{post.frontmatter.title}</h1>
         <small><i>Tags: {post.frontmatter.tags.join(", ")}</i></small>
        
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <ArticleContainer dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
   )
