@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 
 const siteTitle = "Impressum"
 
-export default ({ data }) => (
+export default () => (
   <Layout title={siteTitle}  >
     <SEO title={siteTitle} />
     <h1>Impressum</h1>

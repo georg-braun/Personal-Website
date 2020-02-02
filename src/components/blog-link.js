@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap"
 import { Link as GatsbyLink} from "gatsby"
 import styled from "styled-components"
 
-const StyledBlogLink = styled.div`
+const StyledLinkContainer = styled.div`
   margin-bottom: 20px;
   padding: 5px;
   border-style: solid;
@@ -29,7 +29,7 @@ const BlogLink = ({ title, path, tags, date }) => {
   }
 
     return (
-    <StyledBlogLink>
+    <StyledLinkContainer>
         <StyledLink to={path} color="black">
       <Row key={title}>
         <Col>       
@@ -48,7 +48,7 @@ const BlogLink = ({ title, path, tags, date }) => {
         </Col>
       </Row>
       </StyledLink>
-    </StyledBlogLink>
+    </StyledLinkContainer>
   )
 }
 
