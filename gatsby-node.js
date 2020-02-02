@@ -39,10 +39,7 @@ exports.createPages = async ({ graphql, actions }) => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
 
         // Decide which template to use
-        var hComponent = path.resolve(`./src/templates/knowledge-post.js`)
-        if (node.fileAbsolutePath.includes("/data/blog/")){
-          hComponent = path.resolve(`./src/templates/blog-post.js`)
-        }
+        var hComponent = path.resolve(`./src/templates/knowledge-post.js`)        
 
         createPage({
           path: node.fields.slug,
