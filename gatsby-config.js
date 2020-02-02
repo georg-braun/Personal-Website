@@ -56,6 +56,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`, // Transformator der Markdowns
       options: {
         plugins: [
+          `gatsby-remark-emoji`,  // <-- this line adds emoji
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
@@ -87,20 +88,13 @@ module.exports = {
               // base for generating different widths of each image.
               maxWidth: 590,
             },
-          },
+          },          
         ],
       },
     },
     // Laden/Transformieren von Bildern
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          `gatsby-remark-emoji`,  // <-- this line adds emoji
-        ]
-      }
-    },
+   
   ],
 }
