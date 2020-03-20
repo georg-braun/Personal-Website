@@ -49,7 +49,14 @@ const StyledTag = styled.span`
 function createKnowledgeOverview(data, filterString) {
   var hOverview = data.posts.edges.map(({ node }) => {
 
-    var hKnowledgeEntry = null;
+    var hKnowledgeEntry = <h3>Hey</h3>;
+
+
+    // Filter posts without title    
+    if (node.frontmatter == null || node.frontmatter.title == ""){
+      return; 
+    } 
+    
 
     if (
       node.frontmatter.title.includes(filterString) ||

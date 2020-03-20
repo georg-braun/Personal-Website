@@ -14,13 +14,17 @@ const ArticleContainer = styled.div`
 
 export default ({ data }) => {
   const post = data.markdownRemark
+  const tags  = post.frontmatter.tags != null ?
+    <small><i>Tags: {post.frontmatter.tags.join(", ")}</i></small>
+    : <></> 
 
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
       <div className="markdown-post">
         <h1>{post.frontmatter.title}</h1>
-        <small><i>Tags: {post.frontmatter.tags.join(", ")}</i></small>
+
+        {tags}
        
         <ArticleContainer dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
