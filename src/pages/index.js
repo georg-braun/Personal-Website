@@ -49,7 +49,7 @@ const StyledTag = styled.span`
 function createKnowledgeOverview(data, filterString) {
   var hOverview = data.posts.edges.map(({ node }) => {
 
-    var hKnowledgeEntry = <h3>Hey</h3>;
+    var hKnowledgeEntry = <></>;
 
 
     // Filter posts without title    
