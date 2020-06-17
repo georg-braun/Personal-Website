@@ -46,41 +46,39 @@ const StyledTag = styled.span`
   }
 `
 
+function frontmatterIsValid(edge){
+  console.log(edge.node.frontmatter.title)
+  return edge.node.frontmatter.title != null && edge.node.frontmatter.title != "";
+}
+
 function createKnowledgeOverview(data, filterString) {
-  var hOverview = data.posts.edges.map(({ node }) => {
+  var hOverview = data.posts.edges
+    .filter(_ => frontmatterIsValid(_))
+    .map(({ node }) => {
 
-    var hKnowledgeEntry = <></>;
+      if (
+        node.frontmatter.title.includes(filterString) ||
+        node.rawMarkdownBody.includes(filterString) ||
+        (node.frontmatter.tags != null && node.frontmatter.tags.includes(filterString))
+      ) {
+        
+        var hBlogEntryDateString = "";
+        if (node.frontmatter.date != null){
+          hBlogEntryDateString = dateFormat(node.frontmatter.date, "deutschKurz")
+        }
 
 
-    // Filter posts without title    
-    if (node.frontmatter == null || node.frontmatter.title == ""){
-      return; 
-    } 
-    
-
-    if (
-      node.frontmatter.title.includes(filterString) ||
-      node.rawMarkdownBody.includes(filterString) ||
-      (node.frontmatter.tags != null && node.frontmatter.tags.includes(filterString))
-    ) {
-      
-      var hBlogEntryDateString = "";
-      if (node.frontmatter.date != null){
-        hBlogEntryDateString = dateFormat(node.frontmatter.date, "deutschKurz")
+        var hKnowledgeEntry = (
+          <>
+            <BlogLink
+              title={node.frontmatter.title}
+              path={node.fields.slug}       
+              date={hBlogEntryDateString}    
+              tags={node.frontmatter.tags} 
+            ></BlogLink>
+          </>
+        )
       }
-
-
-      hKnowledgeEntry = (
-        <>
-          <BlogLink
-            title={node.frontmatter.title}
-            path={node.fields.slug}       
-            date={hBlogEntryDateString}    
-            tags={node.frontmatter.tags} 
-          ></BlogLink>
-        </>
-      )
-    }
 
     return hKnowledgeEntry;
    
