@@ -4,12 +4,10 @@ import { Link as GatsbyLink} from "gatsby"
 import styled from "styled-components"
 
 const StyledLinkContainer = styled.div`
-  margin-bottom: 20px;
-  padding: 5px;
-  border-style: solid;
-  border-color: lightgray;
-  border-width: 2px;
-  border-radius: 3px;  
+  margin-bottom: 3px;
+  padding: 10px 5px 10px 5px;
+  background: ghostwhite;
+  border-radius: 1px;  
 `
 
 const StyledLink = styled(GatsbyLink)`
@@ -34,7 +32,6 @@ const BlogLink = ({ title, path, tags, date }) => {
       <Row key={title}>
         <Col>       
             <p>{title}</p>
- 
         </Col>        
       </Row>
       <Row>
