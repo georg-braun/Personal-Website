@@ -13,6 +13,7 @@ import {
   Image,
 } from "semantic-ui-react"
 import { FaXing, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"
+import Footer from "./footer"
 import AvatarImg from "../images/avatar.png"
 import SidebarImg from "../images/sidewall.jpg"
 
@@ -140,6 +141,7 @@ const Layout = ({ children }) => {
         </SidebarContainer>
         <LayoutColumnContent>
           <StyledSiteContent>{children}</StyledSiteContent>
+          <Footer />
         </LayoutColumnContent>
       </LayoutRow>
     </>
