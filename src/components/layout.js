@@ -37,6 +37,7 @@ const SidebarContainer = styled.div`
   }
   @media (max-width: ${cMobileDesktopViewWidthBreakPoint}) {
     width: 100%;
+    padding-bottom: 5px;
     
   }
 `
@@ -118,8 +119,7 @@ const Layout = ({ children }) => {
           <SidebarPersonalInfo>
               <Image  src={AvatarImg} size="small" href="/" ></Image>
               <p>Georg Braun</p>
-              <p>❤️‍🔥 Software</p>
-              <p>🏗️ Things</p>
+              <p>❤️‍🔥 Building software + things</p>              
               <References />
             </SidebarPersonalInfo>
             <SiteNavigation>
