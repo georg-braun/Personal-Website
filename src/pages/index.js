@@ -10,22 +10,11 @@ import dateFormat from "dateformat"
 
 const siteTitle="Blog";
 
-const SearchContainerWideScreen = styled.div`
-  position: fixed;
-  width: 200px;
-  right: 3vw;
 
-  @media (max-width: 1729px) {
-    display: none !important;
-  }  
-`
 
-const SearchContainerSmallScreen = styled.div`
+const SearchContainer = styled.div`
   margin-bottom: 20px;
 
-  @media (min-width: 1730px) {
-    display: none !important;
-  }  
 `
 
 const StyledInputContainer = styled.div`
@@ -116,7 +105,7 @@ export default ({ data }) => {
       
       <h6>{data.posts.totalCount} Beiträge</h6>
 
-      <SearchContainerSmallScreen>
+      <SearchContainer>
         <StyledInputContainer>
         <Input
           onChange={(event, data) => setFilter(data.value)}
@@ -126,28 +115,11 @@ export default ({ data }) => {
           }}
           fluid
           value={filter}
-          actionPosition="left"
+          actionPosition="left"          
           placeholder="Titel, Inhalt, Tag"/>
           </StyledInputContainer>
           {createTagContainer(data.tags.distinct, setFilter)}          
-      </SearchContainerSmallScreen>
-
-      <SearchContainerWideScreen>
-        <StyledInputContainer>
-        <Input
-          onChange={(event, data) => setFilter(data.value)}
-          action={{
-            color: "teal",            
-            icon: "search",            
-          }}
-          fluid
-          value={filter}
-          actionPosition="left"
-          placeholder="Titel, Inhalt, Tag"/>
-          </StyledInputContainer>
-          {createTagContainer(data.tags.distinct, setFilter)}          
-      </SearchContainerWideScreen>
-      
+      </SearchContainer>
 
       {createKnowledgeOverview(data, filter)}
     </Layout>
