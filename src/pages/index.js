@@ -100,7 +100,7 @@ export default ({ data }) => {
   dateFormat.masks.deutschKurz = 'dd.mm.yyyy';
 
   return (
-    <Layout>
+    <Layout >
       <SEO title={siteTitle} />
       
       <h6>{data.posts.totalCount} Beiträge</h6>
