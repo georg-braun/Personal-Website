@@ -122,7 +122,6 @@ const Layout = ({ children }) => {
             <SidebarPersonalInfo>
               <Image  src={AvatarImg} size="small" href="/" ></Image>
               <p>Georg Braun</p>
-              <p>❤️‍🔥 Building software + things</p>                            
             </SidebarPersonalInfo>
             <SiteNavigation>
               <SiteNavigationEntry href="/">

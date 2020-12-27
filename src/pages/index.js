@@ -37,7 +37,7 @@ const StyledTag = styled.span`
 
 function frontmatterIsValid(edge){
   console.log(edge.node.frontmatter.title)
-  return edge.node.frontmatter.title != null && edge.node.frontmatter.title != "";
+  return edge.node.frontmatter.title !== null && edge.node.frontmatter.title !== "";
 }
 
 function createKnowledgeOverview(data, filterString) {
@@ -136,7 +136,6 @@ export const query = graphql`
       }
       filter: {
         frontmatter: { title: { ne: null } }
-        fileAbsolutePath: { regex: "/knowledge-repo/" }
       }
     ) {
       totalCount
