@@ -12,7 +12,6 @@ import { Icon } from "semantic-ui-react"
 import { FaXing, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"
 import Footer from "./footer"
 import AvatarImg from "../images/avatar.png"
-import SidebarImg from "../images/background.png"
 import { Navbar, Image, Dropdown, DropdownButton } from "react-bootstrap"
 
 const cMobileDesktopViewWidthBreakPoint = "600px"
@@ -22,24 +21,7 @@ const WebReference = styled.span`
   color: white;
 `
 
-const SidebarContainer = styled.div`
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url(${SidebarImg});
-  background-position: 20% 20%;
-  background-size: cover;
 
-  @media (min-width: ${cMobileDesktopViewWidthBreakPoint}) {
-    position: fixed;
-    height: 100vh;
-    width: 30vw;
-    padding-top: 5px;
-  }
-  @media (max-width: ${cMobileDesktopViewWidthBreakPoint}) {
-    width: 100%;
-    background-position: 20% 90%;
-    padding-bottom: 5px;
-  }
-`
 
 const StyledSiteContent = styled.div`
   width: 70vw;
