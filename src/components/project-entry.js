@@ -9,24 +9,17 @@ const StyledProjectContainer = styled.div`
   display: flex;
   align-items : flex-end;
   border-style: solid;
-  border-width: 1px 1px 0px 1px !important;
+  
   border-width: 1px;
   border-color: lightgrey;
-  border-radius: 5px;
-  padding-bottom: -10px !important;
-  padding-top: 3px;
+  border-radius: 0px;
+  
+  padding: 5px;
   width: 340px;
   margin: 20px;
-  
+  border: 1px black solid;
 
-  :hover {
-    transform: translate(0, -5px);
-    -webkit-transform: translate(0, -5px);
-    -o-transform: translate(0, -5px);
-    -moz-transform: translate(0, -5px);
-    transition-duration: 0.5s;
-  }
-`
+  `
 
 const ProjectTitle = styled.h3`
   margin-top: 5px;

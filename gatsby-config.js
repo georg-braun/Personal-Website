@@ -35,22 +35,25 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-source-git`,
-      options: {
-        name: `knowledge-repo`,
-        remote: `https://github.com/velox1992/Memory.git`,
-        // Optionally supply a branch. If none supplied, you'll get the default branch.
-        branch: `master`,
-        // Tailor which files get imported eg. import the docs folder from a codebase.
-        patterns: `**`,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`, 
       options: {
         name: `images`,
         path: `${__dirname}/src/data/images`,
-      },
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`, 
+      options: {
+        name: `software-articles`,
+        path: `${__dirname}/src/artikel/software`,
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`, 
+      options: {
+        name: `software-articles`,
+        path: `${__dirname}/src/artikel/projekte`,
+      }
     },
     {
       resolve: `gatsby-transformer-remark`, // Transformator der Markdowns
@@ -93,7 +96,8 @@ module.exports = {
       },
     },
     // Laden/Transformieren von Bildern
-    `gatsby-plugin-sharp`,
+    // FailOnError wg. Checksum Error in libspng
+    { resolve: 'gatsby-plugin-sharp', options: { failOnError: false } },
     `gatsby-transformer-sharp`,
    
   ],
