@@ -1,5 +1,6 @@
 ---
 title: "Kovarianz, Kontravarianz und Invarianz bei generischen Typen"
+category: "Software"
 tags: ["Softwareentwicklung"]
 date: 2020-01-01
 ---

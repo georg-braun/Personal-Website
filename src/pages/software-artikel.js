@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 import { Input } from "semantic-ui-react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -30,35 +29,7 @@ const StyledTag = styled.span`
   }
 `
 
-const StyledLink = styled.a`
-  text-decoration: none;
-  color: black;
-`
-
-const SiteFlexContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-`
-
-const WebsiteArea = styled.div`
-  width: 250px;
-  height: 200px;
-  margin: 10px;
-  padding: 10px;
-
-  border-radius: 5px;
-
-  text-align: center;
-`
-
-const StyledImg = styled(Img)`
-  max-height: 150px;
-  margin-top: 2px;
-`
-
 function frontmatterIsValid(edge) {
-  console.log(edge.node.frontmatter.title)
   return (
     edge.node.frontmatter.title !== null && edge.node.frontmatter.title !== ""
   )
@@ -84,6 +55,7 @@ function createKnowledgeOverview(data, filterString) {
 
         var hKnowledgeEntry = (
           <>
+            <hr></hr>
             <BlogLink
               title={node.frontmatter.title}
               path={node.fields.slug}
@@ -123,46 +95,41 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title={siteTitle} />
+      <p>
+        Hier veröffentliche ich bewusst kurz gehaltene Artikel zu den Themen
+        Softwareentwicklung, .NET und Cloud.
+      </p>
+      <p>
+        Ich verfolge dabei das Ziel mein eigenes Verständnis der Themen zu
+        verbessern. Sollten auch weitere Personen von den Artikeln profitieren
+        freut mich das sehr :)
+      </p>
 
-      <h6>{data.posts.totalCount} Beiträge</h6>
       <SearchContainer>
         <StyledInputContainer>
-        <Input
-          onChange={(event, data) => setFilter(data.value)}
-          action={{
-            color: "teal",            
-            icon: "search",            
-          }}
-          fluid
-          value={filter}
-          actionPosition="left"          
-          placeholder="Titel, Inhalt, Tag"/>
-          </StyledInputContainer>
-          {createTagContainer(data.tags.distinct, setFilter)}          
+          <Input
+            onChange={(event, data) => setFilter(data.value)}
+            action={{
+              color: "teal",
+              icon: "search",
+            }}
+            fluid
+            value={filter}
+            actionPosition="left"
+            placeholder="Titel, Inhalt, Tag"
+          />
+        </StyledInputContainer>
+        {createTagContainer(data.tags.distinct, setFilter)}
       </SearchContainer>
 
-
       {createKnowledgeOverview(data, filter)}
-
     </Layout>
   )
 }
 
-
-
-
-
 export const query = graphql`
-  {
-    posts: allMarkdownRemark(
-      sort: {
-        fields: [frontmatter___date]
-        order: DESC
-      }
-      filter: {
-        frontmatter: { title: { ne: null } }
-      }
-    ) {
+{
+    posts: allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {title: {ne: null}, category: {eq: "Software"}}}) {
       totalCount
       edges {
         node {
@@ -174,6 +141,7 @@ export const query = graphql`
             title
             tags
             date
+            category
           }
           fileAbsolutePath
           tableOfContents
@@ -181,16 +149,8 @@ export const query = graphql`
         }
       }
     }
-
-    tags:     
-      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/knowledge-repo/"}}) {
-        distinct(field: frontmatter___tags)
-      }
-    
-    
-
+    tags: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/knowledge-repo/"}}) {
+      distinct(field: frontmatter___tags)
+    }
   }
 `
-
-
-

@@ -1,34 +1,12 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Input } from "semantic-ui-react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import BlogLink from "../components/blog-link"
 import styled from "styled-components"
-import dateFormat from "dateformat"
 
 const siteTitle = "Startseite"
 
-const SearchContainer = styled.div`
-  margin-bottom: 20px;
-`
-
-const StyledInputContainer = styled.div`
-  width: 200px;
-  margin-bottom: 10px;
-`
-
-const StyledTag = styled.span`
-  font-size: 0.8em;
-  margin-right: 5px;
-  display: inline-block;
-  text-decoration: underline;
-
-  :hover {
-    font-weight: bold;
-  }
-`
 
 const StyledLink = styled.a`
   text-decoration: none;

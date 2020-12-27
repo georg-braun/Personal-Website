@@ -22,7 +22,7 @@ const StyledIconContainer = styled.span`
   margin-right: 10px;
 `
 
-const siteTitle = "Projekte"
+const siteTitle = "Software-Projekte"
 export default ({ data }) => (
   <Layout title={siteTitle}>
     <SEO title={siteTitle} />

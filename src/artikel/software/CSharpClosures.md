@@ -1,5 +1,6 @@
 ---
 title: "Closures in C#"
+category: "Software"
 tags: ["C#"]
 date: 2020-01-01
 ---
@@ -41,4 +42,4 @@ class A {
 
 Durch die Art wie Closures umgesetzt werden kann es zu Verwirrungen bezüglich der verwendbaren Variablen kommen. Im späteren Kontext des `someOtherFunc` Closures ist ebenfalls eine `hObj1` Variable deklariert obwohl diese im Closure `someOtherFunc` nicht genutzt wird.
 
-![image-20200127180204617](/images/csharp-closure.png)
+![image-20200127180204617](/images/csharp-closure.jpg)

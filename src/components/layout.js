@@ -14,8 +14,6 @@ import Footer from "./footer"
 import AvatarImg from "../images/avatar.png"
 import { Navbar, Image, Dropdown, DropdownButton } from "react-bootstrap"
 
-const cMobileDesktopViewWidthBreakPoint = "600px"
-
 const WebReference = styled.span`
   margin: 7px;
   color: white;
@@ -40,23 +38,6 @@ const Reference = ({ children, link }) => {
 const LayoutRow = styled.div`
   display: flex;
   flex-direction: column;
-`
-
-const SiteNavigation = styled.div`
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: LightGray;
-  text-align: center;
-`
-
-const SiteNavigationEntry = styled.a`
-  margin: 5px;
-  color: inherit;
-  text-decoration: none;
-
-  :hover {
-    color: white;
-  }
 `
 
 const BootstrapImage = styled(Image)`

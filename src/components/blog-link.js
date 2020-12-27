@@ -5,17 +5,10 @@ import styled from "styled-components"
 
 const StyledLinkContainer = styled.div`
   margin-bottom: 3px;
-  padding: 10px 5px 10px 5px;
-
-  border-radius: 1px;
 `
 
 const StyledLink = styled(GatsbyLink)`
   color: black;
-`
-
-const StyledDate = styled.div`
-  text-align: right;
 `
 
 const BlogLink = ({ title, path, tags, date }) => {
