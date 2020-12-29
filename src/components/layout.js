@@ -77,7 +77,6 @@ const Layout = ({ children }) => {
             <BootstrapImage
               src={AvatarImg}
               width="100"
-              verti
               href="/"
             ></BootstrapImage>
           </div>
@@ -89,6 +88,7 @@ const Layout = ({ children }) => {
 
         <BootstrapDropdownButton
           id="dropdown-basic-button"
+          menuAlign="right"
           title=""
           variant="secondary"
         >
