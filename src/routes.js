@@ -1,7 +1,7 @@
 var routes = {
-    softwareProjects: "software-projekte",
-    projects: "projekte",
-    profile: "profil",
+    softwareProjects: "/software-projekte",
+    projects: "/projekte",
+    profile: "/profil",
   };
 
   
