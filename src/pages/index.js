@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
+import routes from "../routes"
 
 const siteTitle = "Startseite"
 
@@ -43,25 +44,19 @@ export default ({ data }) => {
       <SEO title={siteTitle} />
 
       <SiteFlexContainer>
-        <StyledLink href="software-artikel">
-          <WebsiteArea>
-            Software-Artikel
-            <StyledImg fluid={data.screen.edges[0].node.fluid} alt="" />
-          </WebsiteArea>
-        </StyledLink>
-        <StyledLink href="software-projekte">
+      <StyledLink href={routes.softwareProjects}>
           <WebsiteArea>
             Software-Projekte
             <StyledImg fluid={data.laptops.edges[0].node.fluid} alt="" />
           </WebsiteArea>
         </StyledLink>
-        <StyledLink href="projekte">
+        <StyledLink href={routes.projects}>
           <WebsiteArea>
             Projekte
             <StyledImg fluid={data.hammer.edges[0].node.fluid} alt="" />
           </WebsiteArea>
         </StyledLink>
-        <StyledLink href="profil">
+        <StyledLink href={routes.profile}>
           <WebsiteArea>
             Profil
             <StyledImg fluid={data.avatar.edges[0].node.fluid} alt="" />

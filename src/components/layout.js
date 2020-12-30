@@ -13,6 +13,7 @@ import { FaXing, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"
 import Footer from "./footer"
 import AvatarImg from "../images/avatar.png"
 import { Navbar, Image, Dropdown, DropdownButton } from "react-bootstrap"
+import routes from "../routes"
 
 const WebReference = styled.span`
   margin: 7px;
@@ -92,16 +93,13 @@ const Layout = ({ children }) => {
           title=""
           variant="secondary"
         >
-          <Dropdown.Item href="/software-artikel">
-          <Icon name="book" />Software Artikel
-          </Dropdown.Item>
-          <Dropdown.Item href="/software-projekte">
+          <Dropdown.Item href={routes.softwareProjects}>
             <Icon name="pencil" />Software Projekte
           </Dropdown.Item>
-          <Dropdown.Item href="/projekte">
+          <Dropdown.Item href={routes.projects}>
             <Icon name="rocket" />Projekte
           </Dropdown.Item>
-          <Dropdown.Item href="/profil">
+          <Dropdown.Item href={routes.profile}>
             <Icon name="user circle" /> Profil
           </Dropdown.Item>
         </BootstrapDropdownButton>
