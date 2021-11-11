@@ -59,7 +59,7 @@ const References = () => {
       <Reference link="https://www.linkedin.com/in/georg-braun-41286b140/">
         <FaLinkedin />
       </Reference>
-      <Reference link="https://github.com/velox1992">
+      <Reference link="https://github.com/georg-braun">
         <FaGithub />
       </Reference>
       <Reference link="mailto:mail@georg-braun.de">
