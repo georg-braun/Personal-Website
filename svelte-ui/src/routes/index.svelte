@@ -1,14 +1,16 @@
 <div>
 	<div
-		class="flex flex-wrap border-solid border-2 drop-shadow-xl border-gray-400 rounded-md  md:w-1/2"
-	>
-		<img src="garage-buddy-project.png" alt="Profile picture" />
-		<div class="p-2">
-			<p class="text-2xl font-semibold ">Garage buddy</p>
-			<p class="mt-2">
-				Neben dem Verwalten von Fahrzeug Inspektionen wird man auch an anstehende Inspektionen
-				erinnert
-			</p>
+		class="flex flex-wrap border-solid border-2 overflow-clip shadow-xl  rounded-md  md:w-1/2">
+		<div >
+			<img src="garage-buddy-project.png" alt="Profile picture" />
+			<div class="p-2">
+				<p class="text-2xl font-semibold ">Garage buddy</p>
+				<p class="mt-2">
+					Eine Webanwendung zum Verwalten von Fahrzeug-Inspektionen. Demnächst anstehende Inspektionen werden hervorgehoben.
+                    Es war ein Hobby-Projekt um mehr über React, Next.js und Firebase zu lernen.
+                    <!-- Link zum Blog-Post -->
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
