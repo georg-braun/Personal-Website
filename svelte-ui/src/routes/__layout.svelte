@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { text } from 'svelte/internal';
 	import '../app.css';
+	import '../prism.css';
 </script>
 
 <main>
