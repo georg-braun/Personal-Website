@@ -15,7 +15,8 @@
 				</div>
 				<div class="w-full sm:w-auto mt-2 sm:mt-0">
 					<p class="text-center">
-						<a href="/">Blog</a>
+						<a href="/">projects</a>
+						<a class="ml-2" href="/blog">posts</a>
 					</p>
 				</div>
 				<!--<div class="w-full sm:ml-4 sm:w-auto">

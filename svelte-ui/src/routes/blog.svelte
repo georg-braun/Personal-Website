@@ -1,0 +1,28 @@
+<script context="module">
+	import { getAllPosts } from '../blog/posts';
+	export async function load() {
+		const posts = getAllPosts();
+		return posts;
+		//return { props: { posts: posts } };
+	}
+</script>
+
+<script>
+	export let posts;
+</script>
+
+<div>
+	<div class="w-2/3 mx-auto">
+		<h1 class="text-3xl mb-5">posts</h1>
+		<div class="ml-5">
+			{#each posts as post}
+				{#if post.metadata != undefined && post.metadata.title != undefined && post.metadata.date != undefined && post.route != undefined}
+					<li>
+						<a class="font-semibold" href={post.route}>{post.metadata.title}</a>
+						<span>{post.metadata.date}</span>
+					</li>
+				{/if}
+			{/each}
+		</div>
+	</div>
+</div>
