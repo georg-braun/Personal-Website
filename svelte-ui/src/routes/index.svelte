@@ -29,6 +29,7 @@
 			description="Eine Webanwendung zum Verwalten von Fahrzeug-Inspektionen. Demnächst anstehende Inspektionen
 	werden hervorgehoben. Es war ein Hobby-Projekt um mehr über React, Next.js und Firebase zu
 	lernen."
+			tags={['next.js', "firebase"]}
 		/>
 	</div>
 </div>
