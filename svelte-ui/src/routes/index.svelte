@@ -28,10 +28,8 @@
 			imagePath="garage-buddy-project.png"
 			repoUrl="https://github.com/georg-braun/garage-buddy"
 			projectUrl="https://garage-buddy.georg-braun.de/"
-			tags={['next.js', 'firebase']}
-			description="Eine Webanwendung zum Verwalten von Fahrzeug-Inspektionen. Demnächst anstehende Inspektionen
-	werden hervorgehoben. Es war ein Hobby-Projekt um mehr über React, Next.js und Firebase zu
-	lernen."
+			tags={["react",'next.js', 'firebase']}
+			description="A web application for managing vehicle maintenances. Pending maintenances are highlighted. A nice side effect of this project was to learn more about react, next.js, firebase."
 		/>
 	</div>
 </div>
