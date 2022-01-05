@@ -11,3 +11,5 @@ public bool DoesCodehighlightingWork(){
     return true;
 }
 ```
+
+![](images/example-post-image.png)
