@@ -30,5 +30,9 @@
 		<div class="container mx-auto mt-8 p-4">
 			<slot />
 		</div>
+		<div class="container mx-auto mt-8 text-center">
+			<a href="/impressum">Impressum</a>
+		</div>
+		<div>
 	</div>
 </main>
