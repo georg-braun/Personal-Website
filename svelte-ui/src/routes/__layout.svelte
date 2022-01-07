@@ -17,13 +17,9 @@
 					<p class="text-center">
 						<a href="/">projects</a>
 						<a class="ml-2" href="/blog">posts</a>
+						<a class="ml-2" href="/about">about</a>
 					</p>
 				</div>
-				<!--<div class="w-full sm:ml-4 sm:w-auto">
-					<p class="text-center">
-						<a href="/lebenslauf">Lebenslauf</a>
-					</p>
-				</div>-->
 			</div>
 		</div>
 
@@ -31,8 +27,8 @@
 			<slot />
 		</div>
 		<div class="container mx-auto mt-8 text-center">
-			<a href="/impressum">Impressum</a>
+			<a href="/impressum">impressum</a>
 		</div>
-		<div>
+		<div />
 	</div>
 </main>
