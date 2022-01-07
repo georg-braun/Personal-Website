@@ -27,6 +27,7 @@
 			target="_blank"
 			rel="noopener noreferrer"
 			href="https://www.linkedin.com/in/georg-braun-41286b140/">LinkedIn profile</a
-		> or contact me :)
+		>
+		or contact me <a href="mailto:mail@georg-braun.de">mail@georg-braun.de</a> :)
 	</p>
 </div>
