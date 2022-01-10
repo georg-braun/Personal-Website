@@ -4,8 +4,6 @@ import preprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
 import { join } from 'path';
 
-const blog_layout = join(process.cwd(), '/src/layout/blog-post.svelte');
-
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// an array of file extensions that should be treated as Svelte components
