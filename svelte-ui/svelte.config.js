@@ -2,7 +2,7 @@ import adapter from '@sveltejs/adapter-auto';
 import copy from 'rollup-plugin-copy';
 import preprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
-import { join } from 'path';
+import rehypeExternalLinks from 'rehype-external-links';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -10,7 +10,14 @@ const config = {
 	extensions: ['.svelte', '.md'],
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: [preprocess(), mdsvex({ extensions: ['.md'], layout: '/src/blog-post.svelte' })],
+	preprocess: [
+		preprocess(),
+		mdsvex({
+			extensions: ['.md'],
+			layout: '/src/blog-post.svelte',
+			rehypePlugins: [rehypeExternalLinks]
+		})
+	],
 
 	kit: {
 		adapter: adapter(),
