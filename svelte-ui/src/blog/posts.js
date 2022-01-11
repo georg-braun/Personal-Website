@@ -11,7 +11,6 @@ function extractPostData(rawPath, rawPost) {
 	};
 }
 
-
 export function getPostsDescByDate() {
 	const allPosts = import.meta.globEager(`../routes/blog/**/*.md`);
 
@@ -23,8 +22,10 @@ export function getPostsDescByDate() {
 		posts.push(post);
 	}
 
+	console.log(posts);
+
 	posts.sort((a, b) => {
-		return new Date(b.metadata.date).getDate() - new Date(a.metadata.date).getDate();
+		return new Date(b.metadata.date).valueOf() - new Date(a.metadata.date).valueOf();
 	});
 
 	console.log(posts);
@@ -32,5 +33,11 @@ export function getPostsDescByDate() {
 }
 
 export function getLatestFivePostsDescByDate() {
-	return getPostsDescByDate();
+	const allPostsDescByDate = getPostsDescByDate();
+	const latestFivePostsDescByDate = [];
+	for (let postIndex = 0; postIndex < 5; postIndex++) {
+		const post = allPostsDescByDate[postIndex];
+		if (post) latestFivePostsDescByDate.push(post);
+	}
+	return latestFivePostsDescByDate;
 }

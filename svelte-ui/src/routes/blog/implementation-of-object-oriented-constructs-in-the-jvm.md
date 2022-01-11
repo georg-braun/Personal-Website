@@ -1,5 +1,5 @@
 ---
-title: "Seminar Paper: Implementation of object-oriented constructs in the JVM"
+title: Implementation of object-oriented constructs in the JVM (seminar paper)
 date: 2018-12-21
 ---
 
