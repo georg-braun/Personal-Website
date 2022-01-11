@@ -12,7 +12,7 @@
 </script>
 
 <div>
-	<h1 class="text-3xl mb-5">Recent posts</h1>
+	<h1 class="text-3xl mb-5">recent posts</h1>
 	<div class="ml-5">
 		{#each posts as post}
 			{#if post.metadata != undefined && post.metadata.title != undefined && post.metadata.date != undefined && post.route != undefined}
@@ -24,7 +24,7 @@
 			{/if}
 		{/each}
 	</div>
-	<h1 class="text-3xl mt-10 mb-5">Projects</h1>
+	<h1 class="text-3xl mt-10 mb-5">projects</h1>
 	<div class="flex flex-wrap justify-center">
 		<Project
 			title="Garage Buddy"
