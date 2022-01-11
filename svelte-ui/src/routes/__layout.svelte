@@ -10,7 +10,7 @@
 			<div class="flex flex-wrap items-center">
 				<div class="w-full sm:w-40">
 					<div class="w-40 mx-auto">
-						<img src="/avatar.png" alt="Profile picture" />
+						<img src="/avatar.png" alt="Profile" />
 					</div>
 				</div>
 				<div class="w-full sm:w-auto mt-2 sm:mt-0">
