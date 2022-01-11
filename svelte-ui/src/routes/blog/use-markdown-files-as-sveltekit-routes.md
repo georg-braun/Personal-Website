@@ -1,6 +1,6 @@
 ---
 title: Use markdown files as routes in SvelteKit
-date: 1/2022
+date: 2022-01-07
 ---
 
 # The mission 

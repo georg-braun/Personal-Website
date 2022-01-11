@@ -19,7 +19,7 @@
 				{#if post.metadata != undefined && post.metadata.title != undefined && post.metadata.date != undefined && post.route != undefined}
 					<li>
 						<a class="font-semibold" href={post.route}>{post.metadata.title}</a>
-						<span>{post.metadata.date}</span>
+						<span>{new Date(post.metadata.date).toLocaleDateString()}</span>
 					</li>
 				{/if}
 			{/each}

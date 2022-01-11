@@ -1,6 +1,6 @@
 ---
 title: Store images in the same folder as markdown files in SvelteKit blog
-date: 1/2022
+date: 2022-01-10
 ---
 
 I had a running blog solution. Markdown files were processed and served as routes. 

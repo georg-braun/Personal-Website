@@ -1,6 +1,6 @@
 ---
 title: Add a layout to markdown posts in SvelteKit
-date: 1/2022
+date: 2022-01-08
 ---
 
 The layout of my website is defined in __layout.svelte file. The placeholder for the concrete content (slot) is missing a special styling. Therefore every page is able to define a placeholder styling that meets their needs. 
