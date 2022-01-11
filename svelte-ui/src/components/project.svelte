@@ -14,7 +14,7 @@
 
 <div class="border-solid border-2 overflow-clip shadow-xl  rounded-md  md:w-1/3 m-4">
 	<div>
-		<img src={imagePath} alt="Profile picture" />
+		<img src={imagePath} alt="Profile" />
 
 		<div class="p-2">
 			<p class="text-xl font-semibold ">{title}</p>
@@ -31,9 +31,8 @@
 			</div>
 			<p class="mt-2">
 				{description}
-				<!-- Link zum Blog-Post -->
 			</p>
-			<div class="flex mt-2">
+			<div class="flex mt-4">
 				{#each tags as tag}
 					<Tag tagName={tag} />
 				{/each}
