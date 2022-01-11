@@ -28,12 +28,21 @@
 	<div class="flex flex-wrap justify-center">
 		<Project
 			title="Garage Buddy"
-			imagePath="garage-buddy-project.png"
+			imagePath="projects/garage-buddy.png"
 			repoUrl="https://github.com/georg-braun/garage-buddy"
 			projectUrl="https://garage-buddy.georg-braun.de/"
 			tags={['react', 'next.js', 'firebase']}
 			date="2021"
 			description="A web application for managing vehicle maintenances. Pending maintenances are highlighted. A nice side effect of this project was to learn more about react, next.js, firebase."
+		/>
+		<Project
+			title="Family tree"
+			imagePath="projects/family-tree.png"
+			repoUrl="https://github.com/georg-braun/Family-Tree"
+			projectUrl="https://stammbaum.georg-braun.de/"
+			tags={['react']}
+			date="2019"
+			description="Based on the dTree library I built a family tree. In addition, I wrote a graph-to-list converter to switch between different family trees."
 		/>
 		<Project
 			title="OpenCV Augmented Reality"
