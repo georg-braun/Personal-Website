@@ -11,7 +11,8 @@ function extractPostData(rawPath, rawPost) {
 	};
 }
 
-export function getAllPosts() {
+
+export function getPostsDescByDate() {
 	const allPosts = import.meta.globEager(`../routes/blog/**/*.md`);
 
 	// many thanks to https://blog.stranianelli.com/sveltekit-routing-from-other-folders-english/
@@ -22,5 +23,14 @@ export function getAllPosts() {
 		posts.push(post);
 	}
 
-	return { props: { posts: posts } };
+	posts.sort((a, b) => {
+		return new Date(b.metadata.date).getDate() - new Date(a.metadata.date).getDate();
+	});
+
+	console.log(posts);
+	return posts;
+}
+
+export function getLatestFivePostsDescByDate() {
+	return getPostsDescByDate();
 }

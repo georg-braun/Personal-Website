@@ -1,9 +1,8 @@
 <script context="module">
-	import { getAllPosts } from '../blog/posts';
+	import { getPostsDescByDate } from '../blog/posts';
 	export async function load() {
-		const posts = getAllPosts();
-		return posts;
-		//return { props: { posts: posts } };
+		const posts = getPostsDescByDate();
+		return { props: { posts: posts } };
 	}
 </script>
 
