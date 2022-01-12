@@ -15,7 +15,7 @@ But then I read the mdsvex doc and was surprised.
 
 With mdsvex and svelte props this was super easy because mdsvex passes the frontmatter data to available props in the layout file.
 
-![Image that shows that the frontmatter data is injected to the mdsvex layout file.](images/mdsvex-frontmatter-injection.png)
+![The frontmatter data is injected to the mdsvex layout file.](images/mdsvex-frontmatter-injection.png)
 
 
 Done.
