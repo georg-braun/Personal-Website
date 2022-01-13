@@ -1,5 +1,5 @@
 ---
-title: "SvelteKit Blog: Generate routes at build time"
+title: "SvelteKit Blog: Generate post links at build time"
 date: 2022-01-13
 tags: ["svelte"]
 ---
