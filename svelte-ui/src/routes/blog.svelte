@@ -1,5 +1,5 @@
 <script context="module">
-	import { getPostsDescByDate } from '../blog/posts';
+	import { getPostsDescByDate } from '../blog/markdownFilesToPosts';
 	export async function load() {
 		const posts = getPostsDescByDate();
 		return { props: { posts: posts } };
@@ -17,8 +17,8 @@
 			{#each posts as post}
 				{#if post.metadata != undefined && post.metadata.title != undefined && post.metadata.date != undefined && post.route != undefined}
 					<li>
-						<a class="font-semibold" href={post.route}>{post.metadata.title}</a>
-						<span>{new Date(post.metadata.date).toLocaleDateString()}</span>
+						<a href={post.route}>{post.metadata.title}</a>
+						<span>({new Date(post.metadata.date).toLocaleDateString()})</span>
 					</li>
 				{/if}
 			{/each}

@@ -1,13 +1,16 @@
 <script context="module">
-	import { getLatestFivePostsDescByDate } from '../blog/posts';
+	import { getLatestFivePostsDescByDate } from '../blog/markdownFilesToPosts';
+	// execute before the component is initialized
 	export async function load() {
 		const postsByDescDate = getLatestFivePostsDescByDate();
+		// pass the post data as props to the component
 		return { props: { posts: postsByDescDate } };
 	}
 </script>
 
 <script>
 	import Project from '../components/project.svelte';
+	// posts are injected by the load function
 	export let posts;
 </script>
 

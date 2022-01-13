@@ -16,6 +16,7 @@ export function getLatestFivePostsDescByDate() {
 let postsCache;
 function getAllPosts() {
 	const markdownFiles = getMarkdownFiles();
+	console.log(markdownFiles);
 	if (!postsCache) postsCache = getPosts(markdownFiles);
 	return postsCache;
 }
@@ -28,6 +29,7 @@ function getPosts(markdownFiles) {
 	// many thanks to https://blog.stranianelli.com/sveltekit-routing-from-other-folders-english/
 	const posts = [];
 	for (let path in markdownFiles) {
+		console.log(path);
 		const rawPost = markdownFiles[path];
 		const post = extractPostData(path, rawPost);
 		posts.push(post);
