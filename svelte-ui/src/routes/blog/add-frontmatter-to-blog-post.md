@@ -1,6 +1,7 @@
 ---
-title: Add frontmatter data to posts in SvelteKit
+title: "SvelteKit Blog: Add frontmatter data to posts"
 date: 2022-01-08
+tags: ["svelte"]
 ---
 
 With mdsvex it was possible to transform my markdown files to html files. Besides the post text, the markdown files contain a frontmatter with pieces of information about the post title and the creation date.

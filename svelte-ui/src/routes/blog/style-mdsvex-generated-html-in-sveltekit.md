@@ -1,6 +1,7 @@
 ---
-title: Style mdvsex generated html in SvelteKit
+title: "SvelteKit Blog: Style mdvsex generated html"
 date: 2022-01-11
+tags: ["svelte"]
 ---
 
 My blog posts are markdown files that get processed to html files (you can find more about this in [this post](/blog/use-markdown-files-as-sveltekit-routes)

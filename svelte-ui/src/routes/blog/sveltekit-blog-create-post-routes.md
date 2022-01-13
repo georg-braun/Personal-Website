@@ -1,6 +1,7 @@
 ---
 title: "SvelteKit Blog: Generate routes at build time"
 date: 2022-01-13
+tags: ["svelte"]
 ---
 
 
