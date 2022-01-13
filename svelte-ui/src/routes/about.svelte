@@ -31,3 +31,9 @@
 		or contact me <a href="mailto:mail@georg-braun.de">mail@georg-braun.de</a> :)
 	</p>
 </div>
+
+<style>
+	a {
+		text-decoration: underline;
+	}
+</style>
