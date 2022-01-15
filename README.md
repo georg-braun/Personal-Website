@@ -1,4 +1,4 @@
-# Peroson website 
+# Blog and project overview built with svelte
 
 This website is a blog and project overview built with sveltekit. 
 
