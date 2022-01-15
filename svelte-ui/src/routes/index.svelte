@@ -31,7 +31,7 @@
 	<div class="flex flex-wrap justify-center">
 		<Project
 			title="Website built with svelte"
-			imagePath="projects/garage-buddy.png"
+			imagePath="projects/project-svelte-website.jpg"
 			projectUrl="https://georg-braun.de/"
 			tags={['svelte']}
 			date="2022"
