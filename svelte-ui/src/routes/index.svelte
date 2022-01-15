@@ -30,6 +30,14 @@
 	<h1 class="text-3xl mt-10 mb-5">projects</h1>
 	<div class="flex flex-wrap justify-center">
 		<Project
+			title="Website built with svelte"
+			imagePath="projects/garage-buddy.png"
+			projectUrl="https://georg-braun.de/"
+			tags={['svelte']}
+			date="2022"
+			description="Personal website and blog built with sveltekit."
+		/>
+<Project
 			title="Garage Buddy"
 			imagePath="projects/garage-buddy.png"
 			repoUrl="https://github.com/georg-braun/garage-buddy"
