@@ -1,3 +1,8 @@
+/*
+The posts are sourrounded by a div container with the blog-post class.
+So it's possible to sytle them separate.
+*/
+
 .blog-post ul {
     list-style-type: disc;
     padding-left: 2rem;
