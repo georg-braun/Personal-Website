@@ -9,7 +9,7 @@
 </script>
 
 <script>
-	import Project from '../components/project.svelte';
+	import Project from '../components/project-template.svelte';
 	// posts are injected by the load function
 	export let posts;
 </script>
