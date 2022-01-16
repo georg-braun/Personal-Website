@@ -7,9 +7,9 @@ This website is a blog and project overview built with sveltekit.
   - write posts in markdown
   - store images with markdon files in the same folder
 
-## How can I run this?
+## How can I run this locally?
 
-```js
+```
 // 🚀 start local development
 npm run dev
 ````
