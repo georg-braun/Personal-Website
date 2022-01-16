@@ -12,9 +12,9 @@
 	export let tags = [];
 </script>
 
-<div class="border-solid border-2 overflow-clip shadow-xl  rounded-md  md:w-1/3 m-4">
+<div class="border-solid border-2 overflow-clip shadow-xl  rounded-md w-full md:w-1/3 m-4">
 	<div>
-		<img src={imagePath} alt="Profile" />
+		<img src={imagePath} class="max-h-80 mx-auto" alt="Profile" />
 
 		<div class="p-2">
 			<p class="text-xl font-semibold ">{title}</p>

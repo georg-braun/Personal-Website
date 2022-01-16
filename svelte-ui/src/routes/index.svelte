@@ -31,13 +31,14 @@
 	<div class="flex flex-wrap justify-center">
 		<Project
 			title="Website built with svelte"
-			imagePath="projects/project-svelte-website.jpg"
+			imagePath="projects/svelte-website.png"
+			repoUrl="https://github.com/georg-braun/Personal-Website"
 			projectUrl="https://georg-braun.de/"
 			tags={['svelte']}
 			date="2022"
 			description="Personal website and blog built with sveltekit."
 		/>
-<Project
+		<Project
 			title="Garage Buddy"
 			imagePath="projects/garage-buddy.png"
 			repoUrl="https://github.com/georg-braun/garage-buddy"
