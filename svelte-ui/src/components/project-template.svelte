@@ -9,7 +9,6 @@
 	export let repoUrl = 'https://github.com/georg-braun';
 	export let projectUrl = '';
 	export let date = '';
-	export let tags = [];
 </script>
 
 <div class="border-solid border-2 overflow-clip shadow-xl rounded-md w-full md:w-2/3 m-8">
