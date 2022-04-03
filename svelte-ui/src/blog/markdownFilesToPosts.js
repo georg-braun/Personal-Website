@@ -30,7 +30,8 @@ function getPosts(markdownFiles) {
 	for (let path in markdownFiles) {
 		const rawPost = markdownFiles[path];
 		const post = extractPostData(path, rawPost);
-		posts.push(post);
+		if (post.metadata.category !== "private-project")
+			posts.push(post);
 	}
 	return posts;
 }
