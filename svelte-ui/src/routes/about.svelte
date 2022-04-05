@@ -2,11 +2,13 @@
 	export let rockyElmoImage = 'rocky-elmo.png';
 </script>
 
-<div class="w-2/3 mx-auto">
-	<h1 class="text-xl">About me</h1>
+<div class="w-2/3">
+	<h1 class="text-3xl">About me</h1>
 
-	<p class="mt-4">My name is Georg Braun and work as (C#) software engineer in Germany. <br>
-		I'm interessted and evolve in software- and system-architecture, web development and DevOps.</p>
+	<p class="mt-4">
+		My name is Georg Braun and work as (C#) software engineer in Germany. <br />
+		I'm interessted and evolve in software- and system-architecture, web development and DevOps.
+	</p>
 	<p class="mt-4">
 		<br />
 		My spare time I mostly spent with
@@ -20,11 +22,11 @@
 		<li>build stuff</li>
 	</ul>
 	<p class="mt-4">
-		My blog is about projects, opinions, and problems I encounter as a software engineer. I think
-		blogging has several advantages: reflection, learning by teaching, and offer hopefully some
-		useful information.<br>
-		Maybe there will sneak in some posts about my other interests ;)
+		My blog is about projects, opinions, and problems I encounter as a software engineer.<br />
+		I think blogging has several advantages: reflection, learning by teaching, and offer hopefully some
+		useful information.<br />
 	</p>
+	<p class="mt-4">Maybe there will sneak in some posts about my other interests ;)</p>
 
 	<p class="mt-4">
 		If you want to see a full list of stages and buzzwords visit my <a

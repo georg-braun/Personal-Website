@@ -6,7 +6,7 @@
 
 <div>
 	<input type="checkbox" bind:checked={showOnlySoftwareProjects} class="rounded-ful" />
-	Show only software stuff
+	Show only software stuff 👨‍💻
 </div>
 
 <div class="flex flex-wrap ">
