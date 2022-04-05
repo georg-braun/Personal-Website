@@ -6,7 +6,7 @@
 	export let title = 'Projekt';
 	export let description = 'Projektbeschreibung';
 	export let imagePath = 'default-project-image.png';
-	export let repoUrl = 'https://github.com/georg-braun';
+	export let repoUrl = '';
 	export let projectUrl = '';
 	export let date = '';
 </script>
@@ -16,22 +16,23 @@
 		<div class="p-2 flex md:flex-nowrap flex-wrap-reverse">
 			<div class="w-fit md:w-1/3 mx-auto">
 				<img src={imagePath} class="mx-auto" alt="Profile" />
-
 			</div>
 			<div class="w-2/3 ml-2">
 				<p class="text-xl font-semibold ">{title}</p>
 				<div class="align-middle">
 					<span class="align-middle">{date}</span>
-					<a target="_blank" rel="noopener noreferrer" href={repoUrl}
-						><Icon class="inline align-middle text-xl" icon="akar-icons:github-fill" /></a
-					>
+					{#if repoUrl != ''}
+						<a target="_blank" rel="noopener noreferrer" href={repoUrl}
+							><Icon class="inline align-middle text-xl" icon="akar-icons:github-fill" /></a
+						>
+					{/if}
 					{#if projectUrl != ''}
 						<a target="_blank" rel="noopener noreferrer" href={projectUrl}>
 							<Icon class="inline align-middle text-xl" icon="ci:external-link" />
 						</a>
 					{/if}
 				</div>
-				<div >
+				<div>
 					{description}
 				</div>
 			</div>
