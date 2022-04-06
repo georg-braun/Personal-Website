@@ -18,12 +18,20 @@
 		"description": "A web application for managing vehicle maintenances. Pending maintenances are highlighted. A nice side effect of this project was to learn more about react, next.js, firebase."
 	},
 	{
+		"title": "Building a couch",
+		"imagePath": "blog/images/couch-2020/result.png",
+		"projectUrl": "/blog/building-a-couch",
+		"date": "2020",
+		"category": "private",
+		"description": "We wanted to have a couch on our balcony to enjoy the sunset. Therefore we built a couch ;)"
+	},
+	{
 		"title": "Building a raised bed",
 		"imagePath": "blog/images/raised-bed-2020/planted.png",
 		"projectUrl": "/blog/building-a-raised-bed",
 		"date": "2020",
 		"category": "private",
-		"description": "In summer 2020 my girlfriend and I moved to a new location. Although it was possible to use the garden we wanted to have the possibility to plant something near the kitchen. So I decided to construct and build a raised bed."
+		"description": "In summer 2019 my girlfriend and I moved to a new location. Although it was possible to use the garden we wanted to have the possibility to plant something near the kitchen. So I decided to construct and build a raised bed."
 	},
 	{
 		"title": "Family tree",

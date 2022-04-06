@@ -4,7 +4,7 @@ date: 2020-09-01
 category: "private-project"
 ---
 
-In summer 2020 my girlfriend and I moved to a new location. Although it was possible to use the garden we wanted to have the possibility to plant something near the kitchen. So I decided to construct a raised bed with Inventor and calculated how much wood we needed.
+In summer 2019 my girlfriend and I moved to a new location. Although it was possible to use the garden we wanted to have the possibility to plant something near the kitchen. So I decided to construct a raised bed with Inventor and calculated how much wood we needed.
 
 ![Cad sketch](images\raised-bed-2020\cad.png)
 
