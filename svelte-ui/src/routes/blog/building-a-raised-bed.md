@@ -34,6 +34,6 @@ During the work we discovered some limitations due to the available tools, so th
 
 ![Positioned on the gallery](images\raised-bed-2020\positioned.png)
 
-The raised bed got an addtional task as visual cover.
+The raised bed got an additional task as visual cover.
 
 ![Planted](images\raised-bed-2020\planted.png)
