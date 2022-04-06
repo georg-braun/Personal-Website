@@ -17,7 +17,7 @@
 			<div class="w-fit md:w-1/3 mx-auto">
 				<img src={imagePath} class="mx-auto" alt="Profile" />
 			</div>
-			<div class="w-2/3 ml-2">
+			<div class="ml-2">
 				<p class="text-xl font-semibold ">{title}</p>
 				<div class="align-middle">
 					<span class="align-middle">{date}</span>
@@ -32,7 +32,7 @@
 						</a>
 					{/if}
 				</div>
-				<div>
+				<div class="my-2">
 					{description}
 				</div>
 			</div>
