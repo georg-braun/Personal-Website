@@ -6,9 +6,10 @@
 	<h1 class="text-3xl">About me</h1>
 
 	<p class="mt-4">
-		My name is Georg Braun and work as (C#) software engineer in Germany. <br />
+		My name is Georg and work as (C#) software engineer in Germany. <br />
 		I'm interessted and evolve in software- and system-architecture, web development and DevOps.
 	</p>
+
 	<p class="mt-4">
 		<br />
 		My spare time I mostly spent with
