@@ -4,7 +4,7 @@ date: 2020-10-01
 category: "private-project"
 ---
 
-Motivated by building a raised we wanted to build a couch on our balcony.
+Motivated by building a raised bed we wanted to build a couch on our balcony.
 
 After making some sketches and drafts in Inventor we ordered the wood (douglas).
 
