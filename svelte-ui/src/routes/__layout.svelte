@@ -20,7 +20,7 @@
 						<a class="underline text-black" href="/blog">blog</a>,
 						<a class="underline text-black" href="/projects">projects</a>,
 						<a class="underline text-black" href="/about">about</a>],</div>
-					<div class="ml-8 ">content: [software, backend, DevOps, projects, opinions, share knowledge]</div>
+					<div class="ml-8 ">content: [software, architecture, backend, devops, opinions, share knowledge]</div>
 					{'}'}
 					<p class="text-center">
 						
