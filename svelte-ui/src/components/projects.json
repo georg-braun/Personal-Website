@@ -1,5 +1,13 @@
 [
 	{
+		"title": "Office days",
+		"imagePath": "projects/office-days.png",
+		"repoUrl": "https://github.com/georg-braun/office-days",
+		"date": "2022",
+		"category": "it",
+		"description": "Since we work at our company in a remote environment and just sometimes someone visits the office, I developed a little web app to communicate our office days"
+	},
+	{
 		"title": "Website built with svelte",
 		"imagePath": "projects/svelte-website.png",
 		"repoUrl": "https://github.com/georg-braun/Personal-Website",
