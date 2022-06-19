@@ -1,6 +1,6 @@
 ---
 title: "Deploy my side project"
-date: 2022-06-17
+date: 2022-05-17
 tags: ["devops"]
 ---
 
