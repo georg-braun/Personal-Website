@@ -1,5 +1,13 @@
 [
 	{
+		"title": "Cashflow",
+		"imagePath": "projects/cashflow.png",
+		"repoUrl": "https://github.com/georg-braun/cashflow",
+		"date": "2022",
+		"category": "it",
+		"description": "In the past I used different budgeting tools. But none met my requirements. Therefore I created a tool to manage my personal finance. Techstack: Svelte, ASP.NET, Auth0, Docker"
+	},
+	{
 		"title": "Office days",
 		"imagePath": "projects/office-days.png",
 		"repoUrl": "https://github.com/georg-braun/office-days",
