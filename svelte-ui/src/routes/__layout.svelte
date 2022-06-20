@@ -13,15 +13,15 @@
 						<img src="/avatar.png" alt="Profile" />
 					</div>
 				</div>
-				<div class="w-full sm:w-auto mt-2 sm:my-auto font-mono text-sm text-gray-400">
-					{'{'}<br>
-					<div class="ml-8">title: Georg Braun,</div>
-					<div class="ml-8">pages: [<a class="underline text-black" href="/">start</a>,
+				<div class="w-full sm:w-auto mt-2 sm:my-auto font-mono text-sm">
+	
+					<div class="ml-8">Georg Braun,</div>
+					<div class="ml-8"><a class="underline text-black" href="/">start</a>,
 						<a class="underline text-black" href="/blog">blog</a>,
 						<a class="underline text-black" href="/projects">projects</a>,
-						<a class="underline text-black" href="/about">about</a>],</div>
-					<div class="ml-8 ">content: [software, architecture, backend, devops, opinions, share knowledge]</div>
-					{'}'}
+						<a class="underline text-black" href="/about">about</a></div>
+					<div class="ml-8 ">topics: [c#, go, svelte, create 🛠️]</div>
+		
 					<p class="text-center">
 						
 						
