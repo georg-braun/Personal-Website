@@ -15,12 +15,12 @@
 				</div>
 				<div class="w-full sm:w-auto mt-2 sm:my-auto font-mono text-sm">
 	
-					<div class="ml-8">Georg Braun,</div>
+					<div class="ml-8">Georg Braun</div>
 					<div class="ml-8"><a class="underline text-black" href="/">start</a>,
 						<a class="underline text-black" href="/blog">blog</a>,
 						<a class="underline text-black" href="/projects">projects</a>,
 						<a class="underline text-black" href="/about">about</a></div>
-					<div class="ml-8 ">topics: [c#, go, svelte, create 🛠️]</div>
+					<div class="ml-8 ">topics: [🛠️ with c#, go, svelte]</div>
 		
 					<p class="text-center">
 						
