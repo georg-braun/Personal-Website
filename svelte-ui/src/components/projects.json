@@ -5,7 +5,8 @@
 		"repoUrl": "https://github.com/georg-braun/cashflow",
 		"date": "2022",
 		"category": "it",
-		"description": "In the past I used different budgeting tools. But none met my requirements. Therefore I created a tool to manage my personal finance. Techstack: Svelte, ASP.NET, Auth0, Docker"
+		"retired": true,
+		"description": "In the past I used different budgeting tools. But none met my requirements. Therefore I created a tool to manage my personal finance. Techstack: Svelte, ASP.NET, Auth0, Docker. I stopped this project because of the manual workload to log all expenses. This wasn't practicable. The App MoneyMoney syncs automatically all transactions and let me categorize them."
 	},
 	{
 		"title": "Office days",
@@ -13,6 +14,7 @@
 		"repoUrl": "https://github.com/georg-braun/office-days",
 		"date": "2022",
 		"category": "it",
+		"retired": false,
 		"description": "Since we work at our company in a remote environment and just sometimes someone visits the office, I developed a little web app to communicate our office days"
 	},
 	{
@@ -22,6 +24,7 @@
 		"projectUrl": "https://georg-braun.de/",
 		"date": "2022",
 		"category": "it",
+		"retired": false,
 		"description": "Personal website and blog built with sveltekit."
 	},
 	{
@@ -31,6 +34,7 @@
 		"projectUrl": "https://garage-buddy.georg-braun.de/",
 		"date": "2021",
 		"category": "it",
+		"retired": false,
 		"description": "A web application for managing vehicle maintenances. Pending maintenances are highlighted. A nice side effect of this project was to learn more about react, next.js, firebase."
 	},
 	{
@@ -39,6 +43,7 @@
 		"projectUrl": "/blog/building-a-couch",
 		"date": "2020",
 		"category": "private",
+		"retired": false,
 		"description": "We wanted to have a couch on our balcony to enjoy the sunset. Therefore we built a couch ;)"
 	},
 	{
@@ -47,6 +52,7 @@
 		"projectUrl": "/blog/building-a-raised-bed",
 		"date": "2020",
 		"category": "private",
+		"retired": false,
 		"description": "In summer 2019 my girlfriend and I moved to a new location. Although it was possible to use the garden we wanted to have the possibility to plant something near the kitchen. So I decided to construct and build a raised bed."
 	},
 	{
@@ -56,6 +62,7 @@
 		"projectUrl": "https://stammbaum.georg-braun.de/",
 		"date": "2019",
 		"category": "it",
+		"retired": false,
 		"description": "Based on the dTree library I built a family tree. In addition, I wrote a graph-to-list converter to switch between different family trees."
 	},
 	{
@@ -64,6 +71,7 @@
 		"repoUrl": "https://github.com/georg-braun/Study-Computer-Graphics-SS2016",
 		"date": "2016",
 		"category": "it",
+		"retired": true,
 		"description": "An augmented reality application with a combination of C++, OpenGL, OpenCV and the ArUco library."
 	},
 	{
@@ -72,6 +80,7 @@
 		"repoUrl": "https://github.com/georg-braun/Study-Image-Processing-WS2016",
 		"date": "2016",
 		"category": "it",
+		"retired": true,
 		"description": "An augmented reality application with Matlab for the image processing module in university. Read the webcam image and try to detect the movie cover and play the trailer at this position."
 	}
 ]

@@ -1,4 +1,4 @@
-<script context="module">
+,<script context="module">
 	import { getLatestFivePostsDescByDate } from '../blog/markdownFilesToPosts';
 	// execute before the component is initialized
 	export async function load() {
@@ -15,7 +15,7 @@
 </script>
 
 <div>
-	<h1 class="text-3xl mt-10 mb-5">Recent posts</h1>
+	<h1 class="text-3xl mb-5">Recent posts</h1>
 	<div class="ml-5">
 		{#each posts as post}
 			{#if post.metadata != undefined && post.metadata.title != undefined && post.metadata.date != undefined && post.route != undefined}
@@ -27,6 +27,4 @@
 			{/if}
 		{/each}
 	</div>
-	<h1 class="text-3xl mt-10 mb-5">Projects</h1>
-	<Projects />
 </div>
