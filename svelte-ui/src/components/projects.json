@@ -1,5 +1,15 @@
 [
 	{
+		"title": "Focus app",
+		"imagePath": "projects/focus-app.png",
+		"repoUrl": "https://github.com/georg-braun/focus-session",
+		"projectUrl": "https://focus.georg-braun.de",
+		"date": "2022",
+		"category": "it",
+		"retired": false,
+		"description": "During my university studies I sometimes used the pomodoro technique to structure and focus my work. But I didn't like the 'focus, small pause, focus, ...' scheme. For me it's only important to start a session to get the desired focus. The duration is more or less unimportant. Therefore I created a little web app that helps me to get in my focus mode :) Built with svelte ❤️"
+	},
+	{
 		"title": "Cashflow",
 		"imagePath": "projects/cashflow.png",
 		"repoUrl": "https://github.com/georg-braun/cashflow",
