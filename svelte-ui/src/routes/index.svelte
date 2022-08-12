@@ -1,4 +1,4 @@
-,<script context="module">
+<script context="module">
 	import { getLatestFivePostsDescByDate } from '../blog/markdownFilesToPosts';
 	// execute before the component is initialized
 	export async function load() {
@@ -9,8 +9,6 @@
 </script>
 
 <script>
-	import Projects from '../components/projects.svelte';
-
 	export let posts;
 </script>
 
