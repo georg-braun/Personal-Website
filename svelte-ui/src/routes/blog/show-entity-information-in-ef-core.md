@@ -4,11 +4,13 @@ date: 2022-09-01
 tags: ["entity-framework"]
 ---
 
-The DbContext offers some possibilites to inspect the state of entities.
+The DbContext offers some possibilities to inspect the state of entities.
 
 ## Information about single entity
 
-`context.Entry(someEntity)`
+```
+context.Entry(someEntity)
+```
 
 - `Entity`: The data object ActionTemplate
 - `State`: Detached, Unchanged, Modified, ...
@@ -17,7 +19,9 @@ The DbContext offers some possibilites to inspect the state of entities.
 
 ## Information about multiple tracked entities
 
-`context.ChangeTracker.DebugView`
+```
+context.ChangeTracker.DebugView
+```
 
 Offers a view of tracked entities. There exists a short- and long-view.
 
