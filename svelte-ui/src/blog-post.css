@@ -22,6 +22,8 @@ So it's possible to sytle them separate.
 
 .blog-post h2 {
     font-size:2rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
 }
 
 .blog-post h3 {
