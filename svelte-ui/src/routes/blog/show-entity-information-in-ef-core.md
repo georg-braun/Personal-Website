@@ -1,5 +1,5 @@
 ---
-title: "Show entity information in Entity Framework Core"
+title: "EF: Show entity information in Entity Framework Core"
 date: 2022-09-01
 tags: ["entity-framework"]
 ---
