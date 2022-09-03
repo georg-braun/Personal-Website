@@ -2,12 +2,14 @@
 	import './blog-post.css';
 	export let title = 'Default title';
 	export let date = '';
+	export let tags;
 </script>
 
+<div class="mb-8 bg-slate-600 py-4 text-white">
+	<p class="text-4xl text-center">{title}</p>
+	<p class="mt-4 text-center">written: {new Date(date).toLocaleDateString()}</p>
+	<!-- <p class="text-center">tags: {tags}</p> -->
+</div>
 <div class="blog-post container mx-auto md:w-4/5">
-	<div class="mb-8">
-		<p class="text-4xl">{title}</p>
-		<p>{new Date(date).toLocaleDateString()}</p>
-	</div>
 	<slot />
 </div>

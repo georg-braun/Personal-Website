@@ -6,7 +6,7 @@
 
 <main>
 	<div class="flex flex-col">
-		<div class="w-full bg-gray-50">
+		<div class="w-full bg-gray-50 pb-4">
 			<div class="flex flex-wrap items-center">
 				<div class="w-full sm:w-40">
 					<div class="w-40 mx-auto">
@@ -14,25 +14,21 @@
 					</div>
 				</div>
 				<div class="w-full sm:w-auto mt-2 sm:my-auto font-mono text-sm">
-	
 					<div class="ml-8">Georg Braun</div>
 					<div class="ml-8 mb-2 ">software development</div>
-					<div class="ml-8"><a class="underline text-black" href="/">start</a>,
+					<div class="ml-8">
+						<a class="underline text-black" href="/">start</a>,
 						<a class="underline text-black" href="/blog">blog</a>,
 						<a class="underline text-black" href="/projects">projects</a>,
-						<a class="underline text-black" href="/about">about</a></div>
-		
-					<p class="text-center">
-						
-						
-						
-						
-					</p>
+						<a class="underline text-black" href="/about">about</a>
+					</div>
+
+					<p class="text-center" />
 				</div>
 			</div>
 		</div>
 
-		<div class="container mx-auto mt-8 p-4">
+		<div class="">
 			<slot />
 		</div>
 		<div class="container mx-auto mt-8 text-center">

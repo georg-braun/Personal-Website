@@ -1,5 +1,6 @@
 <script context="module">
 	import { getLatestFivePostsDescByDate } from '../blog/markdownFilesToPosts';
+	import { pageContainerDefaultClasses } from '../constants';
 	// execute before the component is initialized
 	export async function load() {
 		const postsByDescDate = getLatestFivePostsDescByDate();
@@ -12,7 +13,7 @@
 	export let posts;
 </script>
 
-<div>
+<div class={pageContainerDefaultClasses}>
 	<h1 class="text-3xl mb-5">Recent posts</h1>
 	<div class="ml-5">
 		{#each posts as post}

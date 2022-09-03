@@ -1,32 +1,29 @@
 <script>
 	export let rockyElmoImage = 'rocky-elmo.png';
+	import { pageContainerDefaultClasses } from '../constants';
 </script>
 
-<div class="w-2/3">
+<div class={pageContainerDefaultClasses}>
 	<h1 class="text-3xl">About me</h1>
 
 	<p class="mt-4">
 		My name is Georg and work as software engineer in Germany. <br />
-		I'm interessted and evolve in software- and system-architecture and web development. 
-		Furthermore I love to determine how things work and share my knowledge.
+		I'm interessted and evolve in software- and system-architecture and web development. Furthermore
+		I love to determine how things work and share my knowledge.
 	</p>
 
 	<p class="mt-8">
 		I think in software development it's important to use the right tool for the job. <br />
 		Therefore a software developer should have a rough overview of possible tools to solve a problem.
-		No one can master them all, but I think to be a generalist isn't the solution. I really like the concept of a T-shaped developer.
+		No one can master them all, but I think to be a generalist isn't the solution. I really like the
+		concept of a T-shaped developer.
 		<br />
-
 	</p>
 	<p class="mt-4">
 		Following is a unordered list of stuff I worked with or can tell somehting about ;) <br />
-		.NET, ASP.NET, 
-		Clean-Architecture, Domain-driven Design, Clean Code,
-		Entity Framework, PostgreSQL, 
-		Svelte, React, 
-		Continuous Integration, Continuous Deployment, GitHub Actions,
-		Docker, Nginx,
-		Agile Development, Scrum, Azure DevOps,
+		.NET, ASP.NET, Clean-Architecture, Domain-driven Design, Clean Code, Entity Framework, PostgreSQL,
+		Svelte, React, Continuous Integration, Continuous Deployment, GitHub Actions, Docker, Nginx, Agile
+		Development, Scrum, Azure DevOps,
 	</p>
 
 	<p class="mt-4">

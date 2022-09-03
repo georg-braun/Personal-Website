@@ -1,4 +1,8 @@
-<div class="container mx-auto md:w-4/5">
+<script>
+	import { pageContainerDefaultClasses } from '../constants';
+</script>
+
+<div class={pageContainerDefaultClasses}>
 	<h1>Impressum</h1>
 	<h2 class="mt-5">Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
 	<p>

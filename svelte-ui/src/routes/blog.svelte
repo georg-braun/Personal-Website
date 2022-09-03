@@ -1,5 +1,7 @@
 <script context="module">
 	import { getPostsDescByDate } from '../blog/markdownFilesToPosts';
+	import { pageContainerDefaultClasses } from '../constants';
+
 	export async function load() {
 		const posts = getPostsDescByDate();
 		return { props: { posts: posts } };
@@ -10,7 +12,7 @@
 	export let posts;
 </script>
 
-<div>
+<div class={pageContainerDefaultClasses}>
 	<div class="w-2/3">
 		<h1 class="text-3xl mb-5">Blog</h1>
 		<div class="ml-5">
