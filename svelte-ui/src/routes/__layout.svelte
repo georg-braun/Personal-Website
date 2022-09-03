@@ -6,7 +6,7 @@
 
 <main>
 	<div class="flex flex-col">
-		<div class="w-full bg-gray-50 pb-4">
+		<div class="w-full bg-gray-50">
 			<div class="flex flex-wrap items-center">
 				<div class="w-full sm:w-40">
 					<div class="w-40 mx-auto">
