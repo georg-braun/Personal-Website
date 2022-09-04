@@ -3,7 +3,7 @@
 	import '../app.css';
 	import '../prism.css';
 
-	let darkModeActive;
+	let darkModeActive = true;
 </script>
 
 <main class={darkModeActive ? 'dark' : ''}>
