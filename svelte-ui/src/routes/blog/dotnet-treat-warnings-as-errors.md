@@ -1,5 +1,5 @@
 ---
-title: "Treat warnings as errors in your .NET project"
+title: "Treat warnings as errors in your project"
 date: 2022-09-03
 tags: [".net"]
 ---
