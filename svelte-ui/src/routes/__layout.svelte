@@ -20,8 +20,7 @@
 					<div class="">Georg Braun</div>
 					<div class="mb-2 ">software development</div>
 					<div>
-						<a class="underline text-black" href="/">start</a>,
-						<a class="underline text-black" href="/blog">blog</a>,
+						<a class="underline text-black" href="/">blog</a>,
 						<a class="underline text-black" href="/projects">projects</a>,
 						<a class="underline text-black" href="/about">about</a>
 					</div>
