@@ -35,12 +35,19 @@
 			{#each posts as post}
 				{#if post.metadata != undefined && post.metadata.title != undefined && post.metadata.date != undefined && post.route != undefined && postMeetsSearchCriteria(post.metadata, searchValue)}
 					<a href={post.route}>
-						<div
-							class="mb-2 p-2 border flex flex-nowrap place-content-between hover:bg-slate-100"
-							href={post.route}
-						>
-							<div>{post.metadata.title}</div>
-							<div class="my-auto">{new Date(post.metadata.date).toLocaleDateString()}</div>
+						<div class="mb-2 p-2 border hover:bg-slate-100">
+							<div class="flex flex-nowrap place-content-between" href={post.route}>
+								<div>{post.metadata.title}</div>
+								<div class="my-auto">{new Date(post.metadata.date).toLocaleDateString()}</div>
+							</div>
+							<!-- Tags -->
+							<div class="flex mt-1 text-xs">
+								{#if post.metadata.tags != undefined}
+									{#each post.metadata.tags as tag}
+										<div class="border px-1 bg-slate-50 mr-1 rounded">{tag}</div>
+									{/each}
+								{/if}
+							</div>
 						</div>
 					</a>
 				{/if}
