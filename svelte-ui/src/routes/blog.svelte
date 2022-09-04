@@ -18,10 +18,12 @@
 		<div class="ml-5">
 			{#each posts as post}
 				{#if post.metadata != undefined && post.metadata.title != undefined && post.metadata.date != undefined && post.route != undefined}
-					<li>
-						<a href={post.route}>{post.metadata.title}</a>
-						<span>({new Date(post.metadata.date).toLocaleDateString()})</span>
-					</li>
+					<a href={post.route}>
+						<div class="mb-2 p-2 border flex flex-nowrap place-content-between hover:bg-slate-100" href={post.route}>
+							<div>{post.metadata.title}</div>
+							<div class="my-auto">{new Date(post.metadata.date).toLocaleDateString()}</div>
+						</div>
+					</a>
 				{/if}
 			{/each}
 		</div>
