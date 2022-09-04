@@ -23,19 +23,25 @@
 	}
 </script>
 
-<div class={pageContainerDefaultClasses}>
+<div class="{pageContainerDefaultClasses} h-full">
 	<div class="w-2/3">
 		<h1 class="text-3xl mb-5">Blog</h1>
 		<div class="flex mb-4 ml-5">
 			<div>Filter:</div>
-			<div class="border ml-4"><input type="text" bind:value={searchValue} /></div>
+			<div class="ml-4 dark:bg-slate-800">
+				<input
+					class="border rounded m dark:bg-slate-800 pl-1"
+					type="text"
+					bind:value={searchValue}
+				/>
+			</div>
 		</div>
 
 		<div class="ml-5">
 			{#each posts as post}
 				{#if post.metadata != undefined && post.metadata.title != undefined && post.metadata.date != undefined && post.route != undefined && postMeetsSearchCriteria(post.metadata, searchValue)}
 					<a href={post.route}>
-						<div class="mb-2 p-2 border hover:bg-slate-100">
+						<div class="mb-4 p-2 border rounded hover:bg-slate-100 dark:hover:bg-slate-700">
 							<div class="flex flex-nowrap place-content-between" href={post.route}>
 								<div>{post.metadata.title}</div>
 								<div class="my-auto">{new Date(post.metadata.date).toLocaleDateString()}</div>
@@ -44,7 +50,7 @@
 							<div class="flex mt-1 text-xs">
 								{#if post.metadata.tags != undefined}
 									{#each post.metadata.tags as tag}
-										<div class="border px-1 bg-slate-50 mr-1 rounded">{tag}</div>
+										<div class="border px-1 bg-slate-50 dark:bg-slate-800 mr-1 rounded">{tag}</div>
 									{/each}
 								{/if}
 							</div>
