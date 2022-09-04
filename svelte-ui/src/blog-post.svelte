@@ -10,6 +10,6 @@
 	<p class="mt-4 text-center">written: {new Date(date).toLocaleDateString()}</p>
 	<!-- <p class="text-center">tags: {tags}</p> -->
 </div>
-<div class="blog-post container mx-auto md:w-4/5">
+<div class="blog-post container mx-auto w-11/12">
 	<slot />
 </div>
