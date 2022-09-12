@@ -19,7 +19,7 @@ public void RemoveActionTemplate(Guid actionTemplateId)
 {
     var actionTemplate = ActionTemplates.FirstOrDefault(_ => _.Id.Equals(actionTemplateId));
             
-    // There is no gurantee that there is actionTemplate.
+    // There is no gurantee that there is an actionTemplate.
     // At runtime the following would crash.
     // Thank you build warning :)
 
