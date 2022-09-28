@@ -36,7 +36,7 @@
 			</div>
 		</div>
 
-		<div class="dark:bg-slate-800">
+		<div class="dark:bg-slate-800 h-screen">
 			<slot />
 		</div>
 		<div class="pt-8 text-center dark:bg-slate-800">
