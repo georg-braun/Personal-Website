@@ -4,46 +4,54 @@
 </script>
 
 <div class={pageContainerDefaultClasses}>
-	<h1 class="text-3xl">About me</h1>
-
 	<p class="mt-4">
-		My name is Georg and work as software engineer in Germany. <br />
-		I'm interessted and evolve in software- and system-architecture and web development. Furthermore
-		I love to determine how things work and share my knowledge.
+		Hey I'm Georg and live with my family in Germany. On this website I share my notes, opinons and
+		projects.
 	</p>
 
-	<p class="mt-8">
-		I think in software development it's important to use the right tool for the job. <br />
-		Therefore a software developer should have a rough overview of possible tools to solve a problem.
-		No one can master them all, but I think to be a generalist isn't the solution. I really like the
-		concept of a T-shaped developer.
-		<br />
-	</p>
-	<p class="mt-4">
-		Following is a unordered list of stuff I worked with or can tell somehting about ;) <br />
-		.NET, ASP.NET, Clean-Architecture, Domain-driven Design, Clean Code, Entity Framework, PostgreSQL,
-		Svelte, React, Continuous Integration, Continuous Deployment, GitHub Actions, Docker, Nginx, Agile
-		Development, Scrum, Azure DevOps,
-	</p>
+	<h1 class="mt-4 text-3xl">I am fascinated by</h1>
+	<ul>
+		<li>having an idea -> making a plan -> learn necessary stuff -> realize it </li>
+		
+	</ul>
 
-	<p class="mt-4">
-		<br />
-		My spare time I mostly spent with
-	</p>
+	<h1 class="mt-4 text-3xl">I like</h1>
+	<ul>
+		<li>system and software design / architecture</li>
+		<li>coding</li>
+		<li>teaching</li>
+		<li>create and repair stuff</li>
+	</ul>
+
+	<h1 class="mt-4 text-3xl">My spare time I spend with</h1>
 	<ul>
 		<li>my girlfriend</li>
 		<li>these two guys <img src={rockyElmoImage} alt="animals" /></li>
-		<li>solving problems / do helpful stuff with software</li>
 		<li>bicycles</li>
 		<li>motorcycles</li>
-		<li>build stuff</li>
 	</ul>
+
+
+	<h1 class="mt-8 text-3xl">My computer science toolbox</h1>
 	<p class="mt-4">
-		My blog is about projects, opinions, and problems I encounter as a software engineer.<br />
-		I think blogging has several advantages: reflection, learning by teaching, and offer hopefully some
-		useful information.<br />
+		I'm a Fullstack developer with a preference for the backend. This gives me the ability to realize my project ideas.
+		I'm always keen to learn new stuff and pick the right tool for the job.<br />
+		Following is a list of stuff I worked with or can tell somehting about ;) <br />
 	</p>
-	<p class="mt-4">Maybe there will sneak in some posts about my other interests ;)</p>
+
+	<ul class="mt-4">
+		<li>C#, TypeScript, Delphi</li>
+		<li>ASP.NET Core, WPF</li>
+		<li>Entity Framework Core</li>
+		<li>Domain-driven Design, Clean Code</li>
+		<li>CQRS</li>
+		<li>TDD</li>
+		<li>PostgreSQL, MongoDb</li>
+		<li>Svelte, Blazor</li>
+		<li>Continuous Integration, Continuous Delivery, GitHub Actions, Docker</li>
+		<li>Agile Development</li>
+		<li>Azure DevOps</li>
+	</ul>
 
 	<p class="mt-4">
 		If you want to see a full list of stages and buzzwords visit my <a
