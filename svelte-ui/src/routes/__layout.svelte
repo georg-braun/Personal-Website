@@ -2,18 +2,12 @@
 	import { text } from 'svelte/internal';
 	import '../app.css';
 	import '../prism.css';
-
-	let darkModeActive = true;
 </script>
 
-<main class={darkModeActive ? 'dark' : ''}>
-	<div class="flex flex-col dark:text-white  ">
+<main>
+	<div class="flex flex-col">
 		<div class="w-full ">
-			<!-- Dark/Light Mode -->
-			<div class="absolute right-2 top-2 text-xs opacity-50">
-				<button on:click={() => (darkModeActive = !darkModeActive)}>{darkModeActive ? "Light mode" : "Dark mode"}</button>
-			</div>
-			<div class="flex flex-wrap items-center text-center bg-slate-100 dark:bg-slate-900">
+			<div class="flex flex-wrap items-center text-center bg-slate-100">
 				<div class="w-full sm:w-40">
 					<div class="w-40 mx-auto">
 						<img src="/avatar.png" alt="Profile" />
@@ -36,10 +30,10 @@
 			</div>
 		</div>
 
-		<div class="dark:bg-slate-800 h-screen">
+		<div class="h-screen">
 			<slot />
 		</div>
-		<div class="pt-8 text-center dark:bg-slate-800">
+		<div class="pt-8 text-center">
 			<a href="/impressum">impressum</a>
 		</div>
 		<div />
