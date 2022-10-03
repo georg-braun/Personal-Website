@@ -9,7 +9,6 @@
 	Show only software stuff 👨‍💻
 </div>
 
-<h1 class="text-3xl mt-10 mb-5">Projects</h1>
 <div class="flex flex-wrap ">
 	{#each Projects as project}
 		{#if !project.retired && (!showOnlySoftwareProjects || project.category === 'it')}

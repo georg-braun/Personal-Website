@@ -25,7 +25,6 @@
 
 <div class="{pageContainerDefaultClasses} h-full">
 	<div class="">
-		<h1 class="text-3xl mb-5">Blog</h1>
 		<div class="flex mb-4 ml-5">
 			<div>Filter:</div>
 			<div class="ml-4">
