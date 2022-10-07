@@ -10,6 +10,15 @@
 		"description": "During my university studies I sometimes used the pomodoro technique to structure and focus my work. But I didn't like the 'focus, small pause, focus, ...' scheme. For me it's only important to start a session to get the desired focus. The duration is more or less unimportant. Therefore I created a little web app that helps me to get in my focus mode :) Built with svelte ❤️"
 	},
 	{
+		"title": "Bike ride through germany",
+		"imagePath": "projects/2022-bike-ride.png",
+		"projectUrl": "/blog/bike-ride-through-germany",
+		"date": "2022",
+		"category": "private",
+		"retired": false,
+		"description": "I visited my sister in Ingolstadt with my bicycle. I drove 654 kilometers in 5 days. It was awesome!"
+	},
+	{
 		"title": "Cashflow",
 		"imagePath": "projects/cashflow.png",
 		"repoUrl": "https://github.com/georg-braun/cashflow",

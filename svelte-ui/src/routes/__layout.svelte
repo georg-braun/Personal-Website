@@ -8,7 +8,7 @@
 	<div class="ml-4 mt-4 mb-4">
 		<span>
 			<a class="" href="/">Blog</a>
-			<a class="ml-4" href="/projects">Projects</a>
+			<a class="ml-4" href="/events">Events</a>
 			<a class="ml-4" href="/about">About</a>
 		</span>
 	</div>
