@@ -12,23 +12,26 @@
 			<a class="ml-4" href="/about">About</a>
 		</span>
 	</div>
-	<div class="flex">
-		<div class="w-2/3">
+	<div class="mt-10">
+		<div class="w-full md:w-4/6">
 			<slot />
 		</div>
-		<!--<div class="flex  items-center text-center">
-			<div>
-				<div class="w-28 mx-auto">
-					<img src="/avatar.png" alt="Profile" />
+		<div>
+			<div class="text-center fixed top-20 right-20 invisible md:visible">
+				<div>
+					<div class="w-36 mx-auto">
+						<img src="/avatar.png" alt="Profile" />
+					</div>
+					<div class="mt-2 text-lg">Georg Braun</div>
+					<div class="mt-2 text-gray-500 text-xs">develop software</div>
+					<div class="mt-1 text-gray-500 text-xs">learn</div>
+					<div class="mt-1 text-gray-500 text-xs">create</div>
 				</div>
-				<div class="">Georg Braun</div>
-				<div class="">Aachen</div>
-			</div>
-			<div class="w-full sm:w-auto mt-2 font-sans  sm:my-auto text-sm pb-4 sm:mb-0" />
+				<div class="w-full sm:w-auto mt-2 font-sans  sm:my-auto text-sm pb-4 sm:mb-0" />
 
-			<div />
+				<div />
+			</div>
 		</div>
-	-->
 	</div>
 	<div class="pt-8 text-center">
 		<a href="/impressum">impressum</a>

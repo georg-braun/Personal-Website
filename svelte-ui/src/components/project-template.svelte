@@ -11,10 +11,10 @@
 	export let date = '';
 </script>
 
-<div class="border-solid border-2 overflow-clip shadow-xl rounded-md w-full md:w-2/3 m-8">
+<div class="border-solid border-2 overflow-clip shadow-xl rounded-md w-full m-8">
 	<div>
 		<div class="flex md:flex-nowrap flex-wrap-reverse">
-			<div class="w-fit md:w-1/3 mx-auto">
+			<div class="w-fit max-w-sm md:w-1/3 mx-auto">
 				<img src={imagePath} class="mx-auto" alt="Profile" />
 			</div>
 			<div class="md:w-2/3 ml-4">
@@ -32,7 +32,7 @@
 						</a>
 					{/if}
 				</div>
-				<div class="my-2">
+				<div class="my-2 pr-6">
 					{description}
 				</div>
 			</div>
