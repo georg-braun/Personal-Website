@@ -23,7 +23,7 @@
 						<img src="/avatar.png" alt="Profile" />
 					</div>
 					<div class="mt-2 text-lg">Georg Braun</div>
-					<div class="mt-2 text-gray-500 text-xs">create stuff</div>
+					<div class="mt-2 text-gray-500 text-xs">TRY IT!</div>
 					
 				</div>
 				<div class="w-full sm:w-auto mt-2 font-sans  sm:my-auto text-sm pb-4 sm:mb-0" />
