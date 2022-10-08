@@ -15,7 +15,12 @@
 	<div>
 		<div class="flex md:flex-nowrap flex-wrap-reverse">
 			<div class="w-fit max-w-sm md:w-1/3 mx-auto">
-				<img src={imagePath} class="mx-auto" alt="Profile" />
+				{#if imagePath == ""}
+					<div class="text-center">No image yet</div>			
+				{:else}
+					<img src={imagePath} class="mx-auto" alt="Profile" />
+				{/if}
+				
 			</div>
 			<div class="md:w-2/3 ml-4">
 				<p class="text-xl font-semibold ">{title}</p>
