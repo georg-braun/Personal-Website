@@ -7,7 +7,7 @@
 		"date": "2022",
 		"category": "it",
 		"retired": false,
-		"description": "Last year I created an app called garage buddy to manage the maintenances of my vehicles. Garage buddy is a SPA that uses Google Firestore for authentication and persistence. The problem is that I want to have more control over the data and write the domain logic in the backend instead in the SPA. Therefore I created this new projects that uses Svelte as frontend, ASP.NET Core in the backend and Entity Framework Core as ORM to a PostgreSQL database. For security in the SPA and backend I rely on Auth0. The API of the backend isn't a REST API, I wanted to try a more CQRS like approach."
+		"description": "Last year I created an app called garage buddy to manage the maintenances of my vehicles. Garage buddy is a SPA that uses Google Firestore for authentication and persistence. The problem is that I want to have more control over the data and to write the domain logic in the backend instead in the SPA. Therefore I created this new project that uses Svelte as frontend, ASP.NET Core in the backend and Entity Framework Core as ORM to a PostgreSQL database. For security in the SPA and backend I rely on Auth0. The API of the backend isn't a REST API, I wanted to try a more CQRS like approach."
 	},
 	{
 		"title": "Focus app",
