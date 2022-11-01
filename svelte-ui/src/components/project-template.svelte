@@ -22,7 +22,7 @@
 				{/if}
 				
 			</div>
-			<div class="md:w-2/3 ml-4">
+			<div class="md:w-2/3 ml-4 mt-2">
 				<p class="text-xl font-semibold ">{title}</p>
 				<div class="align-middle">
 					<span class="align-middle">{date}</span>

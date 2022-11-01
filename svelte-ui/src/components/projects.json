@@ -1,7 +1,7 @@
 [
 	{
-		"title": "Overhaul of Garage buddy app (in development)",
-		"imagePath": "",
+		"title": "Maintenance buddy",
+		"imagePath": "projects/maintenance-buddy.png",
 		"repoUrl": "https://github.com/georg-braun/maintenance-buddy",
 		"projectUrl": "https://maintenance-buddy.georg-braun.de",
 		"date": "2022",
@@ -63,7 +63,7 @@
 		"projectUrl": "https://garage-buddy.georg-braun.de/",
 		"date": "2021",
 		"category": "it",
-		"retired": false,
+		"retired": true,
 		"description": "A web application for managing vehicle maintenances. Pending maintenances are highlighted. A nice side effect of this project was to learn more about react, next.js, firebase."
 	},
 	{
