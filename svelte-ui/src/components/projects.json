@@ -10,6 +10,16 @@
 		"description": "Last year I created an app called garage buddy to manage the maintenances of my vehicles. Garage buddy is a SPA that uses Google Firestore for authentication and persistence. The problem is that I want to have more control over the data and to write the domain logic in the backend instead in the SPA. Therefore I created this new project that uses Svelte as frontend, ASP.NET Core in the backend and Entity Framework Core as ORM to a PostgreSQL database. For security in the SPA and backend I rely on Auth0. The API of the backend isn't a REST API, I wanted to try a more CQRS like approach."
 	},
 	{
+		"title": "Focus Tracker",
+		"imagePath": "projects/focus-tracker.png",
+		"repoUrl": "https://github.com/georg-braun/focus-tracker",
+		"projectUrl": "https://focus-tracker.georg-braun.de",
+		"date": "2022",
+		"category": "it",
+		"retired": false,
+		"description": "Beside my 'Focus app' I created this focus tracker that will help to track your focus sessions and visualizes them."
+	},
+	{
 		"title": "Focus app",
 		"imagePath": "projects/focus-app.png",
 		"repoUrl": "https://github.com/georg-braun/focus-session",
