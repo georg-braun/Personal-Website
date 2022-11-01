@@ -5,7 +5,7 @@
 
 <div class={pageContainerDefaultClasses}>
 	<p class="mt-4">
-		Hey I'm Georg and live with my family in Germany. On this website I share my notes, opinons and
+		Hey I'm Georg and live with my family in Germany. On this website I share my notes, opinions and
 		projects.
 	</p>
 
