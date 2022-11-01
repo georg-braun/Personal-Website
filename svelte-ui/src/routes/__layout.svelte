@@ -15,7 +15,7 @@
 			</div>
 			<div class="my-auto">
 				<div class="mt-2 text-lg">Georg Braun</div>
-				<div class="mt-2 text-xs">Software enginner | TRY IT!</div>
+				<div class="mt-2 text-xs">Software engineer | TRY IT!</div>
 			</div>
 		{:else}
 			<div class="w-20 ">
