@@ -10,7 +10,7 @@
 	<div class="flex border-b-4 sticky top-0  backdrop-blur-md">
 	
 		{#if y == 0}
-			<div class="w-36 hover:translate-x-6 duration-300 ">
+			<div class="w-36 hover:translate-x-3 duration-300 ">
 				<img src="/avatar.png" alt="Profile" />
 			</div>
 			<div class="my-auto">
@@ -35,7 +35,7 @@
 	</div>
 
 	<div class="mt-10">
-		<div class="w-full md:w-4/6">
+		<div>
 			<slot />
 		</div>
 		<div>

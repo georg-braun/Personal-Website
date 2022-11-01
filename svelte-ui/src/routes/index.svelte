@@ -1,6 +1,5 @@
 <script context="module">
 	import { getPostsDescByDate } from '../blog/markdownFilesToPosts';
-	import { pageContainerDefaultClasses } from '../constants';
 
 	export async function load() {
 		const posts = getPostsDescByDate();
@@ -23,36 +22,37 @@
 	}
 </script>
 
-<div class="{pageContainerDefaultClasses} h-full">
-	<div class="">
-		<div class="flex mb-4 ml-5">
-			<div>Filter:</div>
-			<div class="ml-4">
-				<input class="border rounded pl-1" type="text" bind:value={searchValue} />
-			</div>
-		</div>
+<div>
+	<div class="mb-10 text-center">
+		<input class="border rounded" type="text" placeholder="Filter" bind:value={searchValue} />
+	</div>
 
-		<div class="ml-5">
-			{#each posts as post}
-				{#if post.metadata != undefined && post.metadata.title != undefined && post.metadata.date != undefined && post.route != undefined && postMeetsSearchCriteria(post.metadata, searchValue)}
-					<a href={post.route}>
-						<div class="mb-4 p-2 border rounded hover:bg-slate-100">
-							<div class="flex flex-nowrap place-content-between" href={post.route}>
-								<div>{post.metadata.title}</div>
-								<div class="my-auto">{new Date(post.metadata.date).toLocaleDateString()}</div>
-							</div>
-							<!-- Tags -->
-							<div class="flex mt-1 text-xs">
-								{#if post.metadata.tags != undefined}
-									{#each post.metadata.tags as tag}
-										<div class="border px-1 bg-slate-50 mr-1 rounded">{tag}</div>
-									{/each}
-								{/if}
-							</div>
+	<div class="">
+		{#each posts as post}
+			{#if post.metadata != undefined && post.metadata.title != undefined && post.metadata.date != undefined && post.route != undefined && postMeetsSearchCriteria(post.metadata, searchValue)}
+			<a href={post.route}>
+				<div class="text-center border rounded-md lg:mx-60 mx-4 mb-10 bg-slate-200 hover:bg-slate-300 duration-200">
+					<!-- Title -->
+					<div class="py-8 text-xl ">
+						{post.metadata.title}
+					</div>
+					<!-- Further information-->
+					<div class="flex flex-wrap place-content-center py-4 bg-white">
+						<!-- Date -->
+						<div class="">{new Date(post.metadata.date).toLocaleDateString()}</div>
+						<!-- Tags -->
+						<div class="flex ml-2">
+							<span class="mr-2">|</span>
+							{#if post.metadata.tags != undefined}
+								{#each post.metadata.tags as tag}
+									<span class="mr-1">{tag}</span>
+								{/each}
+							{/if}
 						</div>
-					</a>
-				{/if}
-			{/each}
-		</div>
+					</div>
+				</div>
+				</a>
+			{/if}
+		{/each}
 	</div>
 </div>
