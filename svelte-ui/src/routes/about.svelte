@@ -9,12 +9,6 @@
 		projects.
 	</p>
 
-	<h1 class="mt-4 text-3xl">I am fascinated by</h1>
-	<ul>
-		<li>having an idea -> making a plan -> learn necessary stuff -> realize it </li>
-		
-	</ul>
-
 	<h1 class="mt-4 text-3xl">I like</h1>
 	<ul>
 		<li>system and software design / architecture</li>
