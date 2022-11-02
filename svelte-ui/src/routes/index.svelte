@@ -23,35 +23,36 @@
 </script>
 
 <div>
-	<div class="mb-10 text-center">
+	<div class="mb-2 text-center">
 		<input class="border rounded" type="text" placeholder="Filter" bind:value={searchValue} />
 	</div>
 
-	<div class="">
+	<div class="flex flex-wrap justify-center">
 		{#each posts as post}
 			{#if post.metadata != undefined && post.metadata.title != undefined && post.metadata.date != undefined && post.route != undefined && postMeetsSearchCriteria(post.metadata, searchValue)}
-			<a href={post.route}>
-				<div class="text-center border rounded-md lg:mx-60 mx-4 mb-10 bg-slate-200 hover:bg-slate-300 duration-200">
-					<!-- Title -->
-					<div class="py-8 text-xl ">
-						{post.metadata.title}
-					</div>
-					<!-- Further information-->
-					<div class="flex flex-wrap place-content-center py-4 bg-white">
-						<!-- Date -->
-						<div class="">{new Date(post.metadata.date).toLocaleDateString()}</div>
-						<!-- Tags -->
-						<div class="flex ml-2">
-							<span class="mr-2">|</span>
-							{#if post.metadata.tags != undefined}
-								{#each post.metadata.tags as tag}
-									<span class="mr-1">{tag}</span>
-								{/each}
-							{/if}
+				<div class="w-full md:w-1/3 border-solid border-2 overflow-clip shadow-xl rounded-md m-8 hover:-translate-y-2 duration-300">
+					<a href={post.route}>
+						<div>
+							<div class="">
+								<div class="">
+									<div class="w-auto h-0 bg-red-400" />
+								</div>
+								<div class="mx-4 mt-2">
+									<p class="text-xl font-semibold ">{post.metadata.title}</p>
+									<div class="my-4">
+										<span>{new Date(post.metadata.date).toLocaleDateString()}</span>
+										<span>|</span>
+										{#if post.metadata.tags != undefined}
+											{#each post.metadata.tags as tag}
+												<span class="mr-1">{tag}</span>
+											{/each}
+										{/if}
+									</div>
+								</div>
+							</div>
 						</div>
-					</div>
+					</a>
 				</div>
-				</a>
 			{/if}
 		{/each}
 	</div>
