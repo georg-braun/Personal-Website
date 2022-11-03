@@ -6,6 +6,7 @@
 	let showBigHeader = true;
 
 	$: {
+		// wait some ms to change the header
 		setTimeout(() => {
 			showBigHeader = y == 0;
 		}, 200)
