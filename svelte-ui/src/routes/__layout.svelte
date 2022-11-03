@@ -3,13 +3,21 @@
 	import '../prism.css';
 
 	let y;
+	let showBigHeader = true;
+
+	$: {
+		setTimeout(() => {
+			showBigHeader = y == 0;
+		}, 200)
+		
+	}
 </script>
 
 <svelte:window bind:scrollY={y} />
 <main>
 	<div class="flex border-b-4 sticky top-0  backdrop-blur-md">
 	
-		{#if y == 0}
+		{#if showBigHeader}
 			<div class="w-36 hover:translate-x-3 duration-300 ">
 				<img src="/avatar.png" alt="Profile" />
 			</div>
