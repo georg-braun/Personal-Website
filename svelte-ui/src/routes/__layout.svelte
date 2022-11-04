@@ -9,38 +9,27 @@
 		// wait some ms to change the header
 		setTimeout(() => {
 			showBigHeader = y == 0;
-		}, 200)
-		
+		}, 100);
 	}
 </script>
 
 <svelte:window bind:scrollY={y} />
+
 <main>
 	<div class="flex border-b-4 sticky top-0  backdrop-blur-md">
-	
-		{#if showBigHeader}
-			<div class="w-36 hover:translate-x-3 duration-300 ">
-				<img src="/avatar.png" alt="Profile" />
-			</div>
-			<div class="my-auto">
-				<div class="mt-2 text-lg">Georg Braun</div>
-				<div class="mt-2 text-xs">Software engineer | Architecture, DDD, Web</div>
-			</div>
-		{:else}
-			<div class="w-20 ">
-				<img src="/avatar.png" alt="Profile" />
-			</div>
-			<div class="my-auto">
-				<div class="mt-2 text-lg">Georg Braun</div>
-			</div>
-		{/if}
+		<div class="{showBigHeader ? 'w-36' : 'w-20'} hover:translate-x-3 duration-300 ">
+			<img src="/avatar.png" alt="Profile" />
+		</div>
+		<div class="my-auto">
+			<div class="text-lg">Georg Braun</div>
+			<div class="{showBigHeader ? 'mt-2 text-xs' : 'invisible h-0'} ">Software engineer | Architecture, DDD, Web</div>
+		</div>
+
 		<div class="flex ml-auto my-auto mr-10">
 			<a href="/"><div class="hover:-translate-y-1 duration-300">Blog</div></a>
 			<a class="ml-4" href="/stuff"><div class="hover:-translate-y-1 duration-300">Stuff</div> </a>
 			<a class="ml-4" href="/about"><div class="hover:-translate-y-1 duration-300">About</div></a>
 		</div>
-		
-	
 	</div>
 
 	<div class="mt-10">
