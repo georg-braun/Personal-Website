@@ -38,6 +38,7 @@
 		<li>ASP.NET Core, WPF</li>
 		<li>Entity Framework Core</li>
 		<li>Domain-driven Design, Clean Code</li>
+		<li>REST, gRPC</li>
 		<li>CQRS</li>
 		<li>TDD</li>
 		<li>PostgreSQL, MongoDb</li>
