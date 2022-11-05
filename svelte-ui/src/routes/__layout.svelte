@@ -8,7 +8,9 @@
 	$: {
 		// wait some ms to change the header
 		setTimeout(() => {
-			showBigHeader = y == 0;
+			
+			showBigHeader = y <= 20;
+
 		}, 100);
 	}
 </script>
@@ -31,6 +33,7 @@
 			<a class="ml-4" href="/about"><div class="hover:-translate-y-1 duration-300">About</div></a>
 		</div>
 	</div>
+
 
 	<div class="mt-10">
 		<div>
