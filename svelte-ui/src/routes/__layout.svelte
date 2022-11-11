@@ -8,8 +8,10 @@
 	$: {
 		// wait some ms to change the header
 		setTimeout(() => {
-			
-			showBigHeader = y <= 20;
+			// avoid that the reszie to the smaller header and the resulting scrollbar position
+			// results again in a big header
+			const heightDiffInPixelBetweenSmallAndBigHeader = 70;
+			showBigHeader = y <= heightDiffInPixelBetweenSmallAndBigHeader;
 
 		}, 100);
 	}
