@@ -2,7 +2,7 @@
 	import '../app.css';
 	import '../prism.css';
 
-	let y;
+	let scrollY;
 	let showBigHeader = true;
 
 	$: {
@@ -11,13 +11,13 @@
 			// avoid that the reszie to the smaller header and the resulting scrollbar position
 			// results again in a big header
 			const heightDiffInPixelBetweenSmallAndBigHeader = 70;
-			showBigHeader = y <= heightDiffInPixelBetweenSmallAndBigHeader;
+			showBigHeader = scrollY <= heightDiffInPixelBetweenSmallAndBigHeader + 100;
 
 		}, 100);
 	}
 </script>
 
-<svelte:window bind:scrollY={y} />
+<svelte:window bind:scrollY={scrollY} />
 
 <main>
 	<div class="flex border-b-4 sticky top-0  backdrop-blur-md">
