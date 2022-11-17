@@ -1,5 +1,15 @@
 [
 	{
+		"title": "Topic Tracker",
+		"imagePath": "projects/topic-timer.png",
+		"repoUrl": "https://github.com/georg-braun/topic-timer",
+		"projectUrl": "https://topic-timer.georg-braun.de",
+		"date": "2022",
+		"category": "it",
+		"retired": false,
+		"description": "Create a topic do you want to work on, set the desired time. Dedicate your time to a task you created and see how much time you spent. Built with svelte."
+	},
+	{
 		"title": "Maintenance buddy",
 		"imagePath": "projects/maintenance-buddy.png",
 		"repoUrl": "https://github.com/georg-braun/maintenance-buddy",
