@@ -21,7 +21,6 @@
 			<img src="/avatar.png" alt="Profile" />
 		</div>
 		<div class="my-auto">
-			{scrollY}
 			<div class="text-lg">Georg Braun</div>
 			<div class="{showBigHeader ? 'mt-2 text-xs' : 'invisible h-0'} ">Software engineer | Architecture, DDD, Web</div>
 		</div>
