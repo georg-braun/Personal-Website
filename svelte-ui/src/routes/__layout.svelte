@@ -8,12 +8,8 @@
 	$: {
 		// wait some ms to change the header
 		setTimeout(() => {
-			// avoid that the reszie to the smaller header and the resulting scrollbar position
-			// results again in a big header
-			const heightDiffInPixelBetweenSmallAndBigHeader = 70;
-			showBigHeader = scrollY <= heightDiffInPixelBetweenSmallAndBigHeader + 100;
-
-		}, 100);
+			showBigHeader = scrollY < 50;
+		},200);
 	}
 </script>
 
@@ -25,6 +21,7 @@
 			<img src="/avatar.png" alt="Profile" />
 		</div>
 		<div class="my-auto">
+			{scrollY}
 			<div class="text-lg">Georg Braun</div>
 			<div class="{showBigHeader ? 'mt-2 text-xs' : 'invisible h-0'} ">Software engineer | Architecture, DDD, Web</div>
 		</div>
