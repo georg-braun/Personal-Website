@@ -12,21 +12,23 @@
 			// results again in a big header
 			const heightDiffInPixelBetweenSmallAndBigHeader = 70;
 			showBigHeader = scrollY <= heightDiffInPixelBetweenSmallAndBigHeader + 100;
-
 		}, 100);
 	}
 </script>
 
-<svelte:window bind:scrollY={scrollY} />
+<svelte:window bind:scrollY />
 
 <main>
 	<div class="flex border-b-4 sticky top-0  backdrop-blur-md">
-		<div class="{showBigHeader ? 'w-36' : 'w-20'} hover:translate-x-3 duration-300 ">
+		<div class="{showBigHeader ? 'w-36' : 'w-20'} hover:translate-x-3 duration-300 mt-auto ">
 			<img src="/avatar.png" alt="Profile" />
 		</div>
 		<div class="my-auto">
 			<div class="text-lg">Georg Braun</div>
-			<div class="{showBigHeader ? 'mt-2 text-xs' : 'invisible h-0'} ">Software engineer | Architecture, DDD, Web</div>
+			<div class="{showBigHeader ? 'mt-2 text-xs' : 'invisible h-0'} ">
+				<div>Software engineer</div>
+				<div>❤️ dotnet, svelte, web, architecture</div>
+			</div>
 		</div>
 
 		<div class="flex ml-auto my-auto mr-10">
@@ -35,7 +37,6 @@
 			<a class="ml-4" href="/about"><div class="hover:-translate-y-1 duration-300">About</div></a>
 		</div>
 	</div>
-
 
 	<div class="mt-10">
 		<div>
