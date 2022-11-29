@@ -1,6 +1,6 @@
 ---
 title: "Make an ASP.NET service available in LAN"
-date: 2022-11-11
+date: 2022-11-29
 tags: ["asp.net"]
 ---
 
