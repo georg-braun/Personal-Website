@@ -29,12 +29,11 @@ After some investigation and experiments I came to the following solution how to
 
 **2.) Explicit allow the incoming TCP Port of the backend**
 
+Windows was blocking the ASP.NET backend port 5246. Although I tried it with a deactivated firewall, it was necessary to explicity allow the incoming TCP Port 5246.
+
 **3.) Maybe deactivate https redirection or trust the certificate**
 
 In my development setup I use a http connection (e.g. in the application url). An activated https redirection could make some problems because the provided certifcate may not be trusted. Therefore I temporarily commented `app.UseHttpsRedirection()` out. Otherwise it's possible to explicit trust the provided certificate.
-
-
-Windows was blocking the ASP.NET backend port 5246. Although I tried it with a deactivated firewall, it was necessary to explicity allow the incoming TCP Port 5246.
 
 
 **Caution.** This setup is just intended for development / test purposes.
