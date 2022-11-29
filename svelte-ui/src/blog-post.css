@@ -13,7 +13,7 @@ So it's possible to sytle them separate.
 }
 
 .blog-post p {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .blog-post h1 {
@@ -29,3 +29,4 @@ So it's possible to sytle them separate.
 .blog-post h3 {
     font-size:1.5rem;
 }
+
