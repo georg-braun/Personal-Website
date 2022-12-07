@@ -1,6 +1,8 @@
 <script context="module">
 	import { getPostsDescByDate } from '../blog/markdownFilesToPosts';
 
+	const dateFormaOptions = { year: 'numeric', month: 'short', day: 'numeric' };
+
 	export async function load() {
 		const posts = getPostsDescByDate();
 		return { props: { posts: posts } };
@@ -27,32 +29,13 @@
 		<input class="border rounded" type="text" placeholder="Filter" bind:value={searchValue} />
 	</div>
 
-	<div class="flex flex-wrap justify-center">
+	<div class="grid grid-cols-6 w-2/3 mx-auto gap-y-1">
 		{#each posts as post}
 			{#if post.metadata != undefined && post.metadata.title != undefined && post.metadata.date != undefined && post.route != undefined && postMeetsSearchCriteria(post.metadata, searchValue)}
-				<div class="w-full md:w-1/3 border-solid border-2 overflow-clip shadow-xl rounded-md m-8 hover:-translate-y-2 duration-300">
-					<a href={post.route}>
-						<div>
-							<div class="">
-								<div class="">
-									<div class="w-auto h-0 bg-red-400" />
-								</div>
-								<div class="mx-4 mt-2">
-									<p class="text-xl font-semibold ">{post.metadata.title}</p>
-									<div class="my-4">
-										<span>{new Date(post.metadata.date).toLocaleDateString()}</span>
-										<span>|</span>
-										{#if post.metadata.tags != undefined}
-											{#each post.metadata.tags as tag}
-												<span class="mr-1">{tag}</span>
-											{/each}
-										{/if}
-									</div>
-								</div>
-							</div>
-						</div>
-					</a>
+				<div class="col-span-1">
+					{new Date(post.metadata.date).toLocaleDateString('en-US', dateFormaOptions)}
 				</div>
+				<div class="col-span-5"><a href={post.route}>{post.metadata.title}</a></div>
 			{/if}
 		{/each}
 	</div>

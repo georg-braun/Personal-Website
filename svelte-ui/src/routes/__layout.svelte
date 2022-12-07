@@ -26,8 +26,8 @@
 		<div class="my-auto">
 			<div class="text-lg">Georg Braun</div>
 			<div class="{showBigHeader ? 'mt-2 text-xs' : 'invisible h-0'} ">
-				<div>Software engineer</div>
-				<div>❤️ dotnet, svelte, web, architecture</div>
+				<div>Software engineer | solve problems</div>
+				<div>❤️ dotnet, svelte, web, architecture, simplicity</div>
 			</div>
 		</div>
 
@@ -39,9 +39,9 @@
 	</div>
 
 	<div class="mt-10">
-		<div>
+
 			<slot />
-		</div>
+
 		<div>
 			<div class="text-center fixed top-20 right-20 invisible md:visible">
 				<div class="w-full sm:w-auto mt-2 font-sans  sm:my-auto text-sm pb-4 sm:mb-0" />

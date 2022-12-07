@@ -1,1 +1,1 @@
-export const pageContainerDefaultClasses = 'container mx-auto mt-8 p-4 w-11/12';
+export const pageContainerDefaultClasses = 'container mx-auto mt-8 p-4 w-2/4';

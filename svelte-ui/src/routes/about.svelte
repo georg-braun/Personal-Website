@@ -4,18 +4,8 @@
 </script>
 
 <div class={pageContainerDefaultClasses}>
-	<p class="mt-4">
-		Hey I'm Georg and live with my family in Germany. On this website I share my notes, opinions and
-		projects.
-	</p>
-
-	<h1 class="mt-4 text-3xl">I like</h1>
-	<ul>
-		<li>system and software design / architecture</li>
-		<li>coding</li>
-		<li>teaching</li>
-		<li>create and repair stuff</li>
-	</ul>
+	<p class="mt-4">Hey I'm Georg and live with my family in Germany.</p>
+	<p>I love to solve problems (mostly with code) and share my knowledge.</p>
 
 	<h1 class="mt-4 text-3xl">My spare time I spend with</h1>
 	<ul>
@@ -25,25 +15,86 @@
 		<li>motorcycles</li>
 	</ul>
 
-
 	<h1 class="mt-8 text-3xl">My computer science toolbox</h1>
 	<p class="mt-4">
-		I'm a Fullstack developer with a preference for the backend. This gives me the ability to realize my project ideas.
-		I'm always keen to learn new stuff and pick the right tool for the job.<br />
-		Following is a list of stuff I worked with or can tell somehting about ;) <br />
+		I'm a Fullstack developer with a preference for the backend. This gives me the ability to
+		realize my project ideas. I'm always keen to learn new stuff and pick the right tool for the
+		job.<br />
+		Following is a list of my tools ;) <br />
 	</p>
 
 	<ul class="mt-4">
-		<li>C#, TypeScript, Delphi</li>
-		<li>ASP.NET Core, WPF</li>
-		<li>Entity Framework Core</li>
-		<li>Domain-driven Design, Clean Code</li>
-		<li>REST, gRPC</li>
-		<li>CQRS</li>
-		<li>TDD</li>
-		<li>PostgreSQL, MongoDb</li>
-		<li>Svelte, Blazor</li>
-		<li>Continuous Integration, Continuous Delivery, GitHub Actions, Docker</li>
+		<li>
+			Programming languages
+			<ul>
+				<li>C#</li>
+				<li>JavaScript / TypeScript</li>
+			</ul>
+		</li>
+		<li>
+			Desktop Client
+			<ul>
+				<li>WPF</li>
+			</ul>
+		</li>
+		<li>
+			Web Backend
+			<ul>
+				<li>ASP.NET</li>
+			</ul>
+		</li>
+		<li>
+			Web Client
+			<ul>
+				<li>Svelte</li>
+				<li>HTML</li>
+				<li>CSS</li>
+			</ul>
+		</li>
+		<li>
+			Architecture
+			<ul>
+				<li>Domain-driven Design</li>
+				<li>CQRS</li>
+			</ul>
+		</li>
+		<li>
+			Databases
+			<ul>
+				<li>PostgreSQL</li>
+				<li>MongoDb</li>
+			</ul>
+		</li>
+		<li>
+			ORM
+			<ul>
+				<li>Entity Framework</li>
+			</ul>
+		</li>
+		<li>
+			Communication
+			<ul>
+				<li>REST</li>
+				<li>gRPC</li>
+				<li>signalR</li>
+			</ul>
+		</li>
+		<li>
+			Tests
+			<ul>
+				<li>TDD</li>
+			</ul>
+		</li>
+		<li>
+			DevOps
+			<ul>
+				<li>Continuous Integration</li>
+				<li>Continuous Delivery</li>
+				<li>GitHub Actions</li>
+				<li>Docker</li>
+			</ul>
+		</li>
+		<li>Clean Code</li>
 		<li>Agile Development</li>
 		<li>Azure DevOps</li>
 	</ul>
