@@ -3,6 +3,7 @@
 	import '../prism.css';
 
 	let scrollY;
+	let innerWidth;
 	let showBigHeader = true;
 
 	$: {
@@ -16,13 +17,14 @@
 	}
 </script>
 
-<svelte:window bind:scrollY />
+<svelte:window bind:scrollY bind:innerWidth/>
 
 <main>
 	<div class="flex border-b-4 sticky top-0  backdrop-blur-md">
 		<div class="{showBigHeader ? 'w-36' : 'w-20'} hover:translate-x-3 duration-300 mt-auto ">
 			<img src="/avatar.png" alt="Profile" />
 		</div>
+		{#if innerWidth > 550}
 		<div class="my-auto">
 			<div class="text-lg">Georg Braun</div>
 			<div class="{showBigHeader ? 'mt-2 text-xs' : 'invisible h-0'} ">
@@ -30,6 +32,7 @@
 				<div>❤️ dotnet, svelte, web, architecture, simplicity</div>
 			</div>
 		</div>
+		{/if}
 
 		<div class="flex ml-auto my-auto mr-10">
 			<a href="/"><div class="hover:-translate-y-1 duration-300">Blog</div></a>

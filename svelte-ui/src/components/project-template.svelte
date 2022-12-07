@@ -14,7 +14,7 @@
 <div class="border-solid border-2 overflow-clip shadow-xl rounded-md w-full m-8">
 	<div>
 		<div class="flex md:flex-nowrap flex-wrap-reverse">
-			<div class="w-fit max-w-sm md:w-1/3 mx-auto">
+			<div class="w-fit max-w-sm md:w-1/3 mx-auto my-auto">
 				{#if imagePath == ""}
 					<div class="text-center">No image yet</div>			
 				{:else}

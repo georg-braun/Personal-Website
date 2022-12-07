@@ -4,7 +4,7 @@
 	let showOnlySoftwareProjects;
 </script>
 
-<div>
+<div class="text-center">
 	<input type="checkbox" bind:checked={showOnlySoftwareProjects} class="rounded-ful" />
 	Show only software stuff 👨‍💻
 </div>
