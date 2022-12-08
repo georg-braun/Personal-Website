@@ -11,5 +11,8 @@
 	<!-- <p class="text-center">tags: {tags}</p> -->
 </div>
 <div class="blog-post container mx-auto md:w-2/4">
-	<slot />
+	<div class="mx-2">
+		<slot />
+	</div>
+
 </div>
