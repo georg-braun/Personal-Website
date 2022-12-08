@@ -4,7 +4,7 @@
 	let showOnlySoftwareProjects;
 </script>
 
-<div class="text-center">
+<div class="text-center mb-4">
 	<input type="checkbox" bind:checked={showOnlySoftwareProjects} class="rounded-ful" />
 	Show only software stuff 👨‍💻
 </div>
@@ -23,8 +23,8 @@
 		{/if}
 	{/each}
 </div>
-<h1 class="text-3xl mt-10 mb-5 text-center">Retired projects</h1>
-<div class="">
+<h1 class="text-3xl mt-20 mb-5 w-full text-center">Retired projects</h1>
+<div class="flex flex-wrap">
 	{#each Projects as project}
 		{#if project.retired && (!showOnlySoftwareProjects || project.category === 'it')}
 			<Project
