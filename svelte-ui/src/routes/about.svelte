@@ -15,7 +15,7 @@
 		<li>motorcycles</li>
 	</ul>
 
-	<h1 class="mt-8 text-3xl">My computer science toolbox</h1>
+	<h1 class="mt-8 text-3xl">My toolbox</h1>
 	<p class="mt-4">
 		I'm a Fullstack developer with a preference for the backend. This gives me the ability to
 		realize my project ideas. I'm always keen to learn new stuff and pick the right tool for the
@@ -25,27 +25,21 @@
 
 	<ul class="mt-4">
 		<li>
-			Programming languages
+			Backend
 			<ul>
 				<li>C#</li>
-				<li>JavaScript / TypeScript</li>
+				<li>ASP.NET</li>
+				<li>Entity Framework</li>
+				<li>REST</li>
+				<li>gRPC</li>
+				<li>signalR</li>
 			</ul>
 		</li>
 		<li>
-			Desktop Client
+			Frontend
 			<ul>
 				<li>WPF</li>
-			</ul>
-		</li>
-		<li>
-			Web Backend
-			<ul>
-				<li>ASP.NET</li>
-			</ul>
-		</li>
-		<li>
-			Web Client
-			<ul>
+				<li>JavaScript / TypeScript</li>
 				<li>Svelte</li>
 				<li>HTML</li>
 				<li>CSS</li>
@@ -66,23 +60,12 @@
 			</ul>
 		</li>
 		<li>
-			ORM
-			<ul>
-				<li>Entity Framework</li>
-			</ul>
-		</li>
-		<li>
-			Communication
-			<ul>
-				<li>REST</li>
-				<li>gRPC</li>
-				<li>signalR</li>
-			</ul>
-		</li>
-		<li>
 			Tests
 			<ul>
 				<li>TDD</li>
+				<li>xUnit</li>
+				<li>NUnit</li>
+				<li>Fluent Assertions</li>
 			</ul>
 		</li>
 		<li>

@@ -29,7 +29,7 @@
 			<div class="text-lg">Georg Braun</div>
 			<div class="{showBigHeader ? 'mt-2 text-xs' : 'invisible h-0'} ">
 				<div>Software engineer | solve problems</div>
-				<div>❤️ dotnet, svelte, web, architecture, simplicity</div>
+				<div>❤️ dotnet, svelte, web, build, simplicity</div>
 			</div>
 		</div>
 

@@ -5,7 +5,7 @@
 	export let tags;
 </script>
 
-<div class="mb-8 bg-slate-600 py-4  -mt-10">
+<div class="mb-4 bg-gray-800 pt-4 pb-1 -mt-10">
 	<p class="text-4xl text-center">{title}</p>
 	<p class="mt-4 text-center">written: {new Date(date).toLocaleDateString()}</p>
 	<!-- <p class="text-center">tags: {tags}</p> -->
