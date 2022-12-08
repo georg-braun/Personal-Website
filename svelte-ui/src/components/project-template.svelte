@@ -11,10 +11,10 @@
 	export let date = '';
 </script>
 
-<div class="border-solid border-2 overflow-clip shadow-xl rounded-md w-full m-8">
+<div class="border-solid border-2 overflow-clip shadow-xl rounded-md w-[300px] mx-auto m-8">
 	<div>
-		<div class="flex md:flex-nowrap flex-wrap-reverse">
-			<div class="w-fit max-w-sm md:w-1/3 mx-auto my-auto">
+		<div class="flex flex-wrap">
+			<div class="w-fit   mx-auto">
 				{#if imagePath == ""}
 					<div class="text-center">No image yet</div>			
 				{:else}
@@ -22,7 +22,7 @@
 				{/if}
 				
 			</div>
-			<div class="md:w-2/3 ml-4 mt-2">
+			<div class="w-full ml-4 mt-2">
 				<p class="text-xl font-semibold ">{title}</p>
 				<div class="align-middle">
 					<span class="align-middle">{date}</span>

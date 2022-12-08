@@ -9,7 +9,7 @@
 	Show only software stuff 👨‍💻
 </div>
 
-<div class="flex flex-wrap ">
+<div class="">
 	{#each Projects as project}
 		{#if !project.retired && (!showOnlySoftwareProjects || project.category === 'it')}
 			<Project
@@ -23,8 +23,8 @@
 		{/if}
 	{/each}
 </div>
-<h1 class="text-3xl mt-10 mb-5">Retired projects</h1>
-<div class="flex flex-wrap ">
+<h1 class="text-3xl mt-10 mb-5 text-center">Retired projects</h1>
+<div class="">
 	{#each Projects as project}
 		{#if project.retired && (!showOnlySoftwareProjects || project.category === 'it')}
 			<Project
