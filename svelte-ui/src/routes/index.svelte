@@ -1,7 +1,7 @@
 <script context="module">
 	import { getPostsDescByDate } from '../blog/markdownFilesToPosts';
 
-	const dateFormaOptions = { year: 'numeric', month: 'short', day: 'numeric' };
+	const dateFormatOptions = { year: 'numeric', month: 'short', day: 'numeric' };
 
 	export async function load() {
 		const posts = getPostsDescByDate();
@@ -29,7 +29,7 @@
 		{#each posts as post}
 			{#if post.metadata != undefined && post.metadata.title != undefined && post.metadata.date != undefined && post.route != undefined && postMeetsSearchCriteria(post.metadata, searchValue)}
 				<div class="col-span-2 md:col-span-1">
-					{new Date(post.metadata.date).toLocaleDateString('en-US', dateFormaOptions)}
+					{new Date(post.metadata.date).toLocaleDateString('en-US', dateFormatOptions)}
 				</div>
 				<div class="col-span-4 md:col-span-5"><a href={post.route}>{post.metadata.title}</a></div>
 			{/if}
