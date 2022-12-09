@@ -44,7 +44,7 @@
 			{/if}
 		</div>
 
-		<div class="col-span-2 p-4">
+		<div class="col-span-2 pt-0 p-4">
 			{description}
 		</div>
 	</div>
