@@ -3,13 +3,22 @@
 @tailwind utilities;
 
 @layer base {
-  h1, h2, h3, h4 {
+
+  html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
     @apply font-bold;
   }
 }
 
 
-body{
+body {
   background-color: #303030;
   color: white;
 }
@@ -19,11 +28,11 @@ ul {
   padding-left: 2rem;
 }
 
-a{
+a {
   color: cornflowerblue;
   text-decoration: underline;
 }
 
-p{
+p {
   margin-bottom: 1em;
 }
