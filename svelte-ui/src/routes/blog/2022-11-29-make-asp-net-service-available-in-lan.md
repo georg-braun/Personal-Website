@@ -20,7 +20,7 @@ After some investigation and experiments I came to the following solution how to
 "profiles": {
     "Server": {
       ...
-      // 0.0.0.0 => all IPv5 addresses on the local machine
+      // 0.0.0.0 => all IPv4 addresses on the local machine
       // I could also use 192.168.178.80
       // But for portability to other development machines I use the former.
       "applicationUrl": "http://0.0.0.0:5246;...",      
