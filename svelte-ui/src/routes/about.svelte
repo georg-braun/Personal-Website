@@ -4,23 +4,24 @@
 </script>
 
 <div class={pageContainerDefaultClasses}>
-	<p class="mt-4">Hey I'm Georg and live with my family in Germany.</p>
-	<p>I love to solve problems (mostly with code) and share my knowledge.</p>
 
-	<h1 class="mt-4 text-3xl">My spare time I spend with</h1>
-	<ul>
-		<li>my girlfriend</li>
-		<li>these two guys <img src={rockyElmoImage} alt="animals" /></li>
-		<li>bicycles</li>
-		<li>motorcycles</li>
-	</ul>
+
+	<p class="mt-4">Hey my name is Georg and I'm a software engineer living in Germany. I love to solve problems (mostly with code) and 
+		share my knowledge. I'm always keen to try new things and learn new stuff.</p>
+	
+
+	<h1 class="mt-4 text-3xl">When I'm not coding</h1>
+	I spend a lot of my time with my girlfriend and these two guys <img src={rockyElmoImage} alt="animals" />
+	Another passion are bicycles and motorocycles. 
+
+
+	<h1 class="mt-8 text-3xl">Why is this website so simple?</h1>
+	I often like the simplicity of things and the main purpose of this site is to share content and opinions and not a css experience 🦄
 
 	<h1 class="mt-8 text-3xl">My toolbox</h1>
 	<p class="mt-4">
-		I'm a Fullstack developer with a preference for the backend. This gives me the ability to
-		realize my project ideas. I'm always keen to learn new stuff and pick the right tool for the
-		job.<br />
-		Following is a list of my tools ;) <br />
+		I ❤️ coding with dotnet and svelte.<br />
+		Following is a list of tools I use or can tell you somehting about ;) <br />
 	</p>
 
 	<ul class="mt-4">

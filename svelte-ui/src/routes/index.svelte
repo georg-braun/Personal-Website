@@ -34,9 +34,10 @@
 				<div class="col-span-4 md:col-span-5"><a href={post.route}>{post.metadata.title}</a></div>
 			{/if}
 		{/each}
+		<div class="mt-4 text-black">
+			<input class="border rounded" type="text" placeholder="Search" bind:value={searchValue} />
+		</div>
 	</div>
 
-	<div class="mt-4 text-center text-black">
-		<input class="border rounded" type="text" placeholder="Search" bind:value={searchValue} />
-	</div>
+
 </div>

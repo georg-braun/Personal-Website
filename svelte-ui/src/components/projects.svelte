@@ -4,12 +4,12 @@
 	let showOnlySoftwareProjects;
 </script>
 
-<div class="text-center mb-4">
+<div class="text-center my-14">
 	<input type="checkbox" bind:checked={showOnlySoftwareProjects} class="rounded-ful" />
 	Show only software stuff 👨‍💻
 </div>
 
-<div class="">
+<div class="flex flex-wrap justify-center gap-8">
 	{#each Projects as project}
 		{#if !project.retired && (!showOnlySoftwareProjects || project.category === 'it')}
 			<Project
@@ -23,8 +23,8 @@
 		{/if}
 	{/each}
 </div>
-<h1 class="text-3xl mt-20 mb-5 w-full text-center">Retired projects</h1>
-<div class="flex flex-wrap">
+<h1 class="text-3xl my-20  w-full text-center">Retired projects</h1>
+<div class="flex flex-wrap justify-center gap-8">
 	{#each Projects as project}
 		{#if project.retired && (!showOnlySoftwareProjects || project.category === 'it')}
 			<Project
