@@ -19,6 +19,7 @@
 				projectUrl={project.projectUrl}
 				date={project.date}
 				description={project.description}
+				tags={project.tags}
 			/>
 		{/if}
 	{/each}
@@ -34,6 +35,7 @@
 				projectUrl={project.projectUrl}
 				date={project.date}
 				description={project.description}
+				tags={project.tags}
 			/>
 		{/if}
 	{/each}
