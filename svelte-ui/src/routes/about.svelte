@@ -4,19 +4,22 @@
 </script>
 
 <div class={pageContainerDefaultClasses}>
-
-
-	<p class="mt-4">Hey my name is Georg and I'm a software engineer living in Germany. I love to solve problems (mostly with code) and 
-		share my knowledge. I'm always keen to try new things and learn new stuff.</p>
-	
+	<p class="mt-4">Hey my name is Georg and I'm a software engineer living in Germany.</p>
+	<p>
+		I love to solve problems (mostly with code) and share my knowledge. I'm always keen to try new
+		things and learn new stuff.
+	</p>
 
 	<h1 class="mt-4 text-3xl">When I'm not coding</h1>
-	I spend a lot of my time with my girlfriend and these two guys <img src={rockyElmoImage} alt="animals" />
-	Another passion are bicycles and motorocycles. 
-
+	I spend a lot of my time with my girlfriend and these two guys.<img
+		src={rockyElmoImage}
+		alt="animals"
+	/>
+	Another passion are bicycles and motorocycles.
 
 	<h1 class="mt-8 text-3xl">Why is this website so simple?</h1>
-	I often like the simplicity of things and the main purpose of this site is to share content and opinions and not a css experience 🦄
+	I often like the simplicity of things and the main purpose of this site is to share content and opinions
+	and not a css experience 🦄
 
 	<h1 class="mt-8 text-3xl">My toolbox</h1>
 	<p class="mt-4">
@@ -33,6 +36,7 @@
 				<li>Entity Framework</li>
 				<li>REST</li>
 				<li>gRPC</li>
+				<li>GraphQL</li>
 				<li>signalR</li>
 			</ul>
 		</li>
