@@ -29,7 +29,7 @@ const config = {
 				copy({
 					// copy images from the markdown posts folder to the static folder during build time
 					// advantage: images can reside with the markdown files
-					targets: [{ src: 'src/routes/blog/images', dest: 'static/blog' }]
+					targets: [{ src: 'src/routes/bits/images', dest: 'static/bits' }]
 				})
 			]
 		})

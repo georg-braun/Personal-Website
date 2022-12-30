@@ -1,5 +1,5 @@
 <script context="module">
-	import { getPostsDescByDate } from '../blog/markdownFilesToPosts';
+	import { getPostsDescByDate } from '../lib/markdownFilesToPosts';
 
 	const dateFormatOptions = { year: 'numeric', month: 'short', day: 'numeric' };
 
@@ -25,7 +25,8 @@
 </script>
 
 <div>
-	<div class="grid grid-cols-6 sm:w-2/3 mx-auto gap-y-1">
+    <div class="grid grid-cols-1 sm:w-2/3 mx-auto mb-4 opacity-50">Bits = my notes and thoughts</div>
+	<div class="grid grid-cols-6 sm:w-2/3 mx-auto gap-y-2">
 		{#each posts as post}
 			{#if post.metadata != undefined && post.metadata.title != undefined && post.metadata.date != undefined && post.route != undefined && postMeetsSearchCriteria(post.metadata, searchValue)}
 				<div class="col-span-2 md:col-span-1">
