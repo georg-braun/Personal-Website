@@ -6,9 +6,11 @@
 <div class={pageContainerDefaultClasses}>
 	<p class="mt-4">Hey my name is Georg and I'm a software engineer living in Germany.</p>
 	<p>
-		I love to solve problems (mostly with code) and share my knowledge. I'm always keen to try new
-		things and learn new stuff.
+		I love to solve problems (mostly with code) and to check out new things. But I also like to share my insights and thoughts.
+        Therefore I started to write about different software development topics. Maybe this will help some people, but primarily it helps me to reflect
+        about these topics. An other advantage is that it's like a little notebook and I know where to search if I forget something 😄
 	</p>
+
 
 	<h1 class="mt-4 text-3xl">When I'm not coding</h1>
 	I spend a lot of my time with my girlfriend and these two guys.<img
