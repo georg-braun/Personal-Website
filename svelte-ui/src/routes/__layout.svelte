@@ -10,7 +10,7 @@
 		</div>
 
 		<div class="flex mx-auto justify-center p-2 border border-x-0 border-y-4">
-			<a href="/"><div>Bits</div></a>
+			<a href="/"><div>Notes</div></a>
 			<a class="ml-4" href="/stuff"><div>Projects</div> </a>
 			<a class="ml-4" href="/about"><div>About</div></a>
 		</div>

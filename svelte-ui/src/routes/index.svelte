@@ -1,5 +1,5 @@
 <script context="module">
-	import { getPostsDescByDate } from '../lib/markdownFilesToPosts';
+	import { getPostsDescByDate } from '../lib/markdown-files-to-notes';
 
 	const dateFormatOptions = { year: 'numeric', month: 'short', day: 'numeric' };
 

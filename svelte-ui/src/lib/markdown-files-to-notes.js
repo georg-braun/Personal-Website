@@ -21,7 +21,7 @@ function getAllPosts() {
 }
 
 function getMarkdownFiles() {
-	return import.meta.globEager(`../routes/bits/**/*.md`);
+	return import.meta.globEager(`../routes/notes/**/*.md`);
 }
 
 function getPosts(markdownFiles) {
