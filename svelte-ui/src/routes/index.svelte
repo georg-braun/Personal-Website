@@ -25,20 +25,24 @@
 </script>
 
 <div>
-    <div class="grid grid-cols-1 sm:w-2/3 mx-auto mb-4 opacity-50">Bits = my notes and thoughts</div>
-	<div class="grid grid-cols-6 sm:w-2/3 mx-auto gap-y-2">
+    <div class="text-center" title="Readings should be simple">Simple notes. Fits within a ☕ break.</div>
+	<div class="mt-4 text-black text-center mb-4">
+		<input class="border rounded text-center" type="text" placeholder="Search" bind:value={searchValue} />
+	</div>
+	<div class="flex flex-wrap mx-auto justify-center gap-4 w-2/3">
 		{#each posts as post}
 			{#if post.metadata != undefined && post.metadata.title != undefined && post.metadata.date != undefined && post.route != undefined && postMeetsSearchCriteria(post.metadata, searchValue)}
-				<div class="col-span-2 md:col-span-1">
-					{new Date(post.metadata.date).toLocaleDateString('en-US', dateFormatOptions)}
-				</div>
-				<div class="col-span-4 md:col-span-5"><a href={post.route}>{post.metadata.title}</a></div>
+				<a class="no-underline" href={post.route}>
+					<div class="w-64 h-full border border-solid border-opacity-50 hover:border-opacity-100 transition-all rounded p-2">
+						<div class="col-span-4 md:col-span-5">
+							{post.metadata.title}
+						</div>
+						<div class="col-span-2 md:col-span-1 text-xs opacity-50">
+							{new Date(post.metadata.date).toLocaleDateString('en-US', dateFormatOptions)}
+						</div>
+					</div>
+				</a>
 			{/if}
 		{/each}
-		<div class="mt-4 text-black">
-			<input class="border rounded" type="text" placeholder="Search" bind:value={searchValue} />
-		</div>
 	</div>
-
-
 </div>
