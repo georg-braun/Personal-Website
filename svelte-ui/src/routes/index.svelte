@@ -27,7 +27,7 @@
 <div>
     <div class="text-center" title="Readings should be simple">Simple notes. Fits within a ☕ break.</div>
 	<div class="mt-4 text-black text-center mb-4">
-		<input class="border rounded text-center" type="text" placeholder="Search" bind:value={searchValue} />
+		<input class="border rounded text-center" type="text" placeholder="search" bind:value={searchValue} />
 	</div>
 	<div class="flex flex-wrap mx-auto justify-center gap-4 w-2/3">
 		{#each posts as post}
