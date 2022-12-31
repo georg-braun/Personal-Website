@@ -9,7 +9,7 @@
 	Show only software stuff 👨‍💻
 </div>
 
-<div class="flex flex-wrap justify-center gap-8">
+<div class="flex flex-wrap mx-auto justify-center gap-4 w-2/3">
 	{#each Projects as project}
 		{#if !project.retired && (!showOnlySoftwareProjects || project.category === 'it')}
 			<Project
@@ -25,7 +25,7 @@
 	{/each}
 </div>
 <h1 class="text-3xl my-20  w-full text-center">Retired projects</h1>
-<div class="flex flex-wrap justify-center gap-8">
+<div class="flex flex-wrap mx-auto justify-center gap-4 w-2/3">
 	{#each Projects as project}
 		{#if project.retired && (!showOnlySoftwareProjects || project.category === 'it')}
 			<Project
