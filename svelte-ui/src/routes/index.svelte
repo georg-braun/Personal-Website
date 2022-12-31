@@ -13,13 +13,13 @@
 	export let posts;
 	let searchValue = '';
 
-	function postMeetsSearchCriteria(postMetadata, searchCriteria) {
+	function postMeetsSearchCriteria(noteMetadata, searchCriteria) {
 		if (searchValue === '') return true;
 		return (
-			postMetadata.title.toUpperCase().includes(searchCriteria.toUpperCase()) ||
-			postMetadata.date.toUpperCase().includes(searchCriteria.toUpperCase()) ||
-			(postMetadata.tags != undefined &&
-				postMetadata.tags.some((_) => _.toUpperCase().includes(searchCriteria.toUpperCase())))
+			noteMetadata.title.toUpperCase().includes(searchCriteria.toUpperCase()) ||
+			noteMetadata.date.toUpperCase().includes(searchCriteria.toUpperCase()) ||
+			(noteMetadata.tags != undefined &&
+				noteMetadata.tags.some((_) => _.toUpperCase().includes(searchCriteria.toUpperCase())))
 		);
 	}
 </script>
