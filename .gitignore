@@ -1,3 +1,5 @@
 ﻿old/svelte-ui/.svelte-kit/build
 old/svelte-ui/.svelte-kit
 **/svelte-ui/node_modules
+**/.svelte-kit
+**/node_modules
