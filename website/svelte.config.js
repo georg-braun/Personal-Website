@@ -1,5 +1,4 @@
 import adapter from '@sveltejs/adapter-static';
-import copy from 'rollup-plugin-copy';
 import { mdsvex } from 'mdsvex';
 import sveltePreprocess from 'svelte-preprocess';
 
