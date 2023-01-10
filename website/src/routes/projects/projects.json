@@ -1,0 +1,103 @@
+{
+	"webApplications": [
+		{
+			"title": "Office days",
+			"imagePath": "projects/office-days.png",
+			"repoUrl": "https://github.com/georg-braun/office-days",
+			"date": "2022",
+			"category": "it",
+			"retired": false,
+			"description": "Since we work at our company in a remote environment and just sometimes someone visits the office, I developed a little web app to communicate our office days"
+		},
+		{
+			"title": "Family tree",
+			"imagePath": "projects/family-tree.png",
+			"repoUrl": "https://github.com/georg-braun/Family-Tree",
+			"projectUrl": "https://stammbaum.georg-braun.de/",
+			"date": "2019",
+			"category": "it",
+			"retired": false,
+			"description": "Based on the dTree library I built a family tree. In addition, I wrote a graph-to-list converter to switch between different family trees."
+		},
+		{
+			"title": "Topic Tracker",
+			"imagePath": "projects/topic-timer.png",
+			"repoUrl": "https://github.com/georg-braun/topic-timer",
+			"projectUrl": "https://topic-timer.georg-braun.de",
+			"date": "2022",
+			"category": "it",
+			"retired": false,
+			"description": "Create a topic do you want to work on, set the desired time. Dedicate your time to a task you created and see how much time you spent. Built with svelte.",
+			"tags": [
+				"svelte"
+			]
+		},
+		{
+			"title": "Maintenance buddy",
+			"imagePath": "projects/maintenance-buddy.png",
+			"repoUrl": "https://github.com/georg-braun/maintenance-buddy",
+			"projectUrl": "https://maintenance-buddy.georg-braun.de",
+			"date": "2022",
+			"category": "it",
+			"retired": false,
+			"description": "Last year I created an app called garage buddy to manage the maintenances of my vehicles. Garage buddy is a SPA that uses Google Firestore for authentication and persistence. The problem is that I want to have more control over the data and to write the domain logic in the backend instead in the SPA. Therefore I created this new project that uses Svelte as frontend, ASP.NET Core in the backend and Entity Framework Core as ORM to a PostgreSQL database. For security in the SPA and backend I rely on Auth0. The API of the backend isn't a REST API, I wanted to try a more CQRS like approach.",
+			"tags": [
+				"svelte",
+				"asp.net",
+				"entity framework",
+				"domain-driven design"
+			]
+		}	
+	],
+	"bicycle": [
+		{
+			"title": "Bike ride through germany",
+			"imagePath": "projects/2022-bike-ride.png",
+			"projectUrl": "/blog/bike-ride-through-germany",
+			"date": "2022",
+			"category": "private",
+			"retired": false,
+			"description": "I visited my sister in Ingolstadt with my bicycle. I drove 654 kilometers in 5 days. It was awesome!"
+		}
+	],
+	"handcraft": [
+		{
+			"title": "Building a couch",
+			"imagePath": "blog/images/couch-2020/result.png",
+			"projectUrl": "/blog/building-a-couch",
+			"date": "2020",
+			"category": "private",
+			"retired": false,
+			"description": "We wanted to have a couch on our balcony to enjoy the sunset. Therefore we built a couch ;)"
+		},
+		{
+			"title": "Building a raised bed",
+			"imagePath": "blog/images/raised-bed-2020/planted.png",
+			"projectUrl": "/blog/building-a-raised-bed",
+			"date": "2020",
+			"category": "private",
+			"retired": false,
+			"description": "In summer 2019 my girlfriend and I moved to a new location. Although it was possible to use the garden we wanted to have the possibility to plant something near the kitchen. So I decided to construct and build a raised bed."
+		}
+	],
+	"desktopApplications": [
+		{
+			"title": "OpenCV Augmented Reality",
+			"imagePath": "projects/study-opencv-ar.png",
+			"repoUrl": "https://github.com/georg-braun/Study-Computer-Graphics-SS2016",
+			"date": "2016",
+			"category": "it",
+			"retired": true,
+			"description": "An augmented reality application with a combination of C++, OpenGL, OpenCV and the ArUco library."
+		},
+		{
+			"title": "Matlab Augmented Reality",
+			"imagePath": "projects/study-matlab-ar.png",
+			"repoUrl": "https://github.com/georg-braun/Study-Image-Processing-WS2016",
+			"date": "2016",
+			"category": "it",
+			"retired": true,
+			"description": "An augmented reality application with Matlab for the image processing module in university. Read the webcam image and try to detect the movie cover and play the trailer at this position."
+		}
+	]
+}

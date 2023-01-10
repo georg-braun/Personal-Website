@@ -10,6 +10,10 @@ import Header from '$lib/components/Header.svelte';
     <slot />
 </div>
 
+<div class="impressum">
+    <a href="/impressum">Impressum</a>
+</div>
+
 <style lang="scss">
     .page-content{
 
@@ -18,5 +22,10 @@ import Header from '$lib/components/Header.svelte';
         margin-right: auto;
 
         max-width: 800px;        
+    }
+
+    .impressum{
+        margin: 40px 0px;
+        text-align: center;
     }
 </style>

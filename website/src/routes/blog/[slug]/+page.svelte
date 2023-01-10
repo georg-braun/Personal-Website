@@ -1,4 +1,5 @@
 <script>
+
     import dayjs from "dayjs"
     export let data;
     console.log(data)
@@ -20,4 +21,5 @@
         text-align: center;
         padding: 20px;
     }
+
 </style>

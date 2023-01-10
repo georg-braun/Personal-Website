@@ -15,13 +15,16 @@ After making some sketches and drafts in Inventor we ordered the wood (douglas).
 ![Some sketch](images/couch-2020/sktech-3.png)
 
 ![Wood arrived](images/couch-2020/wood-delivery.png)
+
 The wood arrived :)
 
 ![Worplace inside](images/couch-2020/workplace.png)
+
 Workplace inside.
 
 ![Workplace in the garden](images/couch-2020/workplace-2.png)
-Worplace outside to mill the wood.
+
+Workplace outside to mill the wood.
 
 ![Creating the pillars](images/couch-2020/pillar-2.png)
 Nightshift.

@@ -27,7 +27,34 @@
 		I ❤️ coding with dotnet and svelte.<br />
 		Following is a list of tools I use or can tell you somehting about ;) <br />
 	</p>
-
+<!--
+    <div class="grid">
+        <div>Topic</div>
+        <div>I know something</div>
+        <div>Proficient</div>
+        <div>Main skill</div>
+        <div>Backend</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>Frontend</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>Database</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>Architecture</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>DevOps</div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+-->
 	<ul>
 		<li>
 			Backend
@@ -97,3 +124,13 @@
 		or contact me mail.at.georg-braun.de :)
 	</p>
 </div>
+
+<style>
+    .grid{
+        display: grid;
+
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+ 
+</style>
