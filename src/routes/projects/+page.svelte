@@ -1,7 +1,6 @@
 <script>
 	import ProjectCategory from "$lib/components/project/ProjectCategory.svelte";
 import projects from "./projects.json"
-console.log(projects)
 </script>
 
 <ProjectCategory name="Web Applications" projects={projects.webApplications} />
