@@ -1,5 +1,6 @@
 <script>
     import dayjs from "dayjs"
+    import Icon from "@iconify/svelte"
 	export let data;
 </script>
 
@@ -9,7 +10,7 @@
 
     <div class="line"></div>
 
-<div class="home-introduction-container" title="Readings should be simple">Simple posts. Fits within a ☕ break.</div>
+<div class="home-introduction-container" title="Readings should be simple">Simple posts. Fits within a <Icon icon="bxs:coffee"/> break.</div>
 	
 <div class="posts-list">
 	{#each data.posts as post}
