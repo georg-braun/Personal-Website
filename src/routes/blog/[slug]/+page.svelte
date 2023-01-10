@@ -2,7 +2,6 @@
     import Icon from "@iconify/svelte"
     import dayjs from "dayjs"
     export let data;
-    console.log(data)
 </script>
 
 <div class="post-title">
