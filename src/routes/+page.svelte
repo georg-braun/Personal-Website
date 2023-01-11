@@ -4,13 +4,13 @@
 	export let data;
 </script>
 
-<div class="home-introduction-container">👋 Welcome to my place. Here you can find posts about different topics.
-    At <a href="/projects">/projects</a> I show some stuff I created and navigating to <a href="/aboutme">/aboutme</a> I share some
-    personal stuff.</div>
+<div class="home-introduction-container">👋 Welcome to my place. Here I primarily write about web technologies and dotnet stuff.
+    At <a href="/projects">/projects</a> you can find some things I mades and navigating to <a href="/aboutme">/aboutme</a> I share some
+    personal insights.</div>
 
     <div class="line"></div>
 
-<div class="home-introduction-container" title="Readings should be simple">Simple posts. Fits within a <Icon icon="bxs:coffee"/> break.</div>
+<div class="home-introduction-container" title="Readings should be simple">I like simple posts that don't overwhelm the reader. A post should be readable within a coffee break <iconify-icon icon="lucide:coffee"></iconify-icon></div>
 	
 <div class="posts-list">
 	{#each data.posts as post}

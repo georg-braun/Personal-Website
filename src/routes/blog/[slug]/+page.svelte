@@ -11,14 +11,14 @@
 
 <div class="coffee-tag">
     &lt;
-    <Icon icon="bxs:coffee"/>
+    <iconify-icon icon="lucide:coffee"></iconify-icon>
     &gt;
 </div>
 
 <svelte:component this={data.content} />
 <div class="coffee-tag">
     &lt;/
-    <Icon icon="bxs:coffee"/>
+    <iconify-icon icon="lucide:coffee"></iconify-icon>
     &gt;
 </div>
 <style>

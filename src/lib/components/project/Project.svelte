@@ -13,12 +13,12 @@
     <div class="header__links">
        {#if project.repoUrl}
        <a href="{project.repoUrl}" target="_blank">
-               <Icon icon="mdi:github" />
+            <iconify-icon icon="mdi:github"></iconify-icon>
        </a>
        {/if} 
        {#if project.projectUrl}
         <a href="{project.projectUrl}" target="_blank">
-                <Icon icon="material-symbols:open-in-new-rounded" />
+            <iconify-icon icon="material-symbols:open-in-new"></iconify-icon>
         </a>
         {/if} 
     </div>
