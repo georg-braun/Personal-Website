@@ -19,10 +19,6 @@ import Header from '$lib/components/Header.svelte';
     <a href="/impressum">Impressum</a>
 </div>
 
-<button on:click={() => darkMode = !darkMode}>
-	{themeName}
-</button>
-
 <style lang="scss">
     .page-content{
 
