@@ -1,5 +1,5 @@
 <script>
-    import Icon from "@iconify/svelte"
+    import "./post.css"
     import dayjs from "dayjs"
     export let data;
 </script>
@@ -14,8 +14,9 @@
     <iconify-icon icon="lucide:coffee"></iconify-icon>
     &gt;
 </div>
-
-<svelte:component this={data.content} />
+<div class="post">
+    <svelte:component this={data.content} />
+</div>
 <div class="coffee-tag">
     &lt;/
     <iconify-icon icon="lucide:coffee"></iconify-icon>
