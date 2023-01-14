@@ -6,3 +6,7 @@
         max-width: 100%;
     }
 
+blockquote{
+    background-color: lightgray;
+    padding: 20px;
+}

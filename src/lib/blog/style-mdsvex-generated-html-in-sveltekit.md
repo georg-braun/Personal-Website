@@ -4,6 +4,8 @@ date: 2022-01-11
 tags: ["svelte"]
 ---
 
+> Deprecated with the release of SvelteKit 1.0
+
 My blog posts are markdown files that get processed to html files (you can find more about this in [this post](/blog/use-markdown-files-as-sveltekit-routes)
 
 In a new post that I wrote in markdown I used a bullet list. The problem was that the bullet list wasn't visible in the generated html. 

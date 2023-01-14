@@ -1,7 +1,7 @@
 ---
 title: "SvelteKit: Refresh a page after the slug changed with afterNavigate"
 date: 2022-11-01
-tags: ["svelktekit"]
+tags: ["svelte"]
 ---
 
 When I create a svelte component and want to fetch some data I mostly use the `onMount` lifecycle method.
