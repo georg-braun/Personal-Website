@@ -4,3 +4,6 @@ old/svelte-ui/.svelte-kit
 **/.svelte-kit
 **/node_modules
 build
+src/routes/.DS_Store
+.DS_Store
+static/blog/images
