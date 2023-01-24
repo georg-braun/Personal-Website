@@ -7,7 +7,7 @@
 <div class="home-introduction-container">
     👋 Welcome to my place. Here I primarily write about web technologies and
     dotnet stuff. At <a href="/projects">/projects</a> you can find some things
-    I mades and navigating to <a href="/aboutme">/aboutme</a> I share some personal
+    I made and navigating to <a href="/aboutme">/aboutme</a> I share some personal
     insights.
 </div>
 
