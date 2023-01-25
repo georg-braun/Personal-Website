@@ -1,10 +1,10 @@
 ---
 title: "SvelteKit Blog: Style mdvsex generated html"
 date: 2022-01-11
-tags: ["svelte"]
+tags: ["sveltekit"]
 ---
 
-> Deprecated with the release of SvelteKit 1.0
+> Notice. This was written pre SvelteKit 1.0.0. With the release of SvelteKit 1.0.0 some things changed. Especially the folder and routing structure. The solution in this blog post isn't compatible with version 1.0.0.
 
 My blog posts are markdown files that get processed to html files (you can find more about this in [this post](/blog/use-markdown-files-as-sveltekit-routes)
 

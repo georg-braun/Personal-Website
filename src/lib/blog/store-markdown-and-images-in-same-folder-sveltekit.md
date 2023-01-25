@@ -1,8 +1,10 @@
 ---
 title: "SvelteKit Blog: Store images in the same folder as markdown files"
 date: 2022-01-10
-tags: ["svelte"]
+tags: ["sveltekit"]
 ---
+
+> Notice. This was written pre SvelteKit 1.0.0. With the release of SvelteKit 1.0.0 some things changed. Especially the folder and routing structure. The solution in this blog post isn't compatible with version 1.0.0.
 
 I had a running blog solution. Markdown files were processed and served as routes. 
 

@@ -1,8 +1,10 @@
 ---
 title: "SvelteKit Blog: Use markdown files as routes in SvelteKit"
 date: 2022-01-07
-tags: ["svelte"]
+tags: ["sveltekit"]
 ---
+
+> Notice. This was written pre SvelteKit 1.0.0. With the release of SvelteKit 1.0.0 some things changed. Especially the folder and routing structure. The solution in this blog post isn't compatible with version 1.0.0.
 
 # The mission 
 

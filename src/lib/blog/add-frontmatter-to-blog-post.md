@@ -1,8 +1,10 @@
 ---
 title: "SvelteKit Blog: Add frontmatter data to posts"
 date: 2022-01-08
-tags: ["svelte"]
+tags: ["sveltekit"]
 ---
+
+> Notice. This was written pre SvelteKit 1.0.0. With the release of SvelteKit 1.0.0 some things changed. Especially the folder and routing structure. The solution in this blog post isn't compatible with version 1.0.0.
 
 With mdsvex it was possible to transform my markdown files to html files. Besides the post text, the markdown files contain a frontmatter with pieces of information about the post title and the creation date.
 

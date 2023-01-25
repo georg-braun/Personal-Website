@@ -1,7 +1,7 @@
 ---
 title: "Svelte: Use a key expression to reflect data changes to the correct list item"
 date: 2022-11-16
-tags: ["svelte"]
+tags: ["sveltekit"]
 ---
 
 # The problem 
