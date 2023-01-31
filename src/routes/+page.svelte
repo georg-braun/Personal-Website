@@ -52,7 +52,7 @@
     }
 
     .line {
-        width: 500px;
+        width: 90%;
         height: 1px;
         background-color: black;
 
