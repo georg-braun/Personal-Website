@@ -27,7 +27,7 @@ Console.WriteLine($$"""{ "name": "{{name}}"} """);
 // { "name": "Georg"}
 ```
 
-If the string content should containt more than three double quoutes you have to incerement the start and end part with respective more double quotes.
+If the string content should contain more than three double quoutes you have to incerement the start and end part with respective more double quotes.
 ```csharp
 // Use double quotes  
 Console.WriteLine(""""{ """name""": ""Georg""} """");
