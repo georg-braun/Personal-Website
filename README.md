@@ -26,7 +26,6 @@ Blog
 - If new images are added and not shown in local development: run `npm run build` to trigger the copy plugin to copy the images to the `static` folder
 - Blog posts need a valid frontmatter
 
-
 ## I want to know more about this
 You can find more details in the blog posts
 - visit [http://georg-braun.de](http://georg-braun.de)
