@@ -64,7 +64,7 @@ The possible problem is that in the first scenario the object is disposed before
 
 # Why it's disposed in the first scenario?
 
-Look at the translated code and you can the reason.
+Look at the translated code and you can see the reason.
 
 ```csharp
     DisposableClass disposableClass = new DisposableClass();
