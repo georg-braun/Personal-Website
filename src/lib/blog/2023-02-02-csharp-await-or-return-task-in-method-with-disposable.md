@@ -9,73 +9,101 @@ I recently saw a video of Nick Chapsas about [Settling the Biggest Await Async D
 
 # Introduce the scenario
 
-Assume there are two methods that executes async code. Both define a disposable object with `using var`. But they are different in how they handle the "async code".
+Assume you have the following code.
 
 ```csharp
-Console.WriteLine("Scenario 1:");
-Console.WriteLine("Call a method. This method defines a disposable object. This method also executes async code. But in the method the code is not awaited. It just returns the task object.");
-Console.WriteLine("Start");
-await disposeAndReturnTaskCanLeadToProblems();
-Console.WriteLine("End");
-
-Task disposeAndReturnTaskCanLeadToProblems()
+// Scenario 1: Return the task.
+Task scenarioDisposableObjectReturnTask()
 {
-    using var aDisposableObject = new DisposableClass();
-    return AsyncStuff.DoHeavyWorkAndLogIfFinishedAsync();
+    using var aObject = new DisposableClass();
+    return AsyncStuff.DoAsyncStuff();
+}
+
+// Scenario 2: Await the task.
+async Task scenarioDisposableObjectAwaitTask()
+{
+    using var aObject = new DisposableClass();
+    await AsyncStuff.DoAsyncStuff();
 }
 ```
 
+What do you think happens with the disposable object? Does it still exist while the async code is executed?
+
+We can take a look at the execution of the code (showed by console outputs).
+
 ```csharp
-Console.WriteLine("Scenario 2:");
-Console.WriteLine("This time the called method invokes the same async methods. But this time async methods are awaited.");
 Console.WriteLine("Start");
-await disposeAndAwaitAndEverythingIsInCorrectOrder();
+await scenarioDisposableObjectReturnTask();
 Console.WriteLine("End");
 
-async Task disposeAndAwaitAndEverythingIsInCorrectOrder()
+/*
+Output:
+    Start
+    I dispose some things. This should happen after all work is done.
+    Task delay started.
+    Task delay ended.
+    End
+*/
+
+Console.WriteLine("Start");
+await scenarioDisposableObjectAwaitTask();
+Console.WriteLine("End");
+
+/*
+Output:
+    Start
+    Task delay started.
+    Task delay ended.
+    I dispose some things. This should happen after all work is done.
+    End
+*/
+
+
+// ---------- DETAILS ----------
+
+// Only necessary to show the dispose event.
+class DisposableClass : IDisposable
 {
-    using var aDisposableObject = new DisposableClass();
-    await AsyncStuff.DoHeavyWorkAndLogIfFinishedAsync();
+    public void Dispose()
+    {
+        Console.WriteLine("I dispose some things. This should happen after all work is done.");
+    }
+}
+
+// Do something async
+internal static class AsyncStuff
+{ 
+    public static Task DoAsyncStuff()
+    {
+        return Task.Run(async () =>
+        {
+            Console.WriteLine("Task delay started.");
+            await Task.Delay(5000);
+            Console.WriteLine("Task delay ended.");
+        });
+    }
 }
 ```
 
-# The result
+In the first scenario (*return the task*) the object could be disposed when the async code gets executed.
+I think this is not obvious to everyone during development.
 
-The console output shows the problem.
-```
-Scenario 1:
-Call a method. This method defines a disposable object. This method also executes async code.But in the method the code is not awaited. It just returns the task object.
-Start
-I dispose some things. This should happen after all work is done.
-Task delay started.
-Task delay ended.
-End
---------
-Scenario 2:
-This time the called method invokes the same async methods. But this time async methodsare awaited.
-Start
-Task delay started.
-Task delay ended.
-I dispose some things. This should happen after all work is done.
-End
-```
-
-The possible problem is that in the first scenario the object is disposed before the async code is finished. 
 
 # Why it's disposed in the first scenario?
 
 Look at the translated code and you can see the reason.
 
 ```csharp
-    DisposableClass disposableClass = new DisposableClass();
-    try
-    {
-      // The task is returned immediately. Therefore the object is also disposed before the task is finished. 
-      return AsyncStuff.DoHeavyWorkAndLogIfFinishedAsync();
-    }
-    finally
-    {
-      if (disposableClass != null)
-        disposableClass.Dispose();
-    }
+DisposableClass disposableClass = new DisposableClass();
+try
+{
+    // The task is returned immediately... 
+    return AsyncStuff.DoAsyncStuff();
+}
+finally
+{
+    // ... therefore the object is also disposed before the task is finished.
+    if (disposableClass != null)
+    disposableClass.Dispose();
+}
 ```
