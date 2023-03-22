@@ -8,7 +8,7 @@ I have an app that uses Svelte as SPA frontend framework and svelte-router to di
 
 During development on my local machine everything works fine. But as soon as I deployed my app via vercel I got problems accessing different routes. 
 
-A call to `my page.com/lists` resulted in a 404.
+A call to `mypage.com/lists` resulted in a 404.
 
 The problem was that the server serving the frontend tried to find a route or file with `/lists` that didn't exist. But the route argument has to be served to the index file containing the routing logic. 
 
