@@ -1,5 +1,5 @@
 ---
-title: "Accessing a url in a Svelte app with svelte-router resutls in 404"
+title: "Accessing a url in a Svelte app with svelte-router results in 404"
 date: 2023-03-21
 tags: ["svelte"]
 ---
