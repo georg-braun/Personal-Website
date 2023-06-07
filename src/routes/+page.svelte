@@ -4,11 +4,16 @@
     export let data;
 </script>
 
-<div class="home-introduction-container">
-    👋 Welcome to my place. Here I primarily write about web technologies and
-    dotnet stuff. At <a href="/projects">/projects</a> you can find some things
-    I made and navigating to <a href="/aboutme">/aboutme</a> I share some personal
-    insights.
+<div class="introduction">
+    <div class="image-container hide">
+        <img src="/avatar.png" alt="Profile" width="150px" />
+    </div>
+    <div class="home-introduction-container">
+        👋 Welcome to my place. Here I primarily write about web technologies and
+        dotnet stuff. At <a href="/projects">/projects</a> you can find some things
+        I made and navigating to <a href="/aboutme">/aboutme</a> I share some personal
+        insights.
+    </div>
 </div>
 
 <div class="line" />
@@ -42,8 +47,18 @@
 </div>
 
 <style>
+
+@media (max-width: 600px) {
+    .hide {
+        display: none;
+    }
+}
+    .introduction {
+        display: flex;
+    }
     .home-introduction-container {
         text-align: center;
+        margin: auto;
     }
 
     .posts-list__date {
