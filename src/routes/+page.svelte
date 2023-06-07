@@ -1,7 +1,29 @@
 <script>
-    import dayjs from "dayjs";
-    import { getTagColor } from "$lib/utils/tags";
+    import PostEntry from "$lib/components/PostEntry.svelte";
     export let data;
+
+    const numberOfVisibleRecentPosts = 10;
+    $: postsByTag = mapPostsToTag(data?.posts);
+    $: recentNPosts = data?.posts.slice(0, numberOfVisibleRecentPosts);
+
+    const mapPostsToTag = (posts) => {
+        const postsByTagDictionary = {};
+        if (posts == undefined) return;
+
+        posts.forEach((post) => {
+            const tags = post?.meta.tags;
+            if (tags == undefined) return;
+
+            tags.forEach((tag) => {
+                if (postsByTagDictionary[tag] == undefined)
+                    postsByTagDictionary[tag] = [];
+
+                postsByTagDictionary[tag].push(post);
+            });
+        });
+    
+        return postsByTagDictionary;
+    };
 </script>
 
 <div class="introduction">
@@ -9,10 +31,10 @@
         <img src="/avatar.png" alt="Profile" width="150px" />
     </div>
     <div class="home-introduction-container">
-        👋 Welcome to my place. Here I primarily write about web technologies and
-        dotnet stuff. At <a href="/projects">/projects</a> you can find some things
-        I made and navigating to <a href="/aboutme">/aboutme</a> I share some personal
-        insights.
+        👋 Welcome to my place. Here I primarily write about web technologies
+        and dotnet stuff. At <a href="/projects">/projects</a> you can find some
+        things I made and navigating to <a href="/aboutme">/aboutme</a> I share some
+        personal insights.
     </div>
 </div>
 
@@ -23,47 +45,47 @@
     readable within a coffee break <iconify-icon icon="lucide:coffee" />
 </div>
 
+<div class="posts__header">
+    Recent {numberOfVisibleRecentPosts} posts
+</div>
 <div class="posts-list">
-    {#each data.posts as post}
-        <div class="posts-list__date">
-            {dayjs(post.meta.date).format("YYYY-MM-DD")}
-        </div>
-        <div>
-            <a href={post.path}>
-                {post.meta.title}
-            </a>
-        </div>
-        <div></div>
-        <div class="tag-container">
-            {#if post.meta.tags}
-                {#each post.meta.tags as tag}
-                    <div class="tag" style="background-color: {getTagColor(tag)};">
-                        {tag}
-                    </div>
-                {/each}
-            {/if}
-        </div>
+    {#each recentNPosts as post}
+        <PostEntry {post} />
     {/each}
 </div>
 
-<style>
+<div class="posts__header">Posts by category</div>
 
-@media (max-width: 600px) {
-    .hide {
-        display: none;
+{#if !!postsByTag}
+    <div class="posts-by-tag">
+        {#each Object.keys(postsByTag) as tag}
+            <div class="posts-by-tag__tag">{tag}</div>
+
+            <div>
+                {#each postsByTag[tag] as post}
+                    <div class="posts-by-tag__post-title">
+                        <a href={post.path}>
+                            {post.meta.title}
+                        </a>
+                    </div>
+                {/each}
+            </div>
+        {/each}
+    </div>
+{/if}
+
+<style>
+    @media (max-width: 600px) {
+        .hide {
+            display: none;
+        }
     }
-}
     .introduction {
         display: flex;
     }
     .home-introduction-container {
         text-align: center;
         margin: auto;
-    }
-
-    .posts-list__date {
-        text-align: right;
-        margin-right: 20px;
     }
 
     .line {
@@ -78,6 +100,12 @@
         margin-bottom: 20px;
     }
 
+    .posts__header {
+        margin-top: 40px;
+        font-size: larger;
+        text-align: center;
+    }
+
     .posts-list {
         margin-top: 40px;
 
@@ -85,17 +113,20 @@
         grid-template-columns: 1fr 2fr;
         gap: 10px;
     }
+    .posts-by-tag {
+        margin-top: 40px;
 
-    .tag-container {
-        display: flex;
-        font-size: small;
-        gap: 5px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 10px;
     }
 
-    .tag{
-        border: solid;
-        border-width: 1px;
-        border-radius: 10px;
-        padding: 0px 6px;
+    .posts-by-tag__post-title {
+        margin-bottom: 20px;
+    }
+
+    .posts-by-tag__tag {
+        text-align: right;
+        margin-right: 20px;
     }
 </style>
