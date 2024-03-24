@@ -18,36 +18,7 @@
 			"category": "it",
 			"retired": false,
 			"description": "Based on the dTree library I built a family tree. In addition, I wrote a graph-to-list converter to switch between different family trees."
-		},
-		{
-			"title": "Topic Tracker",
-			"imagePath": "projects/topic-timer.png",
-			"repoUrl": "https://github.com/georg-braun/topic-timer",
-			"projectUrl": "https://topic-timer.georg-braun.de",
-			"date": "2022",
-			"category": "it",
-			"retired": false,
-			"description": "Create a topic do you want to work on, set the desired time. Dedicate your time to a task you created and see how much time you spent. Built with svelte.",
-			"tags": [
-				"svelte"
-			]
-		},
-		{
-			"title": "Maintenance buddy",
-			"imagePath": "projects/maintenance-buddy.png",
-			"repoUrl": "https://github.com/georg-braun/maintenance-buddy",
-			"projectUrl": "https://maintenance-buddy.georg-braun.de",
-			"date": "2022",
-			"category": "it",
-			"retired": false,
-			"description": "Last year I created an app called garage buddy to manage the maintenances of my vehicles. Garage buddy is a SPA that uses Google Firestore for authentication and persistence. The problem is that I want to have more control over the data and to write the domain logic in the backend instead in the SPA. Therefore I created this new project that uses Svelte as frontend, ASP.NET Core in the backend and Entity Framework Core as ORM to a PostgreSQL database. For security in the SPA and backend I rely on Auth0. The API of the backend isn't a REST API, I wanted to try a more CQRS like approach.",
-			"tags": [
-				"svelte",
-				"asp.net",
-				"entity framework",
-				"domain-driven design"
-			]
-		}	
+		}
 	],
 	"bicycle": [
 		{
