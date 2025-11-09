@@ -51,13 +51,6 @@
         text-align: center;
     }
 
-    .posts-list {
-        margin-top: 40px;
-
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 10px;
-    }
     .posts-by-tag {
         margin-top: 40px;
 
