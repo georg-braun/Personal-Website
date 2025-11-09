@@ -7,3 +7,4 @@ build
 src/routes/.DS_Store
 .DS_Store
 static/blog/images
+package-lock.json
