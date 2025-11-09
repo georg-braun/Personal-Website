@@ -1,132 +1,74 @@
 <script>
-    import PostEntry from "$lib/components/PostEntry.svelte";
-    export let data;
-
-    const numberOfVisibleRecentPosts = 10;
-    $: postsByTag = mapPostsToTag(data?.posts);
-    $: recentNPosts = data?.posts.slice(0, numberOfVisibleRecentPosts);
-
-    const mapPostsToTag = (posts) => {
-        const postsByTagDictionary = {};
-        if (posts == undefined) return;
-
-        posts.forEach((post) => {
-            const tags = post?.meta.tags;
-            if (tags == undefined) return;
-
-            tags.forEach((tag) => {
-                if (postsByTagDictionary[tag] == undefined)
-                    postsByTagDictionary[tag] = [];
-
-                postsByTagDictionary[tag].push(post);
-            });
-        });
-    
-        return postsByTagDictionary;
-    };
 </script>
 
 <div class="introduction">
-    <div class="image-container hide">
-        <img src="/avatar.png" alt="Profile" width="150px" />
+  <div class="image-container hide">
+    <img src="/avatar.png" alt="Profile" width="150px" />
+  </div>
+  <div class="home-introduction-container">
+    <h1>Hey, I'm Georg 👋</h1>
+    <p>
+      I love building things whether that's handcrafting something,
+      wrenching on bikes or building it stuff (primarily software development).
+      </p>
+    <p>
+      This site focuses on that IT passion: a public notebook for the ideas,
+      mistakes, and patterns I discover while coding.
+    </p>
+
+    <div class="intro-tags">
+      <span class="intro-tag">C# / ASP.NET</span>
+      <span class="intro-tag">Svelte</span>
+      <span class="intro-tag">React</span>
+      <span class="intro-tag">Terraform</span>
+      <span class="intro-tag">AWS</span>
+      <span class="intro-tag">Software architecture</span>
+      <span class="intro-tag">Domain-driven Design</span>
+      <span class="intro-tag">Software development process </span>
     </div>
-    <div class="home-introduction-container">
-        👋 Welcome to my place. Here I primarily write about web technologies
-        and dotnet stuff. At <a href="/projects">/projects</a> you can find some
-        things I made and navigating to <a href="/aboutme">/aboutme</a> I share some
-        personal insights.
-    </div>
+  </div>
 </div>
 
-<div class="line" />
 
-<div class="home-introduction-container" title="Readings should be simple">
-    I like simple posts that don't overwhelm the reader. A post should be
-    readable within a coffee break <iconify-icon icon="lucide:coffee" />
-</div>
-
-<div class="posts__header">
-    Recent {numberOfVisibleRecentPosts} posts
-</div>
-<div class="posts-list">
-    {#each recentNPosts as post}
-        <PostEntry {post} />
-    {/each}
-</div>
-
-<div class="posts__header">Posts by category</div>
-
-{#if !!postsByTag}
-    <div class="posts-by-tag">
-        {#each Object.keys(postsByTag) as tag}
-            <div class="posts-by-tag__tag">{tag}</div>
-
-            <div>
-                {#each postsByTag[tag] as post}
-                    <div class="posts-by-tag__post-title">
-                        <a href={post.path}>
-                            {post.meta.title}
-                        </a>
-                    </div>
-                {/each}
-            </div>
-        {/each}
-    </div>
-{/if}
 
 <style>
-    @media (max-width: 600px) {
-        .hide {
-            display: none;
-        }
+  @media (max-width: 600px) {
+    .hide {
+      display: none;
     }
-    .introduction {
-        display: flex;
-    }
-    .home-introduction-container {
-        text-align: center;
-        margin: auto;
-    }
+  }
+  .introduction {
+    display: flex;
+  }
+  .home-introduction-container {
+    text-align: center;
+    margin: auto;
+    max-width: 600px;
+  }
 
-    .line {
-        width: 90%;
-        height: 1px;
-        background-color: black;
+  .home-introduction-container h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+  }
 
-        margin-left: auto;
-        margin-right: auto;
+  .intro-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+  }
 
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+  .intro-tag {
+    background-color: #f3f3f3;
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 0.9rem;
+  }
 
-    .posts__header {
-        margin-top: 40px;
-        font-size: larger;
-        text-align: center;
-    }
 
-    .posts-list {
-        margin-top: 40px;
+  
 
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 10px;
-    }
-    .posts-by-tag {
-        margin-top: 40px;
 
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 10px;
-    }
-
-    .posts-by-tag__post-title {
-        margin-bottom: 20px;
-    }
-
-    .posts-by-tag__tag {
-        text-align: right;
-        margin-right: 20px;
-    }
+  
 </style>
