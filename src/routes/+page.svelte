@@ -12,8 +12,8 @@
       wrenching on bikes or building it stuff (primarily software development).
       </p>
     <p>
-      This site focuses on that IT passion: a public notebook for the ideas,
-      mistakes, and patterns I discover while coding.
+      This site focuses on that IT passion: a public notebook for ideas, learnings and
+      mistakes.
     </p>
 
     <div class="intro-tags">
