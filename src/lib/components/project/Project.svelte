@@ -1,6 +1,5 @@
 <script>
-    import Icon from "@iconify/svelte"
-    export let project;
+    let { project } = $props();
 </script>
 
 <div class="header">
@@ -15,12 +14,12 @@
        <a href="{project.repoUrl}" target="_blank">
             <iconify-icon icon="mdi:github"></iconify-icon>
        </a>
-       {/if} 
+       {/if}
        {#if project.projectUrl}
         <a href="{project.projectUrl}" target="_blank">
             <iconify-icon icon="material-symbols:open-in-new"></iconify-icon>
         </a>
-        {/if} 
+        {/if}
     </div>
 </div>
 
@@ -34,7 +33,7 @@
     .header{
         display: flex;
         justify-content: space-between;
-        
+
     }
 
     .header__links{

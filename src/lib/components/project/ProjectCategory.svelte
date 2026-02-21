@@ -1,8 +1,7 @@
 <script>
 	import Project from "./Project.svelte";
 
-    export let name;
-    export let projects;
+    let { name, projects } = $props();
 </script>
 
 <div class="category">

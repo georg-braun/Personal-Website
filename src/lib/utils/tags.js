@@ -1,7 +1,9 @@
+/** @param {string} tag */
 export function getTagColor(tag) {
     return colorCodes[tag] ?? "lightgray";
 }
 
+/** @type {Record<string, string>} */
 const colorCodes = {
     /** Backend */
     "dotnet": "rgba(75,41,205,0.5)",

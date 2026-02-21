@@ -2,7 +2,7 @@
     import dayjs from "dayjs";
     import { getTagColor } from "$lib/utils/tags";
 
-    export let post;
+    let { post } = $props();
 </script>
 
 <div class="posts-list__date">

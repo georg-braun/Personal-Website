@@ -1,8 +1,8 @@
 import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
 import copy from 'rollup-plugin-copy';
 
-/** @type {import('vite').UserConfig} */
-const config = {
+export default defineConfig({
 	plugins: [
 		sveltekit(),
 		copy({
@@ -11,6 +11,4 @@ const config = {
 			targets: [{ src: 'src/lib/blog/images', dest: 'static/blog' }]
 		})
 	]
-};
-
-export default config;
+});

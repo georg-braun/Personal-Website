@@ -1,7 +1,7 @@
 <script>
     import "./post.css"
     import dayjs from "dayjs"
-    export let data;
+    let { data } = $props();
 </script>
 
 <div class="post-title">
@@ -15,7 +15,7 @@
     &gt;
 </div>
 <div class="post">
-    <svelte:component this={data.content} />
+    <data.content />
 </div>
 <div class="coffee-tag">
     &lt;/

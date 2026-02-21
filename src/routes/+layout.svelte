@@ -2,8 +2,10 @@
 import '../prism.css'
 
 import Header from '$lib/components/Header.svelte';
-    $: themeName = darkMode ? "dark" : "light";
-    let darkMode;
+
+    let { children } = $props();
+    let darkMode = $state(false);
+    let themeName = $derived(darkMode ? "dark" : "light");
 </script>
 
 <svelte:head>
@@ -12,7 +14,7 @@ import Header from '$lib/components/Header.svelte';
 
 <Header />
 <div class="page-content">
-    <slot />
+    {@render children()}
 </div>
 
 <div class="impressum">
@@ -26,7 +28,7 @@ import Header from '$lib/components/Header.svelte';
         margin-left: auto;
         margin-right: auto;
 
-        max-width: 800px;        
+        max-width: 800px;
     }
 
     .impressum{
