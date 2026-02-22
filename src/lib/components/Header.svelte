@@ -5,6 +5,9 @@
     <div>
         <a href="/blog" class="navigation__link"> Blog</a>
     </div>
+    <div>
+        <a href="/projects" class="navigation__link"> Projects</a>
+    </div>
 </div>
 
 
