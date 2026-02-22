@@ -1,27 +1,28 @@
 <script>
- export let data;
+ let { data } = $props();
 
-
-    $: postsByTag = mapPostsToTag(data?.posts);
-
-    const mapPostsToTag = (posts) => {
+    /** @param {any[]} posts */
+    function mapPostsToTag(posts) {
+        /** @type {Record<string, any[]>} */
         const postsByTagDictionary = {};
         if (posts == undefined) return;
 
-        posts.forEach((post) => {
+        posts.forEach((/** @type {any} */ post) => {
             const tags = post?.meta.tags;
             if (tags == undefined) return;
 
-            tags.forEach((tag) => {
+            tags.forEach((/** @type {string} */ tag) => {
                 if (postsByTagDictionary[tag] == undefined)
                     postsByTagDictionary[tag] = [];
 
                 postsByTagDictionary[tag].push(post);
             });
         });
-    
+
         return postsByTagDictionary;
-    };
+    }
+
+    let postsByTag = $derived(mapPostsToTag(data?.posts));
 </script>
 
 <div class="posts__header">Notes by category</div>
