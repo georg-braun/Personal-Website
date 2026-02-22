@@ -3,7 +3,7 @@
         <a href="/" class="navigation__link"> Home </a>
     </div>
     <div>
-        <a href="/notes" class="navigation__link"> Notes</a>
+        <a href="/blog" class="navigation__link"> Blog</a>
     </div>
 </div>
 
