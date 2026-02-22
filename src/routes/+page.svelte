@@ -8,12 +8,12 @@
   <div class="home-introduction-container">
     <h1>Hey, I'm Georg 👋</h1>
     <p>
-      I love building things whether that's handcrafting something,
-      wrenching on bikes or building it stuff (primarily software development).
-      </p>
+      I love building things — whether that's handcrafting something,
+      wrenching on bikes, or writing software.
+    </p>
     <p>
-      This site focuses on that IT passion: a public notebook for ideas, learnings and
-      mistakes.
+      Here I write about topics I care about and share projects I've worked on.
+      Check out the <a href="/blog">blog</a> or browse my <a href="/projects">projects</a>.
     </p>
 
     <div class="intro-tags">
